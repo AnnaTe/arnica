@@ -10,7 +10,6 @@ from filter.colorsegmentation import Yellow
 from filter.blobelimination import BlobDetection, applyMask
 
 
-
 class DesignerMainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
     """Customization for Qt Designer created window"""
 
@@ -44,6 +43,16 @@ class DesignerMainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
 
         return img
 
+    def plot(self, image):
+        # clear the Axes
+        self.mpl.canvas.ax.clear()
+
+        self.mpl.canvas.ax.imshow(cv2.cvtColor(image, cv2.COLOR_BGR2RGB))
+        self.mpl.canvas.ax.axis('off')
+        # self.mpl.canvas.ax.set_title('Image Plot', fontsize=16)
+        # force an image redraw
+        self.mpl.canvas.draw()
+
     def crop_image(self, img):
         percent = self.sbCrop.value()
 
@@ -72,17 +81,8 @@ class DesignerMainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
         return image
 
     def initial_plot(self):
-        # plots the initial image that is parsed without changes
-        # gets image from source
         image = self.parse_file(self.lineEditImage.text())
-        # clear the Axes
-        self.mpl.canvas.ax.clear()
-
-        self.mpl.canvas.ax.imshow(cv2.cvtColor(image, cv2.COLOR_BGR2RGB))
-        self.mpl.canvas.ax.axis('off')
-        # self.mpl.canvas.ax.set_title('Image Plot', fontsize=16)
-        # force an image redraw
-        self.mpl.canvas.draw()
+        self.plot(image)
 
     def update_graph(self):
         ## updated image function
@@ -94,15 +94,7 @@ class DesignerMainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
         img = self.colorseg(img)
         img = self.blobsize(img)
 
-        # clear the Axes
-        self.mpl.canvas.ax.clear()
-
-        self.mpl.canvas.ax.imshow(cv2.cvtColor(img, cv2.COLOR_BGR2RGB))
-        self.mpl.canvas.ax.axis('off')
-        #self.mpl.canvas.ax.set_title('Image Plot', fontsize=16)
-
-        # force an image redraw
-        self.mpl.canvas.draw()
+        self.plot(img)
 
 
 # create the GUI application
