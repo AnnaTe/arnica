@@ -2,7 +2,7 @@ import sys
 
 import cv2
 
-from PyQt5 import QtWidgets
+from PyQt5 import QtWidgets, QtGui
 
 from package.gui.guidesign import  Ui_MainWindow
 from filter.openfiles import Crop
@@ -20,22 +20,31 @@ class DesignerMainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
         self.setupUi(self)
 
         # connect the signals with the slots
-        # QtCore.QObject.connect(self.mplactionOpen, QtCore.SIGNAL('triggered()'), self.select_file)
+        self.actionSingle.triggered.connect(self.select_file)
+        self.actionDirectory.triggered.connect(self.select_dir)
+        self.pbDirectoryOpen.clicked(self.select_dir)
+
         # QtCore.QObject.connect(self.mplactionQuit, QtCore.SIGNAL('triggered()'), QtGui.qApp, QtCore.SLOT("quit()"))
 
         # connect signals with slots
         self.pbImageOpen.clicked.connect(self.initial_plot)
         self.pbUpdate.clicked.connect(self.update_graph)
 
+
     #
-    # def select_file(self):
-    #     """opens a file select dialog"""
-    #     # open the dialog and get the selected file
-    #     file = QtGui.QFileDialog.getOpenFileName()
-    #     # if a file is selected
-    #     if file:
-    #         # update the lineEdit widget text with the selected filename
-    #         self.mpllineEdit.setText(file)
+    def select_file(self):
+         """opens a file select dialog"""
+         # open the dialog and get the selected file
+         file = QtWidgets.QFileDialog.getOpenFileName(self, 'Select Image')
+         # update the lineEdit widget text with the selected filename
+         self.lineEditImage.setText(file[0])
+         self.tabWidget.setCurrentIndex(0)
+
+
+    def select_dir(self):
+        directory = QtWidgets.QFileDialog.getExistingDirectory(self, 'Select directory')
+        self.lineEditDirIn.setText(directory)
+        self.tabWidget.setCurrentIndex(1)
 
     def parse_file(self, filename):
         """Function to parse an image file to display"""

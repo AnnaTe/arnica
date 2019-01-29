@@ -352,6 +352,9 @@
              <property name="text">
               <string>yellow segmentation</string>
              </property>
+             <property name="checked">
+              <bool>true</bool>
+             </property>
             </widget>
            </item>
            <item>
@@ -388,6 +391,9 @@
                  <width>85</width>
                  <height>16777215</height>
                 </size>
+               </property>
+               <property name="prefix">
+                <string>10</string>
                </property>
                <property name="maximum">
                 <number>150</number>
@@ -466,6 +472,19 @@
        </item>
       </layout>
      </widget>
+     <widget class="QPushButton" name="pbRun">
+      <property name="geometry">
+       <rect>
+        <x>500</x>
+        <y>450</y>
+        <width>92</width>
+        <height>26</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Run</string>
+      </property>
+     </widget>
     </widget>
    </widget>
   </widget>
@@ -486,8 +505,8 @@
      <property name="title">
       <string>Open</string>
      </property>
-     <addaction name="actionSingle_Image"/>
-     <addaction name="actionOpen"/>
+     <addaction name="actionSingle"/>
+     <addaction name="actionDirectory"/>
     </widget>
     <addaction name="menuOpen"/>
     <addaction name="actionClose"/>
@@ -495,7 +514,7 @@
    <addaction name="menuFile"/>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
-  <action name="actionOpen">
+  <action name="actionDirectory">
    <property name="text">
     <string>from Directory</string>
    </property>
@@ -505,7 +524,7 @@
     <string>Close</string>
    </property>
   </action>
-  <action name="actionSingle_Image">
+  <action name="actionSingle">
    <property name="text">
     <string>single Image</string>
    </property>

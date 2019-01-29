@@ -22,7 +22,7 @@ except OSError as e:
 for fpath in fpaths:
      img = cv2.imread(fpath)
      img = Crop(img, 50)
-     seg = yellow(img)
+     seg = Yellow(img)
      out = BlobDetection(seg)
      img_masked = applyMask(out, img)
      out_path = "/home/rio/Dokumente/Uni/Bachelorarbeit/arnika/Project/output/" + fpath[-12:-4] + "seg" + ".PNG"
