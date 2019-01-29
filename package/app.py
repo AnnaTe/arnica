@@ -5,7 +5,8 @@ import cv2
 from PyQt5 import QtWidgets, QtGui
 
 from package.gui.guidesign import  Ui_MainWindow
-from filter.openfiles import Crop
+#from filter.openfiles import Crop
+from filter.data import Data
 from filter.colorsegmentation import Yellow
 from filter.blobelimination import BlobDetection, applyMask
 
@@ -22,7 +23,7 @@ class DesignerMainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
         # connect the signals with the slots
         self.actionSingle.triggered.connect(self.select_file)
         self.actionDirectory.triggered.connect(self.select_dir)
-        self.pbDirectoryOpen.clicked(self.select_dir)
+        #self.pbDirectory.clicked(self.select_dir)
 
         # QtCore.QObject.connect(self.mplactionQuit, QtCore.SIGNAL('triggered()'), QtGui.qApp, QtCore.SLOT("quit()"))
 
@@ -40,7 +41,6 @@ class DesignerMainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
          self.lineEditImage.setText(file[0])
          self.tabWidget.setCurrentIndex(0)
 
-
     def select_dir(self):
         directory = QtWidgets.QFileDialog.getExistingDirectory(self, 'Select directory')
         self.lineEditDirIn.setText(directory)
@@ -48,7 +48,8 @@ class DesignerMainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
 
     def parse_file(self, filename):
         """Function to parse an image file to display"""
-        img = cv2.imread(filename)
+        #img = cv2.imread(filename)
+        img = Data(filename)
 
         return img
 
@@ -62,17 +63,17 @@ class DesignerMainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
         # force an image redraw
         self.mpl.canvas.draw()
 
-    def crop_image(self, img):
-        percent = self.sbCrop.value()
-
-        if percent == 100:
-            return img
-        elif percent == 0:
-            print("Imagesize can't be 0 %.")
-            return img
-        else:
-            image = Crop(img, percent)
-            return image
+    # def crop_image(self, img):
+    #     percent = self.sbCrop.value()
+    #
+    #     if percent == 100:
+    #         return img
+    #     elif percent == 0:
+    #         print("Imagesize can't be 0 %.")
+    #         return img
+    #     else:
+    #         image = Crop(img, percent)
+    #         return image
 
     def colorseg(self, img):
         if self.cbYellow.isChecked():
@@ -91,7 +92,7 @@ class DesignerMainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
 
     def initial_plot(self):
         image = self.parse_file(self.lineEditImage.text())
-        self.plot(image)
+        self.plot(image.img)
 
     def update_graph(self):
         ## updated image function
@@ -99,7 +100,7 @@ class DesignerMainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
         image = self.parse_file(self.lineEditImage.text())
 
         # call of functions
-        img = self.crop_image(image)
+        #img = self.crop_image(image)
         img = self.colorseg(img)
         img = self.blobsize(img)
 
@@ -115,3 +116,4 @@ dmw.show()
 # start the Qt main loop execution, exiting from this script
 # with the same return code of Qt application
 sys.exit(app.exec_())
+
