@@ -2,13 +2,14 @@ import sys
 
 import cv2
 
+
 from PyQt5 import QtWidgets, QtGui
 
 from package.gui.guidesign import  Ui_MainWindow
 #from filter.openfiles import Crop
 from filter.data import Data
-from filter.colorsegmentation import Yellow
-from filter.blobelimination import BlobDetection, applyMask
+#from filter.colorsegmentation import Yellow
+#from filter.blobelimination import BlobDetection, applyMask
 
 
 class DesignerMainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
@@ -63,17 +64,16 @@ class DesignerMainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
         # force an image redraw
         self.mpl.canvas.draw()
 
-    # def crop_image(self, img):
-    #     percent = self.sbCrop.value()
-    #
-    #     if percent == 100:
-    #         return img
-    #     elif percent == 0:
-    #         print("Imagesize can't be 0 %.")
-    #         return img
-    #     else:
-    #         image = Crop(img, percent)
-    #         return image
+     def crop_image(self, img):
+
+         if percent == 100:
+             return img
+         elif percent == 0:
+             print("Imagesize can't be 0 %.")
+             return img
+         else:
+             image = img.
+             return image
 
     def colorseg(self, img):
         if self.cbYellow.isChecked():
@@ -99,6 +99,9 @@ class DesignerMainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
         # opens image from source
         image = self.parse_file(self.lineEditImage.text())
 
+        #crop
+        percent = self.sbCrop.value()
+        image.crop()
         # call of functions
         #img = self.crop_image(image)
         img = self.colorseg(img)
