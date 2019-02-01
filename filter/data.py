@@ -4,43 +4,42 @@ import numpy as np
 
 class Data:
     def __init__(self, path):
-        #self.img = self.open(path)
-        self.path = path
+        self.img = self.open(path)
+        self.cropped = self.img
+        self.seg = self.img
+        self.blob = self.img
 
-
-    #methods
-    def open(self):
-        img = cv2.imread(self.path)
+    @staticmethod
+    def open(path):
+        img = cv2.imread(path)
         return img
 
-    def crop (self, percent=50):
-        lower = 100 - percent / 2 / 100
-        upper = 100 + percent / 2 / 100
-        img = self.img[int(self.img.shape[0] * lower):int(self.img.shape[0] * upper) + 1,
+    def crop(self, percent=50):
+        lower = (50 - (percent / 2)) / 100
+        upper = (50 + (percent / 2)) / 100
+        self.cropped = self.img[int(self.img.shape[0] * lower):int(self.img.shape[0] * upper) + 1,
           int(self.img.shape[1] * lower):int(self.img.shape[1] * upper) + 1, :]
-        return img
+        return self.cropped
 
-    def yellow(self, img):
+    def yellow(self, image):
         minBGR = np.array((0, 133, 225))
         maxBGR = np.array((122, 255, 255))
-        maskBGR = cv2.inRange(img, minBGR, maxBGR)
-        segBGR = cv2.bitwise_and(img, img, mask=maskBGR)
-        return segBGR
+        maskBGR = cv2.inRange(image, minBGR, maxBGR)
+        self.seg = cv2.bitwise_and(image, image, mask=maskBGR)
+        return self.seg
 
-    def __blobs(self, segImg, lowsize=100):
+    def blobelimination(self, lowsize=100):
         'blob detection with variing size'
-        for d in range(segImg.shape[-1]):
-            nb_components, output, stats, centroids = cv2.connectedComponentsWithStats(segImg[:, :, d], connectivity=8)
+        for d in range(self.seg.shape[-1]):
+            nb_components, output, stats, centroids = cv2.connectedComponentsWithStats(self.seg[:, :, d], connectivity=8)
             sizes = stats[1:, -1]
             nb_components = nb_components - 1
             min_size = lowsize
-            img_out = np.zeros((segImg.shape[-3], segImg.shape[-2], segImg.shape[-1]))
+            mask = np.zeros((self.seg.shape[-3], self.seg.shape[-2], self.seg.shape[-1]))
             for i in range(0, nb_components):
                 if sizes[i] >= min_size:
-                    img_out[output == i + 1, d] = 255
-        return img_out
+                    mask[output == i + 1, d] = 255
 
-    def __applyMask(self, mask, img):
         # flatten to keep all the values
         out_sum = mask[:, :, 0] + mask[:, :, 1] + mask[:, :, 2]
         # stack array again in 3-Dimensions to keep shape
@@ -48,27 +47,20 @@ class Data:
         # make 3-D mask
         sum_mask = np.ma.make_mask(out_stack, shrink=False)
         # make a masked array
-        img_masked = np.ma.array(img, mask=sum_mask)
+        self.blob = np.ma.array(self.cropped, mask=sum_mask)
         # put inverse of mask to 0
-        img_masked[~img_masked.mask] = 0
-        return img_masked
-
-    def blobelimination (self, segimg, original, lowsize = 100):
-        blobs = self.__blobs(segimg, lowsize)
-        out = self.__applyMask(blobs, original)
-        return out
-
-    def __repr__(self):
-        pass
-
-    def __str__(self):
-        pass
+        self.blob[~self.blob.mask] = 0
+        return self.blob
 
 
+    # def __repr__(self):
+    #     #print ("Data.open(path)")
+    #     pass
+    #
+    # def __str__(self):
+    #     pass
 
 
+path = "/home/rio/Dokumente/Uni/project/DSC01506.JPG"
+test = Data(path)
 
-
-testpath = "/home/rio/Dokumente/Uni/project/DSC01506.JPG"
-
-test = Data(testpath)
