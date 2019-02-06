@@ -50,9 +50,9 @@ class DesignerMainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
     def parse_file(self, filename):
         """Function to parse an image file to display"""
         #img = cv2.imread(filename)
-        img = Data(filename)
+        a = Data(filename)
 
-        return img
+        return a
 
     def plot(self, image):
         # clear the Axes
@@ -64,50 +64,50 @@ class DesignerMainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
         # force an image redraw
         self.mpl.canvas.draw()
 
-     def crop_image(self, img):
+    # def crop_image(self, img):
+    #
+    #     if percent == 100:
+    #         return img
+    #     elif percent == 0:
+    #         print("Imagesize can't be 0 %.")
+    #         return img
+    #     else:
+    #         image =
+    #         return image
 
-         if percent == 100:
-             return img
-         elif percent == 0:
-             print("Imagesize can't be 0 %.")
-             return img
-         else:
-             image = img.
-             return image
+    # def colorseg(self, img):
+    #     if self.cbYellow.isChecked():
+    #         # call function colorsegmentation
+    #         image = ##
+    #         return image
+    #     else:
+    #        return img
 
-    def colorseg(self, img):
-        if self.cbYellow.isChecked():
-            # call function colorsegmentation
-            image = Yellow(img)
-            return image
-        else:
-           return img
-
-    def blobsize(self, img):
-        #call blobelimination
-        minsize = self.sbBlob.value()
-        out = BlobDetection(img, minsize)
-        image = applyMask(out, img)
-        return image
+    # def blobsize(self, img):
+    #     #call blobelimination
+    #     minsize = self.sbBlob.value()
+    #     out = BlobDetection(img, minsize)
+    #     image = applyMask(out, img)
+    #     return image
 
     def initial_plot(self):
-        image = self.parse_file(self.lineEditImage.text())
-        self.plot(image.img)
+        a = self.parse_file(self.lineEditImage.text())
+        self.plot(a.img)
 
     def update_graph(self):
         ## updated image function
-        # opens image from source
-        image = self.parse_file(self.lineEditImage.text())
+        # loads image in Data class
+        a = self.parse_file(self.lineEditImage.text())
 
-        #crop
+        #colect values from user input
         percent = self.sbCrop.value()
-        image.crop()
-        # call of functions
-        #img = self.crop_image(image)
-        img = self.colorseg(img)
-        img = self.blobsize(img)
+        lowsize = self.sbBlob.value()
 
-        self.plot(img)
+        #apply whole filter
+        a.filter(percent, lowsize)
+
+        # plot result
+        self.plot(a.blob)
 
 
 # create the GUI application

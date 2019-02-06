@@ -5,9 +5,9 @@ import numpy as np
 class Data:
     def __init__(self, path):
         self.img = self.open(path)
-        self.cropped = self.img
-        self.seg = self.img
-        self.blob = self.img
+        self.cropped = np.copy(self.img)
+        self.seg = np.copy(self.cropped)
+        self.blob = np.copy(self.cropped)
 
     @staticmethod
     def open(path):
@@ -47,10 +47,16 @@ class Data:
         # make 3-D mask
         sum_mask = np.ma.make_mask(out_stack, shrink=False)
         # make a masked array
-        self.blob = np.ma.array(self.cropped, mask=sum_mask)
+        self.blob = np.copy(self.cropped)
+        self.blob = np.ma.array(self.blob, mask=sum_mask)
         # put inverse of mask to 0
         self.blob[~self.blob.mask] = 0
         return self.blob
+
+    def filter(self, percent, lowsize):
+        self.crop(percent)
+        self.yellow(self.cropped)
+        self.blobelimination(lowsize)
 
 
     # def __repr__(self):
@@ -61,6 +67,33 @@ class Data:
     #     pass
 
 
-path = "/home/rio/Dokumente/Uni/project/DSC01506.JPG"
-test = Data(path)
 
+
+
+
+if __name__ == "__main__":
+    path = "/home/rio/Dokumente/Uni/project/DSC01506.JPG"
+    test = Data(path)
+    test.filter(percent=40, lowsize=140)
+
+    import matplotlib.pyplot as plt
+
+    plt.figure(1)
+
+    plt.subplot(221)
+    plt.imshow(cv2.cvtColor(test.img, cv2.COLOR_BGR2RGB))
+    plt.title('original Image')
+
+    plt.subplot(222)
+    plt.imshow(cv2.cvtColor(test.cropped, cv2.COLOR_BGR2RGB))
+    plt.title('cropped Image')
+
+    plt.subplot(223)
+    plt.imshow(cv2.cvtColor(test.seg, cv2.COLOR_BGR2RGB))
+    plt.title('yellow segmentation')
+
+    plt.subplot(224)
+    plt.imshow(cv2.cvtColor(test.blob, cv2.COLOR_BGR2RGB))
+    plt.title('blob reduction')
+
+    plt.show()
