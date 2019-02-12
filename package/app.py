@@ -25,6 +25,8 @@ class DesignerMainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
         self.actionSingle.triggered.connect(self.select_file)
         self.actionDirectory.triggered.connect(self.select_dir)
         #self.pbDirectory.clicked(self.select_dir)
+        self.percent = self.sbCrop.value()
+        self.lowsize = self.sbBlob.value()
 
         # QtCore.QObject.connect(self.mplactionQuit, QtCore.SIGNAL('triggered()'), QtGui.qApp, QtCore.SLOT("quit()"))
 
@@ -94,17 +96,36 @@ class DesignerMainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
         a = self.parse_file(self.lineEditImage.text())
         self.plot(a.img)
 
+    def whole_update(self):
+        a = self.parse_file(self.lineEditImage.text())
+
+        # colect values from user input
+
+        # apply whole filter
+        a.filter(self.percent, self.lowsize)
+
+        # plot result
+        self.plot(a.blob)
+
     def update_graph(self):
         ## updated image function
         # loads image in Data class
         a = self.parse_file(self.lineEditImage.text())
 
         #colect values from user input
-        percent = self.sbCrop.value()
-        lowsize = self.sbBlob.value()
+        perc_changed = self.sbCrop.value()
+        low_changed = self.sbBlob.value()
+
+        #pb.valueChanged.connect(function)
+        if perc_changed != self.percent:
+            a.filter(self.percent, low_changed)
+        elif perc_changed == self.percent and low_changed != self.lowsize:
+            a.blobelimination(low_changed)
+        else:
+            pass
 
         #apply whole filter
-        a.filter(percent, lowsize)
+
 
         # plot result
         self.plot(a.blob)

@@ -1,6 +1,8 @@
-# arnica
+# arnica filter
 
-This is an application ... in construction.
+This is an software application  ... in construction.
+
+Dies ist eine Anwendungssoftware zum Monitoring von Arnika Blumen durch die Auswertung von Luftbildern von Drohnen
 
 todos:
 
@@ -11,3 +13,10 @@ todos:
 - status bar
 - debug
 
+
+bis zum 25.02.:
+- Titel Vorschlag
+- Inhaltsverzeichnis Entwurf
+- Probleme in Stichpunkten
+- Ziele ausformuliert
+- Vorzeigbare GUI (alles geht, auch wenn noch nicht schnell oder perfekt)
