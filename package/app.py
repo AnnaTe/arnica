@@ -5,11 +5,10 @@ import cv2
 
 from PyQt5 import QtWidgets, QtGui
 
-from package.gui.guidesign import  Ui_MainWindow
-#from filter.openfiles import Crop
+from package.gui.guidesign import Ui_MainWindow
+
 from filter.data import Data
-#from filter.colorsegmentation import Yellow
-#from filter.blobelimination import BlobDetection, applyMask
+
 
 
 class DesignerMainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
@@ -108,24 +107,17 @@ class DesignerMainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
         self.plot(a.blob)
 
     def update_graph(self):
-        ## updated image function
-        # loads image in Data class
-        a = self.parse_file(self.lineEditImage.text())
 
-        #colect values from user input
+        #collect values from user input
         perc_changed = self.sbCrop.value()
         low_changed = self.sbBlob.value()
 
         #pb.valueChanged.connect(function)
+
         if perc_changed != self.percent:
             a.filter(self.percent, low_changed)
         elif perc_changed == self.percent and low_changed != self.lowsize:
             a.blobelimination(low_changed)
-        else:
-            pass
-
-        #apply whole filter
-
 
         # plot result
         self.plot(a.blob)
