@@ -3,79 +3,55 @@ import numpy as np
 
 class Data:
     def __init__(self, path):
-        self.img = self.open(path)
+        self.img = self._open(path)
         self.cropped = np.copy(self.img)
         self.seg = np.copy(self.cropped)
         self.blob = np.copy(self.cropped)
 
     @staticmethod
-    def open(path):
+    def _open(path):
         img = cv2.imread(path)
         return img
 
     def crop(self, percent=50):
+        if percent == 100:
+            pass
+        #if percent == 0:
         lower = (50 - (percent / 2)) / 100
         upper = (50 + (percent / 2)) / 100
         self.cropped = self.img[int(self.img.shape[0] * lower):int(self.img.shape[0] * upper) + 1,
-          int(self.img.shape[1] * lower):int(self.img.shape[1] * upper) + 1, :]
-        return self.cropped
+                       int(self.img.shape[1] * lower):int(self.img.shape[1] * upper) + 1, :]
 
-    def yellow(self, image):
+    def yellow(self, image, lowsize= 100):
         minBGR = np.array((0, 133, 225))
         maxBGR = np.array((122, 255, 255))
         maskBGR = cv2.inRange(image, minBGR, maxBGR)
+        #if lowsize == 0:
         self.seg = cv2.bitwise_and(image, image, mask=maskBGR)
-        return self.seg
 
-    def blobelimination(self, lowsize=100):
-        'blob detection with variing size'
-        for d in range(self.seg.shape[-1]):
-            nb_components, output, stats, centroids = cv2.connectedComponentsWithStats(self.seg[:, :, d], connectivity=8)
+        #else:
+        if True:
+        #blob dectection including sizes
+            nb_components, output, stats, centroids = cv2.connectedComponentsWithStats(maskBGR, connectivity=8)
             sizes = stats[1:, -1]
             nb_components = nb_components - 1
-            min_size = lowsize
-            mask = np.zeros((self.seg.shape[-3], self.seg.shape[-2], self.seg.shape[-1]))
+            mask = np.zeros((maskBGR.shape), dtype='uint8')
             for i in range(0, nb_components):
-                if sizes[i] >= min_size:
-                    mask[output == i + 1, d] = 255
+                if sizes[i] >= lowsize:
+                    mask[output == i + 1] = 255
+            self.blob = cv2.bitwise_and(image, image, mask=mask)
+            return self.blob
 
-        # flatten to keep all the values
-        out_sum = mask[:, :, 0] + mask[:, :, 1] + mask[:, :, 2]
-        # stack array again in 3-Dimensions to keep shape
-        out_stack = np.stack((out_sum, out_sum, out_sum), axis=-1)
-        # make 3-D mask
-        sum_mask = np.ma.make_mask(out_stack, shrink=False)
-        # make a masked array
-        self.blob = np.copy(self.cropped)
-        self.blob = np.ma.array(self.blob, mask=sum_mask)
-        # put inverse of mask to 0
-        self.blob[~self.blob.mask] = 0
-        return self.blob
-
-    def filter(self, percent, lowsize):
+    def filter(self, percent=50, lowsize=100):
         self.crop(percent)
-        self.yellow(self.cropped)
-        self.blobelimination(lowsize)
-
-
-    # def __repr__(self):
-    #     #print ("Data.open(path)")
-    #     pass
-    #
-    # def __str__(self):
-    #     pass
-
-
-
-
+        self.yellow(self.cropped, lowsize)
+        #self.blobelimination(lowsize)
 
 
 if __name__ == "__main__":
     path = "/home/rio/Dokumente/Uni/project/DSC01506.JPG"
     test = Data(path)
-    #import timeit
-
-    #%timeit test.filter(percent=40, lowsize=140)
+    test.filter()
 
     import matplotlib.pyplot as plt
 

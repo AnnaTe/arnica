@@ -17,7 +17,7 @@
    </sizepolicy>
   </property>
   <property name="windowTitle">
-   <string>MainWindow</string>
+   <string>Flower Segmentation Tool</string>
   </property>
   <widget class="QWidget" name="centralwidget">
    <property name="sizePolicy">
@@ -34,6 +34,11 @@
       <width>1101</width>
       <height>801</height>
      </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Arial</family>
+     </font>
     </property>
     <property name="currentIndex">
      <number>1</number>
@@ -54,6 +59,11 @@
       <layout class="QHBoxLayout" name="horizontalLayout">
        <item>
         <widget class="QLineEdit" name="lineEditImage">
+         <property name="font">
+          <font>
+           <family>Arial</family>
+          </font>
+         </property>
          <property name="placeholderText">
           <string>/home/rio/Dokumente/Uni/Bachelorarbeit/arnika/Project/output/IMAGE</string>
          </property>
@@ -61,8 +71,13 @@
        </item>
        <item>
         <widget class="QPushButton" name="pbImageOpen">
+         <property name="font">
+          <font>
+           <family>Arial</family>
+          </font>
+         </property>
          <property name="text">
-          <string>Open</string>
+          <string>Show</string>
          </property>
         </widget>
        </item>
@@ -90,161 +105,189 @@
        </item>
       </layout>
      </widget>
-     <widget class="QWidget" name="horizontalLayoutWidget_3">
-      <property name="geometry">
-       <rect>
-        <x>10</x>
-        <y>60</y>
-        <width>211</width>
-        <height>71</height>
-       </rect>
-      </property>
-      <layout class="QHBoxLayout" name="horizontalLayout_3">
-       <item>
-        <widget class="QLabel" name="label">
-         <property name="text">
-          <string>Image Size in %</string>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QSpinBox" name="sbCrop">
-         <property name="maximumSize">
-          <size>
-           <width>85</width>
-           <height>16777215</height>
-          </size>
-         </property>
-         <property name="maximum">
-          <number>100</number>
-         </property>
-         <property name="singleStep">
-          <number>10</number>
-         </property>
-         <property name="value">
-          <number>50</number>
-         </property>
-        </widget>
-       </item>
-      </layout>
-     </widget>
-     <widget class="QWidget" name="horizontalLayoutWidget_4">
-      <property name="geometry">
-       <rect>
-        <x>10</x>
-        <y>190</y>
-        <width>211</width>
-        <height>80</height>
-       </rect>
-      </property>
-      <layout class="QHBoxLayout" name="horizontalLayout_4">
-       <item>
-        <widget class="QLabel" name="label_2">
-         <property name="text">
-          <string>Min Flower Size</string>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QSpinBox" name="sbBlob">
-         <property name="maximumSize">
-          <size>
-           <width>85</width>
-           <height>16777215</height>
-          </size>
-         </property>
-         <property name="maximum">
-          <number>150</number>
-         </property>
-         <property name="singleStep">
-          <number>10</number>
-         </property>
-        </widget>
-       </item>
-      </layout>
-     </widget>
-     <widget class="QWidget" name="horizontalLayoutWidget_5">
-      <property name="geometry">
-       <rect>
-        <x>10</x>
-        <y>280</y>
-        <width>211</width>
-        <height>26</height>
-       </rect>
-      </property>
-      <layout class="QHBoxLayout" name="horizontalLayout_5">
-       <item>
-        <widget class="QCheckBox" name="cbDead">
-         <property name="text">
-          <string>show dead flowers</string>
-         </property>
-        </widget>
-       </item>
-      </layout>
-     </widget>
-     <widget class="QWidget" name="horizontalLayoutWidget_6">
-      <property name="geometry">
-       <rect>
-        <x>30</x>
-        <y>350</y>
-        <width>192</width>
-        <height>80</height>
-       </rect>
-      </property>
-      <layout class="QHBoxLayout" name="horizontalLayout_6">
-       <item>
-        <widget class="QPushButton" name="pbExport">
-         <property name="text">
-          <string>Export</string>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QPushButton" name="pbUpdate">
-         <property name="text">
-          <string>Update</string>
-         </property>
-        </widget>
-       </item>
-      </layout>
-     </widget>
-     <widget class="QWidget" name="horizontalLayoutWidget_9">
-      <property name="geometry">
-       <rect>
-        <x>10</x>
-        <y>119</y>
-        <width>212</width>
-        <height>81</height>
-       </rect>
-      </property>
-      <layout class="QHBoxLayout" name="horizontalLayout_9">
-       <item>
-        <widget class="QCheckBox" name="cbYellow">
-         <property name="text">
-          <string>yellow segmentation</string>
-         </property>
-        </widget>
-       </item>
-      </layout>
-     </widget>
-     <widget class="QLabel" name="labelerror">
+     <widget class="QWidget" name="verticalLayoutWidget">
       <property name="geometry">
        <rect>
         <x>20</x>
-        <y>580</y>
+        <y>60</y>
         <width>191</width>
-        <height>141</height>
+        <height>251</height>
        </rect>
       </property>
-      <property name="frameShape">
-       <enum>QFrame::StyledPanel</enum>
-      </property>
-      <property name="frameShadow">
-       <enum>QFrame::Plain</enum>
-      </property>
-      <property name="text">
-       <string/>
-      </property>
+      <layout class="QVBoxLayout" name="verticalLayout">
+       <item>
+        <widget class="QLabel" name="label_3">
+         <property name="font">
+          <font>
+           <family>Arial</family>
+           <pointsize>11</pointsize>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="autoFillBackground">
+          <bool>true</bool>
+         </property>
+         <property name="frameShape">
+          <enum>QFrame::StyledPanel</enum>
+         </property>
+         <property name="text">
+          <string>Crop Image</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout_3">
+         <item>
+          <widget class="QLabel" name="label">
+           <property name="font">
+            <font>
+             <family>Arial</family>
+            </font>
+           </property>
+           <property name="text">
+            <string>Image Size in %</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QSpinBox" name="sbCrop">
+           <property name="maximumSize">
+            <size>
+             <width>85</width>
+             <height>16777215</height>
+            </size>
+           </property>
+           <property name="maximum">
+            <number>100</number>
+           </property>
+           <property name="singleStep">
+            <number>10</number>
+           </property>
+           <property name="value">
+            <number>50</number>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_11">
+         <property name="font">
+          <font>
+           <family>Arial</family>
+           <pointsize>11</pointsize>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="autoFillBackground">
+          <bool>true</bool>
+         </property>
+         <property name="frameShape">
+          <enum>QFrame::StyledPanel</enum>
+         </property>
+         <property name="frameShadow">
+          <enum>QFrame::Plain</enum>
+         </property>
+         <property name="text">
+          <string>Flower Detection</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout_9">
+         <item>
+          <widget class="QCheckBox" name="cbYellow">
+           <property name="font">
+            <font>
+             <family>Arial</family>
+            </font>
+           </property>
+           <property name="text">
+            <string>yellow segmentation</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout_4">
+         <item>
+          <widget class="QLabel" name="label_2">
+           <property name="font">
+            <font>
+             <family>Arial</family>
+            </font>
+           </property>
+           <property name="text">
+            <string>Min Flower Size</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QSpinBox" name="sbBlob">
+           <property name="maximumSize">
+            <size>
+             <width>85</width>
+             <height>16777215</height>
+            </size>
+           </property>
+           <property name="maximum">
+            <number>150</number>
+           </property>
+           <property name="singleStep">
+            <number>10</number>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout_5">
+         <item>
+          <widget class="QCheckBox" name="cbDead">
+           <property name="font">
+            <font>
+             <family>Arial</family>
+            </font>
+           </property>
+           <property name="text">
+            <string>show dead flowers</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout_6">
+         <item>
+          <widget class="QPushButton" name="pbExport">
+           <property name="font">
+            <font>
+             <family>Arial</family>
+            </font>
+           </property>
+           <property name="text">
+            <string>Export</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="pbUpdate">
+           <property name="font">
+            <font>
+             <family>Arial</family>
+            </font>
+           </property>
+           <property name="text">
+            <string>Update</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+      </layout>
      </widget>
     </widget>
     <widget class="QWidget" name="tab_directory">
@@ -485,6 +528,32 @@
        <string>Run</string>
       </property>
      </widget>
+     <widget class="QWidget" name="horizontalLayoutWidget_3">
+      <property name="geometry">
+       <rect>
+        <x>270</x>
+        <y>530</y>
+        <width>551</width>
+        <height>80</height>
+       </rect>
+      </property>
+      <layout class="QHBoxLayout" name="horizontalLayout_14">
+       <item>
+        <widget class="QLabel" name="label_10">
+         <property name="text">
+          <string>Progress:</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QProgressBar" name="progressBar">
+         <property name="value">
+          <number>24</number>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
     </widget>
    </widget>
   </widget>
@@ -498,17 +567,16 @@
     </rect>
    </property>
    <widget class="QMenu" name="menuFile">
+    <property name="font">
+     <font>
+      <family>Arial</family>
+     </font>
+    </property>
     <property name="title">
      <string>File</string>
     </property>
-    <widget class="QMenu" name="menuOpen">
-     <property name="title">
-      <string>Open</string>
-     </property>
-     <addaction name="actionSingle"/>
-     <addaction name="actionDirectory"/>
-    </widget>
-    <addaction name="menuOpen"/>
+    <addaction name="actionSingle"/>
+    <addaction name="actionDirectory"/>
     <addaction name="actionClose"/>
    </widget>
    <addaction name="menuFile"/>
@@ -516,17 +584,32 @@
   <widget class="QStatusBar" name="statusbar"/>
   <action name="actionDirectory">
    <property name="text">
-    <string>from Directory</string>
+    <string>Open Folder</string>
+   </property>
+   <property name="font">
+    <font>
+     <family>Arial</family>
+    </font>
    </property>
   </action>
   <action name="actionClose">
    <property name="text">
     <string>Close</string>
    </property>
+   <property name="font">
+    <font>
+     <family>Arial</family>
+    </font>
+   </property>
   </action>
   <action name="actionSingle">
    <property name="text">
-    <string>single Image</string>
+    <string>Open Image</string>
+   </property>
+   <property name="font">
+    <font>
+     <family>Arial</family>
+    </font>
    </property>
   </action>
  </widget>

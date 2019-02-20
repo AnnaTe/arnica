@@ -17,25 +17,25 @@ class Data:
         lower = (50 - (percent / 2)) / 100
         upper = (50 + (percent / 2)) / 100
         self.cropped = self.img[int(self.img.shape[0] * lower):int(self.img.shape[0] * upper) + 1,
-                       int(self.img.shape[1] * lower):int(self.img.shape[1] * upper) + 1, :]
+          int(self.img.shape[1] * lower):int(self.img.shape[1] * upper) + 1, :]
+        return self.cropped
 
     def crop2(self, percent=50):
-        lower = (int(((50 - (percent / 2)) / 100)* self.img.shape[0]),
-                 int(((50 - (percent / 2)) / 100)* self.img.shape[1]))
-        upper = (int(((50 + (percent / 2)) / 100)* self.img.shape[0]),
-                 int(((50 + (percent / 2)) / 100)* self.img.shape[1]))
+        lower = (int(((50 - (percent / 2)) / 100) * self.img.shape[0]),
+                 int(((50 - (percent / 2)) / 100) * self.img.shape[1]))
+        upper = (int(((50 + (percent / 2)) / 100) * self.img.shape[0]),
+                 int(((50 + (percent / 2)) / 100) * self.img.shape[1]))
         self.cropped = self.img[lower[0]:upper[0] + 1, lower[1]:upper[1] + 1, :]
 
-    def yellow(self, image, lowsize= 100):
+    def yellow(self, image):
         minBGR = np.array((0, 133, 225))
         maxBGR = np.array((122, 255, 255))
         maskBGR = cv2.inRange(image, minBGR, maxBGR)
-        maskBGR = np.invert(maskBGR == False)
-'hier weitermachen!!'
-        if lowsize == 0:
-            self.seg = cv2.bitwise_and(image, image, mask=maskBGR)
+        self.seg = cv2.bitwise_and(image, image, mask=maskBGR)
+        return self.seg
 
-    #blob dectection including sizes
+    def blobelimination(self, lowsize=100):
+        'blob detection with variing size'
         for d in range(self.seg.shape[-1]):
             nb_components, output, stats, centroids = cv2.connectedComponentsWithStats(self.seg[:, :, d], connectivity=8)
             sizes = stats[1:, -1]
@@ -53,12 +53,13 @@ class Data:
         # make 3-D mask
         sum_mask = np.ma.make_mask(out_stack, shrink=False)
         # make a masked array
-        self.blob = np.copy(self.seg)
+        self.blob = np.copy(self.cropped)
         self.blob = np.ma.array(self.blob, mask=sum_mask)
         # put inverse of mask to 0
         self.blob[~self.blob.mask] = 0
+        return self.blob
 
-    def filter(self, percent=50, lowsize=100):
+    def filter(self, percent, lowsize):
         self.crop(percent)
         self.yellow(self.cropped)
         self.blobelimination(lowsize)
