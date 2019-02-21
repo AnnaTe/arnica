@@ -269,7 +269,7 @@ class Ui_MainWindow(object):
         self.label_10.setObjectName("label_10")
         self.horizontalLayout_14.addWidget(self.label_10)
         self.progressBar = QtWidgets.QProgressBar(self.horizontalLayoutWidget_3)
-        self.progressBar.setProperty("value", 24)
+        self.progressBar.setProperty("value", 0)
         self.progressBar.setObjectName("progressBar")
         self.horizontalLayout_14.addWidget(self.progressBar)
         self.tabWidget.addTab(self.tab_directory, "")

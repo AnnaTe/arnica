@@ -87,21 +87,36 @@ class DesignerMainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
             self.plot(a.cropped)
 
     def export_image(self):
-        pass
+        a = self.parse_file(self.lineEditImage.text())
 
+        # collect values from user input
+        percent= self.sbCrop.value()
+        lowsize = self.sbBlob.value()
+
+        saveas = QtWidgets.QFileDialog.getSaveFileName(self, 'Save as')[0]
+
+        if self.cbYellow.isChecked() == True:
+            # apply filter
+            a.filter(percent, lowsize)
+            # plot result
+            cv2.imwrite(saveas, a.blob)
+        else:
+            a.crop(percent)
+            cv2.imwrite(saveas, a.cropped)
 
 
     def run_export(self):
         # list of images
-        path = self.lineEditDirIn.text() + '*.JPG'
+        path = self.lineEditDirIn.text() + '/*.*'
         paths = glob.glob(path)
 
         # create output directory if necessary
-        try:
-            os.makedirs(self.lineEditDirOut.text())
-        except OSError as e:
-            if e.errno != errno.EEXIST:
-                raise
+        outputdir = self.lineEditDirOut.text() + '/'
+        os.makedirs(outputdir, exist_ok= True)
+
+        # set value of progressbar
+        self.completed = 0
+        self.total = len(paths)
 
         # collect values from user input
         percent = self.sbCropDir.value()
@@ -111,19 +126,21 @@ class DesignerMainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
             for imagepath in paths:
                 a = self.parse_file(imagepath)
                 a.filter(percent, lowsize)
-
-                # outpath
-                # cv2.imwrite(a.blob)
+                outpath = outputdir + a.name + 'seg' + str(lowsize) + '.png'
+                cv2.imwrite(outpath, a.blob)
+                if self.completed < 100:
+                    self.completed += 100/self.total
+                    self.progressBar.setValue(self.completed)
         else:
             for imagepath in paths:
                 a = self.parse_file(imagepath)
-
                 a.crop(percent)
-
-                # outpath
-                # cv2.imwrite(a.blob)
+                outpath = outputdir+ a.name + 'crop' + str(percent) + '.png'
+                cv2.imwrite(outpath, a.cropped)
+                if self.completed < 100:
+                    self.completed += 100/self.total
+                    self.progressBar.setValue(self.completed)
         # ...same for deadflowers checkbox
-
 
 
 

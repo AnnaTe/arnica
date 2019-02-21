@@ -7,6 +7,8 @@ class Data:
         self.cropped = np.copy(self.img)
         self.seg = np.copy(self.cropped)
         self.blob = np.copy(self.cropped)
+        self.path = path
+        self.name = self.path.split('/')[-1].split('.')[0]
 
     @staticmethod
     def _open(path):
