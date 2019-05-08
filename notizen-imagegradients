@@ -1,0 +1,16 @@
+image gradients
+
+
+
+DoG = Difference of Gaussian 
+
+Zeigt "lokale Maxima" an, also nicht die großen Edges sondern kleine Farb- und Hell/Dunkel-Unterschiede. dafür werden zwei Gaussian blur mit unterschiedlichen sigma grad subtrahiert. 
+
+-> kann man auch als Histogramme schön darstellen
+
+
+Laplace difference so wie gaussian probieren?
+
+
+
+wie kreigt ich es hin, anzuzeigen wo der blob einen blauwert = 0 hat. aber nur der blob?

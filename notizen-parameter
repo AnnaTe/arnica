@@ -1,0 +1,13 @@
+x-Achse logaritmiert
+Normalize? -> verschiebt nur die Daten zwischen 0 und 1
+anderes Bild ausprobieren
+große Werte rausschmeißen?
+
+
+
+dark dead flowers:
+
+von einem blob die pixel mehrheit in range minBGR-maxBGR??
+
+for
+	bgr[blob] is
