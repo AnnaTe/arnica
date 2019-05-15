@@ -219,4 +219,32 @@
   pages   = {476--481},
 }
 
+@Article{Watts2012,
+  author  = {Watts, Adam C. and Ambrosia, Vincent G. and Hinkley, Everett A.},
+  title   = {Unmanned Aircraft Systems in Remote Sensing and Scientific Research: Classification and Considerations of Use},
+  journal = {Remote Sensing},
+  year    = {2012},
+  volume  = {4},
+}
+
+@Electronic{QSGH2019,
+  author       = {{Quantum-Systems GmbH}},
+  month        = may,
+  year         = {2019},
+  title        = {Trinity F9},
+  language     = {english},
+  organization = {{Quantum-Systems GmbH}},
+  url          = {https://www.quantum-systems.com/trinity-f9/},
+}
+
+@Electronic{WingtraAG2019,
+  author       = {{Wingtra AG}},
+  month        = may,
+  year         = {2019},
+  title        = {WingtraOne Technical Specification},
+  language     = {english},
+  organization = {Wingtra AG},
+  url          = {https://wingtra.b-cdn.net/wp-content/uploads/Wingtra-Technical-Specifications.pdf},
+}
+
 @Comment{jabref-meta: databaseType:bibtex;}

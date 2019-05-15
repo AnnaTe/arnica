@@ -1,5 +1,11 @@
 TODO:
 
+- Bilder raussuchen für Screenshots der GUI
+- Stichprobe nehmen, vllt 5 Bilder pro flug und dann sehr nach ran zoomen, also nicht 50% sondern 80% Crop und plotten, zählen, wie viele erkannt? wie viele kleine Blumen raus sortiert? mit vorgeschlagenem Parameter? mit anderem Parameter (STD) ?
+
+ raussuchen für eine quanti- und qualitative Analyse mit fancy Grafiken
+
+
 LATEX:
 - fancy Header 
 - Farben der Links ändern
@@ -8,15 +14,19 @@ LATEX:
 
 
 PYTHON:
+- Code checken ob bei Folder alles genauso läuft wie bei single Image
+- 
 - Kommentierung 
 - PEP 8 -> pylind
 - Anmerkungen von Weinacker einarbeiten (v.A. Parameter aus Bilddaten vorschlagen)
 - Modulvorraussetzungen und Fehlermeldungen programmieren
 - Struktur ändern -> app.py nur indirekt durch main.py ausführen
-- circle in gui verknüpfen und auch für "dead flowers" übertragen
-- Blumen im Schatten werden nicht erkannt
+- "dead flowers" übertragen
+
 
 
 - Softwaretests -> Debugging
+
+
 
 

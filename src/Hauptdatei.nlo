@@ -15,3 +15,7 @@
 \nomenclatureentry{aUAS@[{UAS}]\begingroup Unmanned Aircraft Systems\nomeqref {0}|nompageref}{6}
 \nomenclatureentry{aDOM@[{DOM}]\begingroup Digitales Oberflächenmodell\nomeqref {0}|nompageref}{6}
 \nomenclatureentry{aDGM@[{DGM}]\begingroup Digitales Geländemodell\nomeqref {0}|nompageref}{6}
+\nomenclatureentry{aGNSS@[{GNSS}]\begingroup Globales Navigationssatellitensystem\nomeqref {0}|nompageref}{6}
+\nomenclatureentry{aRTK@[{RTK}]\begingroup real-time kinematics\nomeqref {0}|nompageref}{6}
+\nomenclatureentry{aPPK@[{PPK}]\begingroup post-processing kinematics\nomeqref {0}|nompageref}{6}
+\nomenclatureentry{aGUI@[{GUI}]\begingroup graphische Benutzeroberfläche\nomeqref {0}|nompageref}{6}

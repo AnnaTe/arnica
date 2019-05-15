@@ -1,4 +1,14 @@
 This is makeindex, version 2.15 [TeX Live 2016] (kpathsea + Thai support).
-Scanning input file Hauptdatei.idx...done (0 entries accepted, 0 rejected).
-Nothing written in Hauptdatei.ind.
+Scanning style file ./latex_einstellungen/abkuezungen/nomencl.ist.......
+** Input style error (file = ./latex_einstellungen/abkuezungen/nomencl.ist, line = 70):
+   -- Unknown specifier lethead_prefix.
+** Input style error (file = ./latex_einstellungen/abkuezungen/nomencl.ist, line = 71):
+   -- Unknown specifier lethead_suffix.
+** Input style error (file = ./latex_einstellungen/abkuezungen/nomencl.ist, line = 72):
+   -- Unknown specifier lethead_flag.
+...done (10 attributes redefined, 3 ignored).
+Scanning input file Hauptdatei.nlo....done (21 entries accepted, 0 rejected).
+Sorting entries....done (94 comparisons).
+Generating output file Hauptdatei.nls....done (47 lines written, 0 warnings).
+Output written in Hauptdatei.nls.
 Transcript written in Hauptdatei.ilg.
