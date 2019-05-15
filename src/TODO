@@ -1,0 +1,28 @@
+TODO:
+
+LATEX:
+- fancy Header 
+- Farben der Links ändern
+- Punktierung der Quellenangaben ändern
+- Formatierung des Literaturverzeichnisses
+
+
+PYTHON:
+- Kommentierung 
+- PEP 8 -> pylind
+- Anmerkungen von Weinacker einarbeiten (v.A. Parameter aus Bilddaten vorschlagen)
+- Modulvorraussetzungen und Fehlermeldungen programmieren
+- Struktur ändern -> app.py nur indirekt durch main.py ausführen
+- circle in gui verknüpfen und auch für "dead flowers" übertragen
+- Blumen im Schatten werden nicht erkannt
+
+
+- Softwaretests -> Debugging
+
+
+
+- Dienstags Signal Gruppe zusammen fassen!
+
+15.05.2019, Belarus Soli-VoKü auf den Flyer
+
+

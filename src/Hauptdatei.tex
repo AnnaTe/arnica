@@ -1,0 +1,283 @@
+% allgem. Dokumentenformat
+\documentclass[a4paper,12pt,headsepline]{scrartcl}
+\input{latex_einstellungen/variablen}
+
+\usepackage{todonotes}
+
+% weitere Pakete
+% Grafiken aus PNG Dateien einbinden
+\usepackage{graphicx}
+\usepackage{subfigure}
+
+% Deutsche Sonderzeichen benutzen 
+\usepackage{ngerman}
+
+% deutsche Silbentrennung
+\usepackage[ngerman]{babel}
+
+% Eurozeichen einbinden
+%\usepackage[right]{eurosym}
+
+% Umlaute unter UTF8 nutzen
+\usepackage[utf8]{inputenc}
+
+% Zeichenencoding
+\usepackage[T1]{fontenc}
+
+% \usepackage{lmodern}
+\usepackage{fix-cm}
+
+% floatende Bilder ermöglichen
+%\usepackage{floatflt}
+
+% mehrseitige Tabellen ermöglichen
+\usepackage{longtable}
+%\usepackage{tabularx}
+
+% Unterstützung für Schriftarten
+%\newcommand{\changefont}[3]{ 
+%\fontfamily{#1} \fontseries{#2} \fontshape{#3} \selectfont}
+\usepackage{mathptmx} % Hier steckt Times drin
+\usepackage[scaled]{helvet}
+\usepackage{courier}
+
+% Packet für Seitenrandabständex und Einstellung für Seitenränder
+\usepackage{geometry}
+\geometry{left=3.5cm, right=2cm, top=2.5cm, bottom=2cm}
+
+% Paket für Boxen im Text
+\usepackage{fancybox}
+
+% bricht lange URLs "schoen" um
+\usepackage[hyphens,obeyspaces,spaces]{url}
+
+% Paket für Textfarben
+\usepackage{color}
+
+% Mathematische Symbole importieren
+\usepackage{amssymb}
+
+% auf jeder Seite eine Überschrift (alt, zentriert)
+%\pagestyle{headings}
+
+% erzeugt Inhaltsverzeichnis mit Querverweisen zu den Kapiteln (PDF Version)
+\usepackage[bookmarksnumbered,pdftitle={\titleDocument},hyperfootnotes=false]{hyperref} 
+%\hypersetup{colorlinks, citecolor=red, linkcolor=blue, urlcolor=black}
+%\hypersetup{colorlinks, citecolor=black, linkcolor= black, urlcolor=black}
+
+%% neue Kopfzeilen mit fancypaket
+%\usepackage{fancyhdr} %Paket laden
+%\pagestyle{fancy} %eigener Seitenstil
+%\fancyhf{} %alle Kopf- und Fußzeilenfelder bereinigen
+%\fancyhead[L]{\nouppercase{\leftmark}} %Kopfzeile links
+%\fancyhead[C]{} %zentrierte Kopfzeile
+%\fancyhead[R]{\thepage} %Kopfzeile rechts
+%\renewcommand{\headrulewidth}{0.4pt} %obere Trennlinie
+%%\fancyfoot[C]{\thepage} %Seitennummer
+%%\renewcommand{\footrulewidth}{0.4pt} %untere Trennlinie
+
+% für Tabellen
+\usepackage{array}
+
+% Runde Klammern für Zitate
+\usepackage[authoryear,round]{natbib}
+
+% Festlegung Art der Zitierung - Havardmethode: Abkuerzung Autor + Jahr
+\bibliographystyle{plainnat}
+\setcitestyle{notesep={: }, yysep={,}}
+% Schaltet den zusätzlichen Zwischenraum ab, den LaTeX normalerweise nach einem Satzzeichen einfügt.
+\frenchspacing
+
+% Paket für Zeilenabstand
+\usepackage{setspace}
+
+% für Bildbezeichner
+\usepackage{capt-of}
+
+% für Stichwortverzeichnis
+\usepackage{makeidx}
+
+% für Listings
+\usepackage{listings}
+\lstset{numbers=left, numberstyle=\tiny, numbersep=5pt, keywordstyle=\color{black}\bfseries, stringstyle=\ttfamily,showstringspaces=false,basicstyle=\footnotesize,captionpos=b}
+\lstset{language=java}
+
+% Indexerstellung
+\makeindex
+
+% Abkürzungsverzeichnis
+\usepackage[german]{nomencl}
+\let\abbrev\nomenclature
+
+% Abkürzungsverzeichnis LiveTex Version
+\renewcommand{\nomname}{Abkürzungsverzeichnis}
+\setlength{\nomlabelwidth}{.25\hsize}
+\renewcommand{\nomlabel}[1]{#1 \dotfill}
+\setlength{\nomitemsep}{-\parsep}
+\makenomenclature
+%\makeglossary
+
+% Abkürzungsverzeichnis TeTEX Version
+% \usepackage[german]{nomencl}
+% \makenomenclature
+% %\makeglossary
+% \renewcommand{\nomname}{Abkürzungsverzeichnis}
+% \setlength{\nomlabelwidth}{.25\hsize}
+% \renewcommand{\nomlabel}[1]{#1 \dotfill}
+% \setlength{\nomitemsep}{-\parsep}
+
+% Disable single lines at the start of a paragraph (Schusterjungen)
+\clubpenalty = 10000
+% Disable single lines at the end of a paragraph (Hurenkinder)
+\widowpenalty = 10000
+\displaywidowpenalty = 10000
+
+\begin{document}
+% hier werden die Trennvorschläge inkludiert
+\input{latex_einstellungen/trennung}
+
+
+%Schriftart Helvetica
+%\changefont{phv}{m}{n}
+
+% Leere Seite am Anfang
+\newpage
+\thispagestyle{empty} % erzeugt Seite ohne Kopf- / Fusszeile
+\section*{ }
+
+% Titelseite %
+\input{latex_einstellungen/deckblatt}
+
+% römische Numerierung
+%\pagenumbering{arabic}
+
+% 1.5 facher Zeilenabstand
+\onehalfspacing
+
+% Sperrvermerk
+%\input{sperrvermerk}
+
+% Einleitung / Abstract
+\include{abstract}
+
+% einfacher Zeilenabstand
+\singlespacing
+
+% Inhaltsverzeichnis anzeigen
+\newpage
+\tableofcontents
+
+% das Abbildungsverzeichnis
+\newpage
+% Abbildungsverzeichnis soll im Inhaltsverzeichnis auftauchen
+\addcontentsline{toc}{section}{Abbildungsverzeichnis}
+% Abbildungsverzeichnis endgueltig anzeigen
+\listoffigures
+
+% das Tabellenverzeichnis
+\newpage
+% Abbildungsverzeichnis soll im Inhaltsverzeichnis auftauchen
+\addcontentsline{toc}{section}{Tabellenverzeichnis}
+% \fancyhead[L]{Abbildungsverzeichnis / Abkürzungsverzeichnis} %Kopfzeile links
+% Abbildungsverzeichnis endgueltig anzeigen
+\listoftables
+
+%% WORKAROUND für Listings
+%\makeatletter% --> De-TeX-FAQ
+%\renewcommand*{\lstlistoflistings}{%
+%  \begingroup
+%    \if@twocolumn
+%      \@restonecoltrue\onecolumn
+%    \else
+%      \@restonecolfalse
+%    \fi
+%    \lol@heading
+%    \setlength{\parskip}{\z@}%
+%    \setlength{\parindent}{\z@}%
+%    \setlength{\parfillskip}{\z@ \@plus 1fil}%
+%    \@starttoc{lol}%
+%    \if@restonecol\twocolumn\fi
+%  \endgroup
+%}
+%\makeatother% --> \makeatletter
+% das Listingverzeichnis
+%\newpage
+% Listingverzeichnis soll im Inhaltsverzeichnis auftauchen
+\addcontentsline{toc}{section}{Listingverzeichnis}
+%\fancyhead[L]{Abbildungs- / Tabellen- / Listingverzeichnis} %Kopfzeile links
+\renewcommand{\lstlistlistingname}{Listingverzeichnis}
+\lstlistoflistings
+%%%%
+
+% das Abkürzungsverzeichnis
+\newpage
+% Abkürzungsverzeichnis soll im Inhaltsverzeichnis auftauchen
+\addcontentsline{toc}{section}{Abkürzungsverzeichnis}
+% das Abkürzungsverzeichnis entgültige Ausgeben
+%\fancyhead[L]{Abkürzungsverzeichnis} %Kopfzeile links
+\input{latex_einstellungen/abkuezungen/abkuerzungen}
+\printnomenclature
+
+% Definiert Stegbreite bei zweispaltigem Layout
+\setlength{\columnsep}{25pt}
+
+%%%%%%% EINLEITUNG %%%%%%%%%%%%
+%\twocolumn
+\newpage
+%\fancyhead[L]{\nouppercase{\leftmark}} %Kopfzeile links
+
+% 1,5 facher Zeilenabstand
+\onehalfspacing
+
+% einzelne Kapitel
+\input{1_einleitung}
+\newpage
+\input{2_Arnika}
+\input{3_Projekt}
+\newpage
+\input{4_Programm}
+\newpage
+\input{5_Ergebnisse}
+\newpage
+%\input{7_Diskussion}
+\newpage
+
+\input{8_fazit}
+
+%\input{beispiel}
+
+\onecolumn
+% einfacher Zeilenabstand
+\singlespacing
+% Literaturliste soll im Inhaltsverzeichnis auftauchen
+\newpage
+\addcontentsline{toc}{section}{Literaturverzeichnis}
+% Literaturverzeichnis anzeigen
+\renewcommand\refname{Literaturverzeichnis}
+\bibliography{jabbib}
+
+%% Index soll Stichwortverzeichnis heissen
+% \newpage
+% % Stichwortverzeichnis soll im Inhaltsverzeichnis auftauchen
+% \addcontentsline{toc}{section}{Stichwortverzeichnis}
+% \renewcommand{\indexname}{Stichwortverzeichnis}
+% % Stichwortverzeichnis endgueltig anzeigen
+% \printindex
+
+\onehalfspacing
+% evtl. Anhang
+\newpage
+\addcontentsline{toc}{section}{Anhang}
+%\fancyhead[L]{Anhang} %Kopfzeile links
+\input{anhang/anhang}
+
+% Eidesstattliche Erklärung
+\addcontentsline{toc}{section}{Eidesstattliche Erklärung}
+\include{erklaerung}
+
+% leere Abschlussseite
+\newpage
+\thispagestyle{empty} % erzeugt Seite ohne Kopf- / Fusszeile
+\section*{ }
+
+\end{document}

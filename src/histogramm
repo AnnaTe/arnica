@@ -1,0 +1,3 @@
+histogramm: von 0-256 zeigt die menge an Pixeln, die einen Wert 0-256 haben.
+
+oder umwandeln in HSV Farbraum: Hue = Farbwert, Saturation = Sättigung, V

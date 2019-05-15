@@ -1,0 +1,222 @@
+% Encoding: UTF-8
+
+@Book{Wyk2015,
+  title     = {Handbuch der Arzneipflanzen: ein Bildatlas},
+  publisher = {Wissenschaftliche Verlagsgesellschaft Stuttgart},
+  year      = {2015},
+  author    = {van Wyk, Prof. Dr. Ben-Erik and Wink, Dr. Coralie and Wink, Prof. Dr. Michael},
+  address   = {Stuttgart},
+  edition   = {3.},
+  note      = {Seite: 62},
+}
+
+@Book{Schoenfelder2015,
+  title     = {Der Kosmos-Heilpflanzenführer: über 600 Heil- und Giftpflanzen Europas},
+  publisher = {Kosmos},
+  year      = {2015},
+  author    = {Schönfelder, Ingrid und Peter},
+}
+
+@Book{RL2018,
+  title     = {Rote Liste gefährdeter Tiere, Pflanzen und Pilze Deutschlands Band 7: Pflanzen},
+  publisher = {Bundesamt für Naturschutz (BfN)},
+  year      = {2018},
+  author    = {BfN},
+  address   = {Bonn - Bad Godesberg},
+}
+
+@Book{Prentner2017,
+  title     = {Heilpflanzen der Traditionellen Europäischen Medizin},
+  publisher = {Springer},
+  year      = {2017},
+  author    = {Prentner, Angelika},
+  address   = {Berlin},
+}
+
+@Booklet{FNR2013,
+  title     = {Arzneipflanzen : Anbau und Nutzen},
+  author    = {FNR},
+  address   = {Gülzow},
+  year      = {2013},
+  editor    = {Wenig, Barbara},
+  publisher = {Fachagentur Nachwachsender Rohstoffe e.V.},
+}
+
+@Book{Schrott2012,
+  title     = {Heilpflanzen der ayurvedischen und der westlichen Medizin},
+  publisher = {Springer-Verlag},
+  year      = {2012},
+  author    = {Schrott, Ernst and Ammon, Hermann Philipp Theodor},
+  address   = {Berlin, Heidelberg},
+}
+
+@Book{Roth2012,
+  title     = {Giftpflanzen Pflanzengifte : Vorkommen, Wirkung, Therapie, allergische und phototoxische Reaktionen},
+  publisher = {Nikol},
+  year      = {2012},
+  author    = {Roth, Lutz [Hrsg.] and Daunderer, Max (1943-2013) and Kormann, Kurt},
+  address   = {Hamburg},
+  note      = {S},
+}
+
+@Book{Sommer2011,
+  title     = {Heilpflanzen: Ihr Wesen Ihre Wirkung Ihre Anwendung},
+  publisher = {aethera},
+  year      = {2011},
+  author    = {Sommer, Markus},
+  address   = {Stuttgart},
+}
+
+@Book{Schoenfelder2011,
+  title     = {Das neue {Handbuch} der {Heilpflanzen} : {Botanik}, {Arzneidrogen}, {Wirkstoffe}, {Anwendungen}},
+  publisher = {Kosmos},
+  year      = {2011},
+  author    = {Schönfelder, Ingrid und Peter},
+  address   = {Stuttgart},
+  note      = {Seiten: 73-74},
+}
+
+@Book{Bingen2007,
+  title     = {Das Buch von den Pflanzen / Hildegard von Bingen. Nach den Quellen übersetzt und erläutert von Peter Riethe},
+  publisher = {Otto Mueller},
+  year      = {2007},
+  author    = {von Bingen, Hildegard},
+  address   = {Salzburg},
+  comment   = {Originalausgabe von 1151--1158},
+}
+
+@Book{RL2009,
+  title     = {Rote Liste gefährdeter Tiere, Pflanzen und Pilze Deutschlands Band 1: Wirbeltiere},
+  publisher = {Bundesamt für Naturschutz (BfN)},
+  year      = {2009},
+  author    = {BfN},
+  address   = {Bonn - Bad Godesberg},
+}
+
+@Electronic{BfN2019,
+  author       = {BfN},
+  month        = mar,
+  year         = {2019},
+  title        = {Rote Listen gefährdeter Pflanzen},
+  language     = {deutsch},
+  organization = {Bundesamt für Naturschutz},
+  url          = {https://www.bfn.de/themen/rote-liste/rl-pflanzen.html},
+}
+
+@Book{Buehring2014,
+  title     = {Praxis Lehrbuch Heilpflanzenkunde Grundlagen - Anwendung - Therapie},
+  publisher = {Haug},
+  year      = {2014},
+  author    = {Bühring, Ursel},
+  address   = {Stuttgart},
+}
+
+@Book{Franke2012,
+  title     = {Handbuch des Arznei- und Gewürzpflanzenanbaus: Band 4 Arznei- und Gewürzpflanzen A - K},
+  publisher = {Verein für Arznei- und Gewürzpflanzen SALUPLANTA e. V.},
+  year      = {2012},
+  author    = {Franke, R. and Albert, H. and Brunner, P. and Eickmeyer, F.},
+  editor    = {Hoppe, Bernd},
+  address   = {Bernburg},
+  comment   = {S. 56 - 94},
+}
+
+@Book{Heeger1956,
+  title     = {Handbuch des Arznei- und Gewürzpflanzenbaues : Drogengewinnung},
+  publisher = {Verlag Harri Deutsch Thun},
+  year      = {1956},
+  author    = {Heeger, Erich},
+  address   = {Frankfurt am Main},
+}
+
+@Electronic{Markenverband2019,
+  author       = {Markenverband},
+  month        = apr,
+  year         = {2019},
+  title        = {Kneipp: Das Arnika-Anbau-Projekt},
+  organization = {Markenverband e.V.},
+  url          = {http://www.wachstum-mit-verantwortung.de/2013/06/kneipp-das-arnika-anbau-projekt},
+}
+
+@Electronic{pta2019,
+  author       = {Monika Schulte-Löbbert},
+  month        = apr,
+  year         = {2019},
+  title        = {Arnika: Die wilde Schönheit aus den Bergen},
+  organization = {Avoxa – Mediengruppe Deutscher Apotheker GmbH},
+  url          = {https://ptaforum.pharmazeutische-zeitung.de/index.php?id=5670},
+}
+
+@Electronic{Kneipp2019,
+  author       = {Kneipp},
+  month        = apr,
+  year         = {2019},
+  title        = {Beispiele nachhaltiger Rohstoffbeschaffung: Arnica montana L.},
+  organization = {Kneipp GmbH},
+  url          = {https://www.kneipp.com/de_de/unternehmen/wie-wir-arbeiten/nachhaltigkeit/rohstoffe/ and https://www.kneipp.com/de_de/unternehmen/wie-wir-arbeiten/nachhaltigkeit/rohstoffe/arnika-als-nachhaltiger-rohstoff/},
+}
+
+@Electronic{Rocher2019,
+  author       = {Yves Rocher},
+  month        = apr,
+  year         = {2019},
+  title        = {Arnika},
+  organization = {Yves Rocher GmbH},
+  url          = {https://www.yves-rocher.de/control/com/de/das-herbarium/arnika},
+}
+
+@Electronic{Weleda2019,
+  author       = {Weleda},
+  month        = apr,
+  year         = {2019},
+  title        = {Arnika-Wildsammlung in den Karpaten},
+  organization = {Weleda AG},
+  url          = {https://www.weleda.de/rein-natuerlich/anbauprojekte/arnika},
+}
+
+@Electronic{Werde2016,
+  author       = {Mara Simperler},
+  month        = jul,
+  year         = {2016},
+  title        = {Arnika ist die Hoffnung},
+  howpublished = {Werde Magazin},
+  organization = {Weleda AG},
+  url          = {https://werde-magazin.de/arnika-ist-die-hoffnung/},
+}
+
+@Electronic{PSF2019,
+  author       = {{Python Software Foundation}},
+  month        = apr,
+  year         = {2019},
+  title        = {General Python FAQ},
+  language     = {english},
+  organization = {Python Software Foundation},
+  url          = {https://docs.python.org/3/faq/general.html},
+}
+
+@Unpublished{DBU2018,
+  author = {{Universität Freiburg}},
+  title  = {Conservation of biodiverity in Romania - perspectives for oligotrophic grassland in the Apuseni Mountains, with focus on the key species Arnica montana},
+  note   = {Project Proposal for funding by DBU},
+  year   = {2018},
+}
+
+@Booklet{ECOKARST2018,
+  title        = {{Biologische Vielfalt für deinen Erfolg - Wirtschaftliche Entwicklung in Schutzgebieten im Einklang mit der Natur}},
+  author       = {Gattenlöhner, U. and Peiffer, A. and Volles, R.},
+  howpublished = {Interreg Danube Transnational Programme, ECO KARST Projekt},
+  year         = {2018},
+  comment      = {S. 24},
+}
+
+@Article{RUSDEA2009,
+  author  = {Ru\c{s}dea, Evelyn and Reif, Albert and Konold, Werner and Rotar, Ioan and Povara\v{a}, Ioan},
+  title   = {PROIECT APUSENI – an Inter and Transdisciplinary Approach for Sustainable Regional Development in the Apuseni Mountains in Romania},
+  journal = {Bulletin UASVM Agriculture},
+  year    = {2009},
+  volume  = {66},
+  number  = {1},
+  pages   = {476--481},
+}
+
+@Comment{jabref-meta: databaseType:bibtex;}

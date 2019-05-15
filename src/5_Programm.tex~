@@ -1,0 +1,41 @@
+\section{Programmbeschreibung}\label{programm}
+Problemstellung/Fragestellung:
+Monitoring von Arnika in Unwegsamen Gelände, Aussage treffen über nachhaltige Nutzung/Pflückung, Also eine Quantifizierung der Blumen (vor und nach der Ernte -> Schwierigkeit weil Reife oder Überreife Blumen anders aussehen)
+
+Monitoringsoftware Zusammenfassung
+%Idee Ziele Problemstellung/Fragestellung
+
+\subsection{Programmiersprache}
+Python ist eine Open Source Programmiersprache, die plattformübergreifend auf allen gängigen Betriebssystemen anwendbar ist. Die interpretierte Skriptsprache wurde 1994 von dem niederländischen Programmierer Guido Rossum als Python 1.0 veröffentlicht. Der Name Python hat Rossum von der britischen Komikergruppe Monty Python abgeleitet.
+Entscheidener Unterschied zu anderen höheren Programmiersprachen, ist der gut lesbare und knapp gehaltene Stil von Python. Ziel ist es Redundanz zu vermeiden und Übersichtlichkeit zu optimieren. Zur Strukturierung verwendet Python Einrückungen und kommt mit wenigen Schlüsselwörtern aus. Mit diesem reduzierten Syntax schafft Python Einfachheit, ohne dabei eine Komplexität zu verhindern. Python unterstützt objektorientierte und funktionale Programmierung. Es gibt eine umfassende  Standartbibliothek und zusätzlich die Möglichkeit der Erweiterung einer Vielzahl an Modulen, die in den Skripten import werden können.
+%Vielzahl von NutzerInnen (kommerziell, wissenschaftlich, Betriebssystemen, Webframeworks)
+
+%- Python-Interpreter, die stärksten sind CPython, basiert auf der Programmiersprache C und Jython basierend auf Java. 
+%-  Compiler, die Python in andere Programmiersprachen übersetzten und dort nutzbar machen.
+
+Seit 2001 wird Python durch die Python Software Foundation stetig weiterentwickelt. 
+Python 2 gibt es seit 2000, Python 3 seit 2008. Dies beinhaltet so tiefgreifende Änderungen, dass einige Funktionen, die unter Python 2 geschrieben wurden, nicht mehr unter Python 3 funktionieren würden. Deshalb wird Python 2.7 noch bis Ende 2019 mit weiteren Updates unterstützt. Die aktuellste stabile Version ist seit 2018 Python 3.7 \citep[vgl.][]{PSF2019}.
+
+
+%Verweis auf Einstiegsmöglichkeit in die verwendete Programmiersprache-> Anhang
+
+
+- Anwendungsbereich
+- Vorgehensweise Methoden?
+- Programmaufbau (Flow-chart und Beschreibung der einzelnen Bestandteile und der Verknüpfungen zwischen den Modulen)
+- Hard- und Softwarevoraussetzungen
+- (Notwendige) In- und Output-Dateien und deren Formate
+- Implementierung / Aufruf
+- Parameterbeschreibung
+- Einbindungsmöglichkeiten in andere Anwendungen
+- Bei komplexen Berechnungsverfahren Beschreibung der Algorithmen und Literaturhinweise zu den Quellen der Verfahren
+
+
+- Programmaufbau (Flow-chart und Beschreibung der einzelnen Bestandteile und der Verknüpfungen zwischen den Modulen)
+    - Modulübersicht (Folderstruktur)
+    - Flow-Chart für die GUI und den Programmaufruf, quasi als "Anleitung der Benutzung"
+    - Flow-Chart von einem Beispiel wie das Bild bearbeitet wird, en detail
+    
+    
+    
+    

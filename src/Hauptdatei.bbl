@@ -1,0 +1,147 @@
+\begin{thebibliography}{22}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[BfN(2009)]{RL2009}
+BfN.
+\newblock \emph{Rote Liste gefährdeter Tiere, Pflanzen und Pilze Deutschlands
+  Band 1: Wirbeltiere}.
+\newblock Bundesamt für Naturschutz (BfN), Bonn - Bad Godesberg, 2009.
+
+\bibitem[BfN(2018)]{RL2018}
+BfN.
+\newblock \emph{Rote Liste gefährdeter Tiere, Pflanzen und Pilze Deutschlands
+  Band 7: Pflanzen}.
+\newblock Bundesamt für Naturschutz (BfN), Bonn - Bad Godesberg, 2018.
+
+\bibitem[Bühring(2014)]{Buehring2014}
+Ursel Bühring.
+\newblock \emph{Praxis Lehrbuch Heilpflanzenkunde Grundlagen - Anwendung -
+  Therapie}.
+\newblock Haug, Stuttgart, 2014.
+
+\bibitem[FNR(2013)]{FNR2013}
+FNR.
+\newblock Arzneipflanzen : Anbau und nutzen.
+\newblock Gülzow, 2013.
+
+\bibitem[Franke et~al.(2012)Franke, Albert, Brunner, and Eickmeyer]{Franke2012}
+R.~Franke, H.~Albert, P.~Brunner, and F.~Eickmeyer.
+\newblock \emph{Handbuch des Arznei- und Gewürzpflanzenanbaus: Band 4 Arznei-
+  und Gewürzpflanzen A - K}.
+\newblock Verein für Arznei- und Gewürzpflanzen SALUPLANTA e. V., Bernburg,
+  2012.
+
+\bibitem[Gattenlöhner et~al.(2018)Gattenlöhner, Peiffer, and
+  Volles]{ECOKARST2018}
+U.~Gattenlöhner, A.~Peiffer, and R.~Volles.
+\newblock {Biologische Vielfalt für deinen Erfolg - Wirtschaftliche
+  Entwicklung in Schutzgebieten im Einklang mit der Natur}.
+\newblock Interreg Danube Transnational Programme, ECO KARST Projekt, 2018.
+
+\bibitem[Heeger(1956)]{Heeger1956}
+Erich Heeger.
+\newblock \emph{Handbuch des Arznei- und Gewürzpflanzenbaues :
+  Drogengewinnung}.
+\newblock Verlag Harri Deutsch Thun, Frankfurt am Main, 1956.
+
+\bibitem[Kneipp(2019)]{Kneipp2019}
+Kneipp.
+\newblock Beispiele nachhaltiger rohstoffbeschaffung: Arnica montana l., April
+  2019.
+\newblock URL
+  \url{https://www.kneipp.com/de_de/unternehmen/wie-wir-arbeiten/nachhaltigkeit/rohstoffe/
+  and
+  https://www.kneipp.com/de_de/unternehmen/wie-wir-arbeiten/nachhaltigkeit/rohstoffe/arnika-als-nachhaltiger-rohstoff/}.
+
+\bibitem[Markenverband(2019)]{Markenverband2019}
+Markenverband.
+\newblock Kneipp: Das arnika-anbau-projekt, April 2019.
+\newblock URL
+  \url{http://www.wachstum-mit-verantwortung.de/2013/06/kneipp-das-arnika-anbau-projekt}.
+
+\bibitem[Prentner(2017)]{Prentner2017}
+Angelika Prentner.
+\newblock \emph{Heilpflanzen der Traditionellen Europäischen Medizin}.
+\newblock Springer, Berlin, 2017.
+
+\bibitem[{Python Software Foundation}(2019)]{PSF2019}
+{Python Software Foundation}.
+\newblock General python faq, April 2019.
+\newblock URL \url{https://docs.python.org/3/faq/general.html}.
+
+\bibitem[Rocher(2019)]{Rocher2019}
+Yves Rocher.
+\newblock Arnika, April 2019.
+\newblock URL
+  \url{https://www.yves-rocher.de/control/com/de/das-herbarium/arnika}.
+
+\bibitem[Roth et~al.(2012)Roth, Daunderer, and Kormann]{Roth2012}
+Lutz~[Hrsg.] Roth, Max (1943-2013) Daunderer, and Kurt Kormann.
+\newblock \emph{Giftpflanzen Pflanzengifte : Vorkommen, Wirkung, Therapie,
+  allergische und phototoxische Reaktionen}.
+\newblock Nikol, Hamburg, 2012.
+\newblock S.
+
+\bibitem[Ru\c{s}dea et~al.(2009)Ru\c{s}dea, Reif, Konold, Rotar, and
+  Povara\v{a}]{RUSDEA2009}
+Evelyn Ru\c{s}dea, Albert Reif, Werner Konold, Ioan Rotar, and Ioan
+  Povara\v{a}.
+\newblock Proiect apuseni – an inter and transdisciplinary approach for
+  sustainable regional development in the apuseni mountains in romania.
+\newblock \emph{Bulletin UASVM Agriculture}, 66\penalty0 (1):\penalty0
+  476--481, 2009.
+
+\bibitem[Schönfelder(2011)]{Schoenfelder2011}
+Ingrid und~Peter Schönfelder.
+\newblock \emph{Das neue {Handbuch} der {Heilpflanzen} : {Botanik},
+  {Arzneidrogen}, {Wirkstoffe}, {Anwendungen}}.
+\newblock Kosmos, Stuttgart, 2011.
+\newblock Seiten: 73-74.
+
+\bibitem[Schönfelder(2015)]{Schoenfelder2015}
+Ingrid und~Peter Schönfelder.
+\newblock \emph{Der Kosmos-Heilpflanzenführer: über 600 Heil- und
+  Giftpflanzen Europas}.
+\newblock Kosmos, 2015.
+
+\bibitem[Sommer(2011)]{Sommer2011}
+Markus Sommer.
+\newblock \emph{Heilpflanzen: Ihr Wesen Ihre Wirkung Ihre Anwendung}.
+\newblock aethera, Stuttgart, 2011.
+
+\bibitem[{Universität Freiburg}(2018)]{DBU2018}
+{Universität Freiburg}.
+\newblock Conservation of biodiverity in romania - perspectives for
+  oligotrophic grassland in the apuseni mountains, with focus on the key
+  species arnica montana.
+\newblock Project Proposal for funding by DBU, 2018.
+
+\bibitem[van Wyk et~al.(2015)van Wyk, Wink, and Wink]{Wyk2015}
+Prof. Dr. Ben-Erik van Wyk, Dr.~Coralie Wink, and Prof. Dr.~Michael Wink.
+\newblock \emph{Handbuch der Arzneipflanzen: ein Bildatlas}.
+\newblock Wissenschaftliche Verlagsgesellschaft Stuttgart, Stuttgart, 3.
+  edition, 2015.
+\newblock Seite: 62.
+
+\bibitem[von Bingen(2007)]{Bingen2007}
+Hildegard von Bingen.
+\newblock \emph{Das Buch von den Pflanzen / Hildegard von Bingen. Nach den
+  Quellen übersetzt und erläutert von Peter Riethe}.
+\newblock Otto Mueller, Salzburg, 2007.
+
+\bibitem[Watts et~al.(2012)Watts, Ambrosia, and Hinkley]{Watts2012}
+Adam~C. Watts, Vincent~G. Ambrosia, and Everett~A. Hinkley.
+\newblock Unmanned aircraft systems in remote sensing and scientific research:
+  Classification and considerations of use.
+\newblock \emph{Remote Sensing}, 4, 2012.
+
+\bibitem[Weleda(2019)]{Weleda2019}
+Weleda.
+\newblock Arnika-wildsammlung in den karpaten, April 2019.
+\newblock URL \url{https://www.weleda.de/rein-natuerlich/anbauprojekte/arnika}.
+
+\end{thebibliography}

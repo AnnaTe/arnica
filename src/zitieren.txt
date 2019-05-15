@@ -1,0 +1,32 @@
+(Autor 2004: 102)
+
+(Böll und Wallraff 1977: 18 f.)
+
+(Fritsch et al. 2005: 15-19)
+
+Michael Schmidt (2004: 102) folgend, ... „Zitat“.
+
+
+Paraphrase: 
+
+In der Goethe-Forschung wird darauf hingewiesen, dass ... (vgl. Schmidt 2004: 102).
+
+
+Verschiedene Autoren weisen darauf hin, dass ... (vgl. Müller 1998: 23-48; Schmidt 2004).
+
+
+\citet{jon90} -> Jones et al. (1990)
+\citet[chap.~2]{jon90} -> Jones et al. (1990, chap. 2)
+\citep{jon90} -> (Jones et al., 1990)
+\citep[chap.~2]{jon90} -> (Jones et al., 1990, chap. 2)
+\citep[see][]{jon90} -> (see Jones et al., 1990)
+\citep[see][chap.~2]{jon90} -> (see Jones et al., 1990, chap. 2)
+\citet*{jon90} -> Jones, Baker, and Williams (1990)
+\citep*{jon90} -> (Jones, Baker, and Williams, 1990)
+
+
+
+
+
+
+

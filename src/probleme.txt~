@@ -1,0 +1,31 @@
+Probleme:
+
+langsam
+
+Lösungsansätze:
+
+Datenstruktur umstellen Objektorientierte Programmierung damit die Bilder schneller abrufbar sind
+
+-> so lang wie möglich mit einer einfachen maske arbeiten und nur am ende einmal mit bitwise operation aufs bild abgleichen
+
+
+Problem:
+
+Data storage
+Wie kann man die Bilder (große numpy arrays) so speichern, dass sie beim update verfügbar sind und langsame Berechnungen sich nicht unnötig wiederholen müssen? 
+
+Lösungsansatz: 
+OOP mit ...(In der --init--) der Klasse zum abrufen. Klappt aber bei updates in der gui nicht.
+
+
+inhaltliche Probleme:
+Blobsize? 
+kleine Blumen rausfiltern
+
+dead flowers
+- option hinzufügen
+
+
+--------------------
+
+verwechslungspotential mit anderen Blumen: schwer zu verhindern, aber durch andere faktoren identifikation -> GSM und Höhe der Pflanzen oder Bodensäure?
