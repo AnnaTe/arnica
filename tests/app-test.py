@@ -22,6 +22,8 @@ class DesignerMainWindow(QtWidgets.QMainWindow, Ui_MainWindow, Data):
         self.setupUi(self)
 
         self.i = None
+        self.perc = 100
+        self.mins = None
 
         self.statusbar.showMessage('Ready', 10000)
 
@@ -84,54 +86,57 @@ class DesignerMainWindow(QtWidgets.QMainWindow, Ui_MainWindow, Data):
 
     def update_graph(self):
         self.statusbar.showMessage('update is running...')
-        #a = self.parse_file()
+
         # collect values from user input
         percent= self.sbCrop.value()
         lowsize = self.sbBlob.value()
-        self.i.filter(percent, lowsize)
 
-        if self.cbYellow.isChecked() == True:
+        if self.cbCircle.isChecked() == True:
+            if percent != self.perc:
+                self.i.filter(percent, lowsize)
+                self.mins = lowsize
+                self.perc = percent
+            else:
+                if lowsize != self.mins:
+                    self.i.yellow(self.i.cropped, lowsize)
+                    self.mins = lowsize
+                else:
+                    pass
+            self.mpl.canvas.ax.clear()
+            number, output, stats, centroids = cv2.connectedComponentsWithStats(self.i.blob[:, :, 0], connectivity=8)
+            center = list(zip(centroids[1:, 0].astype(int), centroids[1:, 1].astype(int)))
+            radius = stats[1:, 3]
+
+            self.mpl.canvas.ax.imshow(cv2.cvtColor(self.i.cropped, cv2.COLOR_BGR2RGB))
+            self.mpl.canvas.ax.axis("off")
+            counter = 0
+            for i in range(centroids[1:, 1].shape[0]):
+                circ = Circle(center[i], radius[i], color="r", linewidth=1, fill=False)
+                self.mpl.canvas.ax.add_patch(circ)
+                counter += 1
+            self.mpl.canvas.draw()
+            self.statusbar.showMessage('{} Flowers counted.'.format(counter))
+
+        elif self.cbYellow.isChecked() == True:
+            if percent != self.perc:
+                self.i.filter(percent, lowsize)
+                self.mins = lowsize
+                self.perc = percent
+            else:
+                if lowsize != self.mins:
+                    self.i.yellow(self.i.cropped, lowsize)
+                    self.mins = lowsize
+                else:
+                    pass
             self.plot(self.i.blob)
 
-        elif self.cbCircle.isChecked() == True or self.cbDead.isChecked() == True:
-            self.mpl.canvas.ax.clear()
-            self.mpl.canvas.ax.set_aspect('equal')
-
-            if self.cbCircle.isChecked() == True:
-                number, output, stats, centroids = cv2.connectedComponentsWithStats(self.i.blob[:, :, 0], connectivity=8)
-                center = list(zip(centroids[1:, 0].astype(int), centroids[1:, 1].astype(int)))
-                radius = stats[1:, 3]
-
-                self.mpl.canvas.ax.imshow(cv2.cvtColor(self.i.cropped, cv2.COLOR_BGR2RGB))
-                self.mpl.canvas.ax.axis("off")
-                counter = 0
-                for i in range(centroids[1:, 1].shape[0]):
-                    circ = Circle(center[i], radius[i], color="r", linewidth=1, fill=False)
-                    self.mpl.canvas.ax.add_patch(circ)
-                    counter += 1
-                self.statusbar.showMessage('{} Flowers counted.'.format(counter))
-            else:
-                minBGR = np.array((0, 133, 200))
-                maxBGR = np.array((55, 160, 220))
-                maskBGR = cv2.inRange(self.i.blob, minBGR, maxBGR)
-
-                number, output, stats, centroids = cv2.connectedComponentsWithStats(maskBGR, connectivity=8)
-                center = list(zip(centroids[1:, 0].astype(int), centroids[1:, 1].astype(int)))
-                radius = stats[1:, 3]
-
-                self.mpl.canvas.ax.imshow(cv2.cvtColor(self.i.blob, cv2.COLOR_BGR2RGB))
-                self.mpl.canvas.ax.axis("off")
-
-
-                for i in range(centroids[1:, 1].shape[0]):
-                    circ = Circle(center[i], radius[i], color="m", linewidth=1, fill=False)
-                    self.mpl.canvas.ax.add_patch(circ)
-
-            self.mpl.canvas.draw()
-
         else:
-            self.i.crop(percent)
-            self.plot(self.i.cropped)
+            if percent == self.perc:
+                self.plot(self.i.cropped)
+            else:
+                self.perc = percent
+                self.i.crop(self.perc)
+                self.plot(self.i.cropped)
 
     def export_image(self):
         self.statusbar.showMessage('export is running...')
