@@ -10,8 +10,12 @@
 \nomenclature{BFA}{Bioflora Apuseni}
 \nomenclature{USAMV}{Universität für Agrarwissenschaften und Tiermedizin Cluj-Napoca}
 \nomenclature{BMBF}{Bundesministerium für Bildung und Forschung}
-\nomenclature{WWF}{(World Wide Fund For Nature}
+\nomenclature{WWF}{World Wide Fund For Nature}
 \nomenclature{UAV}{Unmanned Aircraft Vehicels}
 \nomenclature{UAS}{Unmanned Aircraft Systems}
 \nomenclature{DOM}{Digitales Oberflächenmodell}
 \nomenclature{DGM}{Digitales Geländemodell}
+\nomenclature{GNSS}{Globales Navigationssatellitensystem}
+\nomenclature{RTK}{real-time kinematics}
+\nomenclature{PPK}{post-processing kinematics}
+\nomenclature{GUI}{graphische Benutzeroberfläche}

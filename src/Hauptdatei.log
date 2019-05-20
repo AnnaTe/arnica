@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Debian) (preloaded format=pdflatex 2019.3.6)  15 MAY 2019 14:11
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Debian) (preloaded format=pdflatex 2019.3.6)  20 MAY 2019 10:29
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -503,6 +503,31 @@ File: babel.def 2016/04/23 3.9r Babel common definitions
 \babel@savecnt=\count118
 \U@D=\dimen158
 ))))
+(/usr/share/texlive/texmf-dist/tex/latex/blindtext/blindtext.sty
+Package: blindtext 2012/01/06 V2.0 blindtext-Package
+
+(/usr/share/texlive/texmf-dist/tex/latex/tools/xspace.sty
+Package: xspace 2014/10/28 v1.13 Space after command names (DPC,MH)
+)
+\c@blindtext=\count119
+\c@Blindtext=\count120
+\c@blind@countparstart=\count121
+\blind@countxx=\count122
+\blindtext@numBlindtext=\count123
+\blind@countyy=\count124
+\c@blindlist=\count125
+\c@blindlistlevel=\count126
+\c@blindlist@level=\count127
+\blind@listitem=\count128
+\c@blind@listcount=\count129
+\c@blind@levelcount=\count130
+\blind@mathformula=\count131
+\blind@Mathformula=\count132
+\c@blind@randomcount=\count133
+\c@blind@randommax=\count134
+\c@blind@pangramcount=\count135
+\c@blind@pangrammax=\count136
+)
 (/usr/share/texlive/texmf-dist/tex/latex/base/inputenc.sty
 Package: inputenc 2015/03/17 v1.2c Input encoding file
 \inpenc@prehook=\toks30
@@ -914,19 +939,19 @@ Package: longtable 2014/10/28 v4.11 Multi-page Table package (DPC)
 \LTright=\skip65
 \LTpre=\skip66
 \LTpost=\skip67
-\LTchunksize=\count119
+\LTchunksize=\count137
 \LTcapwidth=\dimen159
 \LT@head=\box40
 \LT@firsthead=\box41
 \LT@foot=\box42
 \LT@lastfoot=\box43
-\LT@cols=\count120
-\LT@rows=\count121
-\c@LT@tables=\count122
-\c@LT@chunks=\count123
+\LT@cols=\count138
+\LT@rows=\count139
+\c@LT@tables=\count140
+\c@LT@chunks=\count141
 \LT@p@ftn=\toks32
 )
-Class scrartcl Info: longtable captions redefined on input line 37.
+Class scrartcl Info: longtable captions redefined on input line 38.
 
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/mathptmx.sty
 Package: mathptmx 2005/04/12 PSNFSS-v9.2a Times w/ Math, improved (SPQR, WaS) 
@@ -983,9 +1008,9 @@ Package ifvtex Info: VTeX not detected.
 (/usr/share/texlive/texmf-dist/tex/generic/ifxetex/ifxetex.sty
 Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 )
-\Gm@cnth=\count124
-\Gm@cntv=\count125
-\c@Gm@tempcnt=\count126
+\Gm@cnth=\count142
+\Gm@cntv=\count143
+\c@Gm@tempcnt=\count144
 \Gm@bindingoffset=\dimen160
 \Gm@wd@mp=\dimen161
 \Gm@odd@mp=\dimen162
@@ -1077,15 +1102,15 @@ Package: auxhook 2016/05/16 v1.4 Hooks for auxiliary files (HO)
 Package: kvoptions 2016/05/16 v3.12 Key value format for package options (HO)
 )
 \@linkdim=\dimen169
-\Hy@linkcounter=\count127
-\Hy@pagecounter=\count128
+\Hy@linkcounter=\count145
+\Hy@pagecounter=\count146
 
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/pd1enc.def
 File: pd1enc.def 2016/06/24 v6.83q Hyperref: PDFDocEncoding definition (HO)
 Now handling font encoding PD1 ...
 ... no UTF-8 mapping file for font encoding PD1
 )
-\Hy@SavedSpaceFactor=\count129
+\Hy@SavedSpaceFactor=\count147
 
 (/usr/share/texlive/texmf-dist/tex/latex/latexconfig/hyperref.cfg
 File: hyperref.cfg 2002/06/06 v1.2 hyperref configuration of TeXLive
@@ -1100,10 +1125,10 @@ Package hyperref Info: Plain pages OFF on input line 4501.
 Package hyperref Info: Backreferencing OFF on input line 4506.
 Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
 Package hyperref Info: Bookmarks ON on input line 4735.
-\c@Hy@tempcnt=\count130
+\c@Hy@tempcnt=\count148
 LaTeX Info: Redefining \url on input line 5088.
 \XeTeXLinkMargin=\dimen170
-\Fld@menulength=\count131
+\Fld@menulength=\count149
 \Field@Width=\dimen171
 \Fld@charsize=\dimen172
 Package hyperref Info: Hyper figures OFF on input line 6342.
@@ -1115,16 +1140,16 @@ Package hyperref Info: Link coloring with OCG OFF on input line 6367.
 Package hyperref Info: PDF/A mode OFF on input line 6372.
 LaTeX Info: Redefining \ref on input line 6412.
 LaTeX Info: Redefining \pageref on input line 6416.
-\Hy@abspage=\count132
-\c@Item=\count133
+\Hy@abspage=\count150
+\c@Item=\count151
 )
 
 Package hyperref Message: Driver (autodetected): hpdftex.
 
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/hpdftex.def
 File: hpdftex.def 2016/06/24 v6.83q Hyperref driver for pdfTeX
-\Fld@listcount=\count134
-\c@bookmark@seq@number=\count135
+\Fld@listcount=\count152
+\c@bookmark@seq@number=\count153
 
 (/usr/share/texlive/texmf-dist/tex/latex/oberdiek/rerunfilecheck.sty
 Package: rerunfilecheck 2016/05/16 v1.8 Rerun checks for auxiliary files (HO)
@@ -1146,7 +1171,7 @@ Package: natbib 2010/09/13 8.31b (PWD, AO)
 \bibhang=\skip71
 \bibsep=\skip72
 LaTeX Info: Redefining \cite on input line 694.
-\c@NAT@ctr=\count136
+\c@NAT@ctr=\count154
 )
 (/usr/share/texlive/texmf-dist/tex/latex/setspace/setspace.sty
 Package: setspace 2011/12/19 v6.7a set line spacing
@@ -1158,23 +1183,23 @@ Package: capt-of 2009/12/29 v0.2 standard captions outside of floats
 Package: makeidx 2014/09/29 v1.0m Standard LaTeX package
 )
 (/usr/share/texlive/texmf-dist/tex/latex/listings/listings.sty
-\lst@mode=\count137
+\lst@mode=\count155
 \lst@gtempboxa=\box46
 \lst@token=\toks40
-\lst@length=\count138
+\lst@length=\count156
 \lst@currlwidth=\dimen175
-\lst@column=\count139
-\lst@pos=\count140
+\lst@column=\count157
+\lst@pos=\count158
 \lst@lostspace=\dimen176
 \lst@width=\dimen177
-\lst@newlines=\count141
-\lst@lineno=\count142
+\lst@newlines=\count159
+\lst@lineno=\count160
 \lst@maxwidth=\dimen178
 
 (/usr/share/texlive/texmf-dist/tex/latex/listings/lstmisc.sty
 File: lstmisc.sty 2015/06/04 1.6 (Carsten Heinz)
-\c@lstnumber=\count143
-\lst@skipnumbers=\count144
+\c@lstnumber=\count161
+\lst@skipnumbers=\count162
 \lst@framebox=\box47
 )
 (/usr/share/texlive/texmf-dist/tex/latex/listings/listings.cfg
@@ -1204,39 +1229,39 @@ Writing nomenclature file Hauptdatei.nlo
 (./Hauptdatei.aux (./abstract.aux) (./erklaerung.aux))
 \openout1 = `Hauptdatei.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 136.
-LaTeX Font Info:    ... okay on input line 136.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 136.
-LaTeX Font Info:    ... okay on input line 136.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 136.
-LaTeX Font Info:    ... okay on input line 136.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 136.
-LaTeX Font Info:    ... okay on input line 136.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 136.
-LaTeX Font Info:    ... okay on input line 136.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 136.
-LaTeX Font Info:    ... okay on input line 136.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 136.
-LaTeX Font Info:    ... okay on input line 136.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 136.
-LaTeX Font Info:    ... okay on input line 136.
-LaTeX Font Info:    Try loading font information for T1+ptm on input line 136.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 137.
+LaTeX Font Info:    ... okay on input line 137.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 137.
+LaTeX Font Info:    ... okay on input line 137.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 137.
+LaTeX Font Info:    ... okay on input line 137.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 137.
+LaTeX Font Info:    ... okay on input line 137.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 137.
+LaTeX Font Info:    ... okay on input line 137.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 137.
+LaTeX Font Info:    ... okay on input line 137.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 137.
+LaTeX Font Info:    ... okay on input line 137.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 137.
+LaTeX Font Info:    ... okay on input line 137.
+LaTeX Font Info:    Try loading font information for T1+ptm on input line 137.
 
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/t1ptm.fd
 File: t1ptm.fd 2001/06/04 font definitions for T1/ptm.
 )
 (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count145
+\scratchcounter=\count163
 \scratchdimen=\dimen181
 \scratchbox=\box48
-\nofMPsegments=\count146
-\nofMParguments=\count147
+\nofMPsegments=\count164
+\nofMParguments=\count165
 \everyMPshowfont=\toks41
-\MPscratchCnt=\count148
+\MPscratchCnt=\count166
 \MPscratchDim=\dimen182
-\MPnumerator=\count149
-\makeMPintoPDFobject=\count150
+\MPnumerator=\count167
+\makeMPintoPDFobject=\count168
 \everyMPtoPDFconversion=\toks42
 ) (/usr/share/texlive/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
 Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
@@ -1293,43 +1318,43 @@ ABD: EveryShipout initializing macros
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 \AtBeginShipoutBox=\box49
-Package hyperref Info: Link coloring OFF on input line 136.
+Package hyperref Info: Link coloring OFF on input line 137.
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
 
 (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
 Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
-\c@section@level=\count151
+\c@section@level=\count169
 )
-LaTeX Info: Redefining \ref on input line 136.
-LaTeX Info: Redefining \pageref on input line 136.
-LaTeX Info: Redefining \nameref on input line 136.
+LaTeX Info: Redefining \ref on input line 137.
+LaTeX Info: Redefining \pageref on input line 137.
+LaTeX Info: Redefining \nameref on input line 137.
 
 (./Hauptdatei.out) (./Hauptdatei.out)
 \@outlinefile=\write7
 \openout7 = `Hauptdatei.out'.
 
-\c@lstlisting=\count152
+\c@lstlisting=\count170
  (./latex_einstellungen/trennung.tex)
-LaTeX Font Info:    Try loading font information for T1+phv on input line 147.
+LaTeX Font Info:    Try loading font information for T1+phv on input line 148.
 
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/t1phv.fd
 File: t1phv.fd 2001/06/04 scalable font definitions for T1/phv.
 )
 LaTeX Font Info:    Font shape `T1/phv/m/n' will be
-(Font)              scaled to size 11.39996pt on input line 147.
+(Font)              scaled to size 11.39996pt on input line 148.
 LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <12> not available
-(Font)              Font shape `T1/phv/b/n' tried instead on input line 147.
+(Font)              Font shape `T1/phv/b/n' tried instead on input line 148.
 LaTeX Font Info:    Font shape `T1/phv/b/n' will be
-(Font)              scaled to size 11.39996pt on input line 147.
+(Font)              scaled to size 11.39996pt on input line 148.
 LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <17.28> not available
-(Font)              Font shape `T1/phv/b/n' tried instead on input line 147.
+(Font)              Font shape `T1/phv/b/n' tried instead on input line 148.
 LaTeX Font Info:    Font shape `T1/phv/b/n' will be
-(Font)              scaled to size 16.41594pt on input line 147.
+(Font)              scaled to size 16.41594pt on input line 148.
 
 (./latex_einstellungen/deckblatt.tex
-<abb/unilogo.png, id=130, 139.9629pt x 165.2574pt>
+<abb/unilogo.png, id=134, 139.9629pt x 165.2574pt>
 File: abb/unilogo.png Graphic file (type png)
  <use abb/unilogo.png>
 Package pdftex.def Info: abb/unilogo.png used on input line 22.
@@ -1418,7 +1443,7 @@ Class scrartcl Warning: \float@listhead detected!
 (scrartcl)              Loading of package `scrhack' may help to
 (scrartcl)              avoid this warning, if you are using a
 (scrartcl)              a package that still implements the
-(scrartcl)              deprecated \float@listhead interface  on input line 210
+(scrartcl)              deprecated \float@listhead interface  on input line 211
 .
 
 (./Hauptdatei.lol)
@@ -1448,14 +1473,14 @@ LaTeX Font Info:    Font shape `T1/phv/b/it' in size <14.4> not available
 LaTeX Font Info:    Font shape `T1/phv/b/sl' will be
 (Font)              scaled to size 13.67995pt on input line 11.
 
-<abb/herbarium-blackwell.jpg, id=242, 749.80125pt x 1031.855pt>
+<abb/herbarium-blackwell.jpg, id=253, 749.80125pt x 1031.855pt>
 File: abb/herbarium-blackwell.jpg Graphic file (type jpg)
 
 <use abb/herbarium-blackwell.jpg>
 Package pdftex.def Info: abb/herbarium-blackwell.jpg used on input line 19.
 (pdftex.def)             Requested size: 216.1011pt x 297.38814pt.
 
-<abb/Koehler-medizinal-pflanzen.png, id=243, 698.3691pt x 961.4319pt>
+<abb/Koehler-medizinal-pflanzen.png, id=254, 698.3691pt x 961.4319pt>
 File: abb/Koehler-medizinal-pflanzen.png Graphic file (type png)
 
 <use abb/Koehler-medizinal-pflanzen.png>
@@ -1464,7 +1489,7 @@ Package pdftex.def Info: abb/Koehler-medizinal-pflanzen.png used on input line
 (pdftex.def)             Requested size: 216.1011pt x 297.49802pt.
  [9 <./abb/herbarium-blackwell.jpg> <./abb/Koehler-medizinal-pflanzen.png (PNG 
 copy)>]
-<abb/Arnika/arnica-900x300.png, id=267, 216.81pt x 72.27pt>
+<abb/Arnika/arnica-900x300.png, id=278, 216.81pt x 72.27pt>
 File: abb/Arnika/arnica-900x300.png Graphic file (type png)
 
 <use abb/Arnika/arnica-900x300.png>
@@ -1488,7 +1513,7 @@ Overfull \hbox (3.86595pt too wide) in paragraph at lines 71--72
 tem Bo-den mit ei-ner gu-ten Wasserzu-
  []
 
-[13] <abb/Arnika/Arnikapfluecker-1024x768.jpg, id=386, 1027.84pt x 770.88pt>
+[13] <abb/Arnika/Arnikapfluecker-1024x768.jpg, id=397, 1027.84pt x 770.88pt>
 File: abb/Arnika/Arnikapfluecker-1024x768.jpg Graphic file (type jpg)
 
 <use abb/Arnika/Arnikapfluecker-1024x768.jpg>
@@ -1502,67 +1527,142 @@ hwä-bisch Gmünd setzt, nach eben-
  []
 
 [14 <./abb/Arnika/Arnikapfluecker-1024x768.jpg>] [15]
-<abb/Stakeholder-map.png, id=411, 737.75626pt x 431.6125pt>
+<abb/Stakeholder-map.png, id=424, 737.75626pt x 431.6125pt>
 File: abb/Stakeholder-map.png Graphic file (type png)
 
 <use abb/Stakeholder-map.png>
-Package pdftex.def Info: abb/Stakeholder-map.png used on input line 18.
+Package pdftex.def Info: abb/Stakeholder-map.png used on input line 21.
 (pdftex.def)             Requested size: 308.71106pt x 180.60425pt.
- [16]
+ [16 <./abb/Stakeholder-map.png>]
+<abb/Arnika/apusenimountain2016.jpg, id=437, 1110.3081pt x 353.8821pt>
+File: abb/Arnika/apusenimountain2016.jpg Graphic file (type jpg)
+
+<use abb/Arnika/apusenimountain2016.jpg>
+Package pdftex.def Info: abb/Arnika/apusenimountain2016.jpg used on input line 
+39.
+(pdftex.def)             Requested size: 441.01773pt x 140.56215pt.
 Package hyperref Info: bookmark level for unknown todo defaults to 0 on input l
-ine 34.
- [17 <./abb/Stakeholder-map.png>]
-<abb/drohnen/trinity-f9.png, id=432, 963.6pt x 386.44376pt>
-File: abb/drohnen/trinity-f9.png Graphic file (type png)
-
-<use abb/drohnen/trinity-f9.png>
-Package pdftex.def Info: abb/drohnen/trinity-f9.png used on input line 48.
-(pdftex.def)             Requested size: 286.65883pt x 114.96107pt.
-
-<abb/drohnen/P4RTK.jpg, id=433, 770.88pt x 768.8725pt>
+ine 44.
+ [17] [18 <./abb/Arnika/apusenimountain2016.jpg>] <abb/drohnen/P4RTK.jpg, id=45
+1, 770.88pt x 768.8725pt>
 File: abb/drohnen/P4RTK.jpg Graphic file (type jpg)
 
 <use abb/drohnen/P4RTK.jpg>
-Package pdftex.def Info: abb/drohnen/P4RTK.jpg used on input line 49.
-(pdftex.def)             Requested size: 132.30666pt x 131.96191pt.
- [18] [19 <./abb/drohnen/trinity-f9.png> <./abb/drohnen/P4RTK.jpg>]
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10.95> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 78.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <8> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 78.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <6> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 78.
+Package pdftex.def Info: abb/drohnen/P4RTK.jpg used on input line 66.
+(pdftex.def)             Requested size: 88.2022pt x 87.96678pt.
 
-Overfull \hbox (24.77908pt too wide) in paragraph at lines 78--101
-[][]
- []
+<abb/drohnen/trinity-f9.png, id=452, 963.6pt x 386.44376pt>
+File: abb/drohnen/trinity-f9.png Graphic file (type png)
 
-<abb/drohnen/wingtraone.png, id=450, 770.88pt x 514.92375pt>
+<use abb/drohnen/trinity-f9.png>
+Package pdftex.def Info: abb/drohnen/trinity-f9.png used on input line 68.
+(pdftex.def)             Requested size: 229.3311pt x 91.97003pt.
+
+<abb/drohnen/wingtraone.png, id=453, 770.88pt x 514.92375pt>
 File: abb/drohnen/wingtraone.png Graphic file (type png)
 
 <use abb/drohnen/wingtraone.png>
-Package pdftex.def Info: abb/drohnen/wingtraone.png used on input line 111.
-(pdftex.def)             Requested size: 264.61333pt x 176.75317pt.
- [20 <./abb/drohnen/wingtraone.png>]
-<abb/SDLC.jpg, id=457, 821.0675pt x 831.105pt>
+Package pdftex.def Info: abb/drohnen/wingtraone.png used on input line 70.
+(pdftex.def)             Requested size: 154.35889pt x 103.10077pt.
+ [19]
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 85.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7.4> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 85.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <6> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 85.
+ [20 <./abb/drohnen/P4RTK.jpg> <./abb/drohnen/trinity-f9.png> <./abb/drohnen/wi
+ngtraone.png>] [21]
+<abb/SDLC.jpg, id=480, 821.0675pt x 831.105pt>
 File: abb/SDLC.jpg Graphic file (type jpg)
  <use abb/SDLC.jpg>
-Package pdftex.def Info: abb/SDLC.jpg used on input line 125.
-(pdftex.def)             Requested size: 176.40439pt x 178.55727pt.
-)
-Underfull \hbox (badness 5374) in paragraph at lines 163--238
-[]\T1/ptm/m/n/12 ++++++++++ wis-sen-schaft-li-cher Kennt-niss-
- []
+Package pdftex.def Info: abb/SDLC.jpg used on input line 124.
+(pdftex.def)             Requested size: 132.30666pt x 133.91795pt.
+ [22 <./abb/SDLC.jpg>]
+<abb/ergebnisse/gleicheblumen/DSC01525-b.png, id=487, 752.8125pt x 752.8125pt>
+File: abb/ergebnisse/gleicheblumen/DSC01525-b.png Graphic file (type png)
 
-[21 <./abb/SDLC.jpg>] (./4_Programm.tex [22]
-<abb/prozess-flow.png, id=475, 1102.1175pt x 770.88pt>
+<use abb/ergebnisse/gleicheblumen/DSC01525-b.png>
+Package pdftex.def Info: abb/ergebnisse/gleicheblumen/DSC01525-b.png used on in
+put line 141.
+(pdftex.def)             Requested size: 105.84666pt x 105.84102pt.
+
+<abb/ergebnisse/gleicheblumen/DSC01298-b.png, id=488, 108.405pt x 108.405pt>
+File: abb/ergebnisse/gleicheblumen/DSC01298-b.png Graphic file (type png)
+
+<use abb/ergebnisse/gleicheblumen/DSC01298-b.png>
+Package pdftex.def Info: abb/ergebnisse/gleicheblumen/DSC01298-b.png used on in
+put line 142.
+(pdftex.def)             Requested size: 105.84666pt x 105.8524pt.
+
+<abb/ergebnisse/gleicheblumen/DSC01757-b.png, id=489, 75.98674pt x 75.98674pt>
+File: abb/ergebnisse/gleicheblumen/DSC01757-b.png Graphic file (type png)
+
+<use abb/ergebnisse/gleicheblumen/DSC01757-b.png>
+Package pdftex.def Info: abb/ergebnisse/gleicheblumen/DSC01757-b.png used on in
+put line 143.
+(pdftex.def)             Requested size: 105.84666pt x 105.84966pt.
+
+<abb/ergebnisse/gleicheblumen/DSC01959-b.png, id=490, 43.15552pt x 43.15552pt>
+File: abb/ergebnisse/gleicheblumen/DSC01959-b.png Graphic file (type png)
+
+<use abb/ergebnisse/gleicheblumen/DSC01959-b.png>
+Package pdftex.def Info: abb/ergebnisse/gleicheblumen/DSC01959-b.png used on in
+put line 144.
+(pdftex.def)             Requested size: 105.84666pt x 105.8636pt.
+
+<abb/ergebnisse/gleicherausschnitt/DSC01525-a.png, id=491, 2176.13pt x 2176.13p
+t>
+File: abb/ergebnisse/gleicherausschnitt/DSC01525-a.png Graphic file (type png)
+ <use abb/ergebnisse/gleicherausschnitt/DSC01525-a.png>
+Package pdftex.def Info: abb/ergebnisse/gleicherausschnitt/DSC01525-a.png used 
+on input line 159.
+(pdftex.def)             Requested size: 105.84666pt x 105.82442pt.
+
+<abb/ergebnisse/gleicherausschnitt/DSC01298-a.JPG, id=492, 447.66103pt x 447.66
+103pt>
+File: abb/ergebnisse/gleicherausschnitt/DSC01298-a.JPG Graphic file (type jpg)
+ <use abb/ergebnisse/gleicherausschnitt/DSC01298-a.JPG>
+Package pdftex.def Info: abb/ergebnisse/gleicherausschnitt/DSC01298-a.JPG used 
+on input line 160.
+(pdftex.def)             Requested size: 105.84666pt x 105.84244pt.
+
+<abb/ergebnisse/gleicherausschnitt/DSC01757-a.png, id=493, 447.66103pt x 447.66
+103pt>
+File: abb/ergebnisse/gleicherausschnitt/DSC01757-a.png Graphic file (type png)
+ <use abb/ergebnisse/gleicherausschnitt/DSC01757-a.png>
+Package pdftex.def Info: abb/ergebnisse/gleicherausschnitt/DSC01757-a.png used 
+on input line 161.
+(pdftex.def)             Requested size: 105.84666pt x 105.84244pt.
+
+<abb/ergebnisse/gleicherausschnitt/DSC01959-a.png, id=494, 447.66103pt x 447.66
+103pt>
+File: abb/ergebnisse/gleicherausschnitt/DSC01959-a.png Graphic file (type png)
+ <use abb/ergebnisse/gleicherausschnitt/DSC01959-a.png>
+Package pdftex.def Info: abb/ergebnisse/gleicherausschnitt/DSC01959-a.png used 
+on input line 162.
+(pdftex.def)             Requested size: 105.84666pt x 105.84244pt.
+ [23 <./abb/ergebnisse/gleicheblumen/DSC01525-b.png> <./abb/ergebnisse/gleicheb
+lumen/DSC01298-b.png (PNG copy)> <./abb/ergebnisse/gleicheblumen/DSC01757-b.png
+ (PNG copy)> <./abb/ergebnisse/gleicheblumen/DSC01959-b.png (PNG copy)> <./abb/
+ergebnisse/gleicherausschnitt/DSC01525-a.png> <./abb/ergebnisse/gleicherausschn
+itt/DSC01298-a.JPG> <./abb/ergebnisse/gleicherausschnitt/DSC01757-a.png (PNG co
+py)> <./abb/ergebnisse/gleicherausschnitt/DSC01959-a.png (PNG copy)>]) [24] (./
+4_Programm.tex
+[25] <abb/prozess-flow.png, id=524, 1102.1175pt x 770.88pt>
 File: abb/prozess-flow.png Graphic file (type png)
 
 <use abb/prozess-flow.png>
 Package pdftex.def Info: abb/prozess-flow.png used on input line 50.
 (pdftex.def)             Requested size: 441.01773pt x 308.47592pt.
-) [23] [24 <./abb/prozess-flow.png>]
-(./5_Ergebnisse.tex) [25] (./8_fazit.tex) [26] (./Hauptdatei.bbl
+
+Overfull \hbox (3.75847pt too wide) in paragraph at lines 55--57
+[]\T1/ptm/m/n/12 Die in-ne-ren Pro-zes-se ei-ner Plo-t-ab-fra-ge wer-den in Ab-
+bil-dung []10[] (S.[]27[]) dar-ge-stellt. Hauptin-
+ []
+
+) [26] [27 <./abb/prozess-flow.png>] (./5_Ergebnisse.tex) [28] (./8_fazit.tex)
+[29] (./Hauptdatei.bbl
 Underfull \hbox (badness 10000) in paragraph at lines 52--59
 \T1/ptm/m/n/12 URL []$\T1/pcr/m/n/12 https : / / www . kneipp . com / de _ de /
  unternehmen / wie -[] wir -[]
@@ -1598,49 +1698,51 @@ Underfull \hbox (badness 2057) in paragraph at lines 77--81
 tps : / / www . yves -[] rocher . de /
  []
 
-[27
+[30
 
-]) [28] (./anhang/anhang.tex) [29]
+]) [31] (./anhang/anhang.tex) [32]
 \openout2 = `erklaerung.aux'.
 
- (./erklaerung.tex) [30
+ (./erklaerung.tex) [33
 
-] [31
+] [34
 
 ]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 284.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 284.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 285.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 285.
 
 (./Hauptdatei.aux (./abstract.aux) (./erklaerung.aux))
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 284.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 284.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 285.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 285.
 Package rerunfilecheck Info: File `Hauptdatei.out' has not changed.
-(rerunfilecheck)             Checksum: F62119B85B3DE4FC55CB3FF93E07CC39;2230.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 284.
+(rerunfilecheck)             Checksum: 5CF65A901368A2E7B79DD3DCF68A5CBD;2310.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 285.
  ) 
 Here is how much of TeX's memory you used:
- 22871 strings out of 494893
- 414397 string characters out of 6178673
- 572678 words of memory out of 5000000
- 25539 multiletter control sequences out of 15000+600000
- 60819 words of font info for 98 fonts, out of 8000000 for 9000
- 18 hyphenation exceptions out of 8191
+ 23130 strings out of 494893
+ 419626 string characters out of 6178673
+ 598130 words of memory out of 5000000
+ 25754 multiletter control sequences out of 15000+600000
+ 68550 words of font info for 105 fonts, out of 8000000 for 9000
+ 19 hyphenation exceptions out of 8191
  73i,12n,76p,8858b,708s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}{/usr/share/texmf/
 fonts/enc/dvips/cm-super/cm-super-t1.enc}</usr/share/texlive/texmf-dist/fonts/t
 ype1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/p
 ublic/amsfonts/cm/cmsy10.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfss
-0800.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfss1000.pfb></usr/share
-/texmf/fonts/type1/public/cm-super/sfsx1000.pfb></usr/share/texlive/texmf-dist/
-fonts/type1/urw/courier/ucrr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/u
-rw/helvetic/uhvb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/
-uhvbo8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></u
-sr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texliv
-e/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on Hauptdatei.pdf (31 pages, 36949827 bytes).
+0800.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfss0900.pfb></usr/share
+/texmf/fonts/type1/public/cm-super/sfss1000.pfb></usr/share/texmf/fonts/type1/p
+ublic/cm-super/sfss1200.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfsx1
+000.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr
+/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/share/texli
+ve/texmf-dist/fonts/type1/urw/helvetic/uhvbo8a.pfb></usr/share/texlive/texmf-di
+st/fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/
+urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmri
+8a.pfb>
+Output written on Hauptdatei.pdf (34 pages, 73857831 bytes).
 PDF statistics:
- 600 PDF objects out of 1000 (max. 8388607)
- 531 compressed objects within 6 object streams
- 111 named destinations out of 1000 (max. 500000)
- 316 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 656 PDF objects out of 1000 (max. 8388607)
+ 571 compressed objects within 6 object streams
+ 126 named destinations out of 1000 (max. 500000)
+ 369 words of extra memory for PDF output out of 10000 (max. 10000000)
 

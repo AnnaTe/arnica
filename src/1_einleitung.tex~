@@ -8,21 +8,20 @@
   
   \item Hintergrund
   \\
-    Arnika
+    - Arnika
     \begin{itemize}
       \item medizinische Nutzung
       \item ökologische Besonderheiten
       \item nachhaltige Ernte
     \end{itemize}
-    Projekt Apuseni
+    - Projekt Apuseni
     \begin{itemize}
-      \item Partnerschaft Freiburg - Rumänien
-      \item Hintergrund
-      \item Finanzierung
-      \item Beschreibung
-      \item Ablauf
+      \item Projektpartner
+      \item Ökologischer Hintergrund
+      \item Vorgehensweise
+      \item Drohneneinsatz zur Fernerkundung
     \end{itemize}
-    Testflüge im Schwarzwald (Methoden?)
+    - Testflüge im Schwarzwald (Methoden?)
     \begin{itemize}
         \item Welche Art von Drohne (Schnelligkeit/Höhe vs Bildqualität)
         \item Warum Monitoring mit Hilfe von Drohnen (Vorteile etc)
@@ -32,20 +31,26 @@
     \end{itemize}
     
   \item Monitoringsoftware
-    \begin{itemize}
-      \item Idee Ziele Problemstellung/Fragestellung
-      \item Programmiersprache (Verweis auf Einstiegsmöglichkeit in die verwendete Programmiersprache-> Anhang)
-      \item Anwendungsbereich
-      \item Vorgehensweise Methoden?
-      \item Programmaufbau (Flow-chart und Beschreibung der einzelnen Bestandteile und der Verknüpfungen zwischen den Modulen)
-      \item Hard- und Softwarevoraussetzungen
-      \item (Notwendige) In- und Output-Dateien und deren Formate
-      \item Implementierung / Aufruf
-      \item Parameterbeschreibung
-      \item Einbindungsmöglichkeiten in andere Anwendungen
-      \item Bei komplexen Berechnungsverfahren Beschreibung der Algorithmen und
-Literaturhinweise zu den Quellen der Verfahren
-    \end{itemize}
+    
+      - Programmiersprache %(Verweis auf Einstiegsmöglichkeit in die verwendete Programmiersprache-> Anhang)
+      
+      - Anwendungsbereich
+
+      - Methoden %Vorgehensweise
+        \begin{itemize}
+        \item Parameterbeschreibung
+        \end{itemize}
+      - Programmaufbau %(Flow-chart und Beschreibung der einzelnen Bestandteile und der Verknüpfungen zwischen den Modulen)
+
+      - Implementierung / Aufruf
+        \begin{itemize}
+          \item Hard- und Softwarevoraussetzungen
+          \item In- und Output-Dateien %und deren Formate      
+        \end{itemize}
+      %\item Einbindungsmöglichkeiten in andere Anwendungen
+      %\item Bei komplexen Berechnungsverfahren Beschreibung der Algorithmen und Literaturhinweise zu den Quellen der Verfahren
+
+    
     
   \item Ergebnisse
     \begin{itemize}

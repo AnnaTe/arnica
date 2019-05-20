@@ -13,19 +13,20 @@
 \contentsline {subsubsection}{\numberline {2.2.1}Projektpartner}{15}{subsubsection.2.2.1}
 \contentsline {subsubsection}{\numberline {2.2.2}\IeC {\"O}kologischer Hintergrund}{17}{subsubsection.2.2.2}
 \contentsline {subsubsection}{\numberline {2.2.3}Vorgehensweise}{18}{subsubsection.2.2.3}
-\contentsline {subsubsection}{\numberline {2.2.4}Drohneneinsatz zur Fernerkundung}{18}{subsubsection.2.2.4}
-\contentsline {subsubsection}{\numberline {2.2.5}Testfl\IeC {\"u}ge im Schwarzwald}{21}{subsubsection.2.2.5}
-\contentsline {section}{\numberline {3}Programmbeschreibung}{22}{section.3}
-\contentsline {subsection}{\numberline {3.1}Programmiersprache}{22}{subsection.3.1}
-\contentsline {subsection}{\numberline {3.2}Anwendungsbereich}{23}{subsection.3.2}
-\contentsline {subsection}{\numberline {3.3}Vorgehensweise Methoden?}{23}{subsection.3.3}
-\contentsline {subsubsection}{\numberline {3.3.1}Parameterbeschreibung}{23}{subsubsection.3.3.1}
-\contentsline {subsection}{\numberline {3.4}Hard- und Softwarevoraussetzungen}{23}{subsection.3.4}
-\contentsline {subsection}{\numberline {3.5}Programmaufbau}{23}{subsection.3.5}
-\contentsline {subsubsection}{\numberline {3.5.1}Implementierung / Aufruf}{24}{subsubsection.3.5.1}
-\contentsline {subsubsection}{\numberline {3.5.2}(Notwendige) In- und Output-Dateien und deren Formate}{24}{subsubsection.3.5.2}
-\contentsline {section}{\numberline {4}Ergebnisse}{25}{section.4}
-\contentsline {section}{\numberline {5}Fazit}{26}{section.5}
-\contentsline {section}{Literaturverzeichnis}{27}{section.5}
-\contentsline {section}{Anhang}{29}{section*.11}
-\contentsline {section}{Eidesstattliche Erkl\IeC {\"a}rung}{29}{section*.12}
+\contentsline {subsection}{\numberline {2.3}Drohneneinsatz zur Fernerkundung}{19}{subsection.2.3}
+\contentsline {subsubsection}{\numberline {2.3.1}Vergleich von Drohnenarten}{19}{subsubsection.2.3.1}
+\contentsline {subsubsection}{\numberline {2.3.2}Testfl\IeC {\"u}ge im Schwarzwald}{22}{subsubsection.2.3.2}
+\contentsline {section}{\numberline {3}Programmbeschreibung}{25}{section.3}
+\contentsline {subsection}{\numberline {3.1}Programmiersprache}{25}{subsection.3.1}
+\contentsline {subsection}{\numberline {3.2}Anwendungsbereich}{26}{subsection.3.2}
+\contentsline {subsection}{\numberline {3.3}Vorgehensweise Methoden?}{26}{subsection.3.3}
+\contentsline {subsubsection}{\numberline {3.3.1}Parameterbeschreibung}{26}{subsubsection.3.3.1}
+\contentsline {subsection}{\numberline {3.4}Hard- und Softwarevoraussetzungen}{26}{subsection.3.4}
+\contentsline {subsection}{\numberline {3.5}Programmaufbau}{26}{subsection.3.5}
+\contentsline {subsubsection}{\numberline {3.5.1}Implementierung / Aufruf}{27}{subsubsection.3.5.1}
+\contentsline {subsubsection}{\numberline {3.5.2}(Notwendige) In- und Output-Dateien und deren Formate}{27}{subsubsection.3.5.2}
+\contentsline {section}{\numberline {4}Ergebnisse}{28}{section.4}
+\contentsline {section}{\numberline {5}Fazit}{29}{section.5}
+\contentsline {section}{Literaturverzeichnis}{30}{section.5}
+\contentsline {section}{Anhang}{32}{section*.10}
+\contentsline {section}{Eidesstattliche Erkl\IeC {\"a}rung}{32}{section*.11}

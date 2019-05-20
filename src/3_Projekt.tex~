@@ -1,7 +1,10 @@
 \subsection{Projekt zum Schutz der Biodiversität in Rumänien}
-%Einordnung meiner Arbeit in Relation zum Projekt??? -> Testflüge erwähnen, Zeitrahmen erwähnen???
 
-Das Projekt zum Schutz der Biodiversität in Rumänien ist eine bilaterale Zusammenarbeit im Apuseni-Gebirge zum Erhalt des oligothrophen Grünlandes und insbesondere der Zielart Arnica montana. In zwei Ansätzen soll unter dem Einsatz von moderner Fernerkundungstechnologien einerseits brachliegende Flächen und andererseits Grasland mit Arnica montana erkannt werden. Mit den Erkenntnissen soll auf brachliegenden Probeflächen mit Mäh- und Mulchmaschinen ein Wiesenmanagement stattfinden. Durch die Verwendung von Drohnen sollen bisher unbekannte Flächen mit Arnica montana identifiziert werden, um so mit einer nachhaltigen Arnika-Ernte und Bewirtschaftung die Biodiversität zu erhalten. Das Projekt möchte sich in der Region für Nachhaltigkeit und Naturschutz einsetzten, unter Steigerung des Wohlergehens der lokalen Bevölkerung. Der Projektzeitplan sieht einen Start ab dem Frühjahr 2019 vor und das Projekt soll über einen Zeitraum von drei Jahren laufen. Jährlich im Juni/Juli sollen die Drohnenflüge zur Identifizierung von Arnika stattfinden. Im September/Oktober werden die Grasland-Flächen beflogen, um eine Bewirtschaftung oder das brachliegen festzustellen. Zur Vorbereitung auf die Datenerhebungen in Rumänien fanden im Juli 2018 Drohnenflüge zu Testzwecken im Schwarzwald statt.
+%„schützen durch nutzen“
+
+
+%Einordnung meiner Arbeit in Relation zum Projekt??? -> Testflüge erwähnen, Zeitrahmen erwähnen???
+Das Projekt zum Schutz der Biodiversität in Rumänien ist eine bilaterale Zusammenarbeit im Apuseni-Gebirge zum Erhalt des oligothrophen Grünlandes und insbesondere der Zielart Arnica montana. In zwei Ansätzen soll unter dem Einsatz von moderner Fernerkundungstechnologien einerseits brachliegende Flächen und andererseits Grasland mit Arnica montana erkannt werden. Mit den Erkenntnissen soll auf brachliegenden Probeflächen mit Mäh- und Mulchmaschinen ein Wiesenmanagement stattfinden. Durch die Verwendung von Drohnen sollen bisher unbekannte Flächen mit Arnica montana identifiziert werden, um so mit einer nachhaltigen Arnika-Ernte und Bewirtschaftung die Biodiversität zu erhalten. Das Projekt möchte sich in der Region für Nachhaltigkeit und Naturschutz einsetzten, unter Steigerung des Wohlergehens der lokalen Bevölkerung. 
 
 \subsubsection{Projektpartner}
 Das Projekt ist eine Zusammenarbeit der Albert-Ludwigs-Universität Freiburg (ALU-FR) mit dem rumänischen Unternehmen Bioflora Apuseni (BFA) und der Universität für Agrarwissenschaften und Tiermedizin Cluj-Napoca (USAMV). Die ALU-FR wird vertreten durch Prof. Dr. Dr. h.c. Albert Reif (Proffessur für Standort- und Vegetationskunde), Dr. Evelyn Ruşdea  (Projektmanagement) und durch Dr. Holger Weinacker (Institut für Fernerkundung und Landschaftsinformationssysteme). Die ALU-FR hat stellvertretend für das Projekt einen Finanzierungsantrag bei der Deutschen Bundesstiftung Umwelt gestellt.
@@ -31,135 +34,135 @@ Vor 1989 war die Waldwirtschaft in Rumänien streng geregelt und kontrolliert. I
 
 Das oligotrophe Grasland kann seine Biodiversität nur erhalten, wenn eine Bewirtschaftung stattfindet. Das Brachliegen oder die Intensivierung der Nutzung gefährdet das schwierige Gleichgewicht der Graslandwiesen. Zum Schutz der Biodiversität muss eine gemäßigte Düngung von biologischen Düngern (keine Mineraldüngung!) periodisch aufgetragen werden. Um optimale Bedingungen für eine hohe Vielfalt an Arznei- und Wildpflanzen zu erhalten, müssen die Flächen etwa jährlich gemäht werden und dazwischen geflegt werden, z.B. durch das Entfernen von Ästen und Steinen.
 
+\begin{figure}[htb]
+ \centering
+  \includegraphics[width=\textwidth,angle=0]{abb/Arnika/apusenimountain2016}
+ \caption{Apuseni Gebirge mit traditioneller Heuernte}
+\label{fig:apuseni}
+\end{figure}
+
 \todo{hier muss noch zu dem tatsächlichen Manangement recherchiert werden}
 
 \subsubsection{Vorgehensweise}
+
+Der Projektzeitplan sieht einen Start ab dem Frühjahr 2019 vor und das Projekt soll über einen Zeitraum von drei Jahren laufen. Jährlich im Juni/Juli sollen die Drohnenflüge zur Identifizierung von Arnika stattfinden. Im September/Oktober werden die Grasland-Flächen beflogen, um eine Bewirtschaftung oder das brachliegen festzustellen. Zur Vorbereitung auf die Datenerhebungen in Rumänien fanden im Juli 2018 Drohnenflüge zu Testzwecken im Schwarzwald statt.
 
 Zur Identifikation von brachliegendem oligotrophen Grasland sollen mit dem Einsatz von Drohnen Digitale Höhenmodelle erstellt werden. Dafür muss das gesamte Gelände zweimal mit der Drohne erfasst werden. Beim ersten Flug wird ein Digitales Oberflächen Modell (DOM) (engl. digital surface model DSM) erstellt, also ein Modell der Erdoberfläche inklusive auf ihr befindlicher Objekte, wie die Vegetation. Nach dem zweiten Flug kann ein Digitales Geländemodell (DGM) (engl. digital terrain model DTM) abgeleitet werden. Das DGM ist ein Modell der natürlichen Erdoberfläche ohne Objekte. Durch die Subtraktion der beiden Modelle kann ermittelt werden, ob Flächen gemäht wurden oder ob sie brachliegen. Nach der Indentifikation von brachliegenden Flächen werden fünf Probeflächen in fünf Gemeinden ausgewählt und durch den Einsatz von Mäh- und Mulchmaschinen wieder nutzbar gemacht. In Zusammenarbeit mit der lokalen Aktionsgruppe Arieşul Mare soll der Kontakt zwischen LandbesitzerInnen initiiert werden. Mit dem Zusammenschluss gibt es die Perspektive weitere Technologien und Maschinen anschaffen zu können und das Projekt auf andere Regionen ausweiten zu können.
 
 Mit der nachhaltigen Vermarktung von Arnica montana soll in die Bevölkerung ein Interesse zum Schutz des oligotrophen Graslandes geschaffen werden. Durch die Verknüpfung der ökonomischen Interessen mit dem ökologischen Erhalt der Biodiversität soll langfristig eine Steigerung der Lebensqualität der vor Ort lebenden Menschen erreicht werden. An die Entwicklung der BFA soll hier angeschlossen werden. Ziel ist es eine Datenbank und Karte über die Verteilung der Arnika-Flächen in zehn Gemeinden zu erstellen. Durch den Einsatz von Drohnen in fünf Gemeinden soll das Produktivitätspotential der Habitate ermittelt und in eine qualitative Klasse in Abhängigkeit von der Anzahl der Blütenstände pro 100 m\textsuperscript{2} eingeordnet werden. Zusätzlich soll erfasst werden, welches Management bisher auf den Flächen durchgeführt wurde. Für die Auswertung der durch den Drohneneinsatz entstandenen Bilder soll ein Software-Programm entwickelt werden, dass die Arnica montana Blütenstände automatisch erkennt und eine Klassifizierung durchführt.
 
-\subsubsection{Drohneneinsatz zur Fernerkundung}
+\subsection{Drohneneinsatz zur Fernerkundung}
 
 %+++ Was ist eine Drohne? Was eine UAS, UAV?
-Drohnen sind Luftfahrzeuge, die ohne an Bord befindliche Personen über einen Computer oder vom Boden aus über eine Fernsteuerung betrieben werden. Unbemannte Luftfahrzeuge (engl. Unmanned Aerial Vehicle, kurz UAV) besitzen zwei Tragflächen und sind dem Flugzeug nachempfunden. Multikopter zählen zu den Hubschraubern und haben zwischen zwei und zwölf Rotoren, so können sie sich in alle Richtungen bewegen. Beide werden im allgemeinen Sprachgebrauch Drohnen genannt. Ferngesteuerte Fluggeräte, die im Freizeitbereich eingesetzt werden, zählen nicht zu den Drohnen, auch wenn vor allem die Multikopter Flugmodelle oft so bezeichnet werden. Unmanned Aerial Systems (UAS) bestehen aus der UAV, der Sensor-Ladung und der Bodenkontrollstation. Komponenten und Größe der Bodenkontrollstationen variieren stark, in Abhängigkeit von der Aufgabe der UAV. Sie können aus großen Kontrollsystemen bestehen, die auf Fahrzeugen montiert werden oder nur aus einem kleinen Laptop, der getragen werden kann. \citep[vgl.][]{Watts2012}
-%Die Klassifizierung von UAS im zivilen wissenschaftlichen Einsatz orientiert sich generell auf den schon vorhandenen militärischen Begriffen. Die Einteilung basiert auf den Eigenschaften Größe, Flugausdauer und weiteren Fähigkeiten der Drohnen.
+Drohnen sind Luftfahrzeuge, die ohne an Bord befindliche Personen über einen Computer oder vom Boden aus über eine Fernsteuerung betrieben werden. Unbemannte Luftfahrzeuge (engl. Unmanned Aerial Vehicle, kurz UAV) besitzen zwei Tragflächen und sind dem Flugzeug nachempfunden. Multikopter zählen zu den Hubschraubern und haben zwischen zwei und zwölf Rotoren, so können sie sich in alle Richtungen bewegen. Beide werden im allgemeinen Sprachgebrauch Drohnen genannt. Ferngesteuerte Fluggeräte, die im Freizeitbereich eingesetzt werden, zählen nicht zu den Drohnen, auch wenn vor allem die Multikopter Flugmodelle oft so bezeichnet werden. Unmanned Aerial Systems (UAS) bestehen aus der UAV, der Sensor-Ladung und der Bodenkontrollstation. Komponenten und Größe der Bodenkontrollstationen variieren stark, in Abhängigkeit von der Aufgabe der UAV. Sie können aus großen Kontrollsystemen bestehen, die auf Fahrzeugen montiert werden oder nur aus einem kleinen Laptop, der getragen werden kann. Die Klassifizierung von UAS im zivilen wissenschaftlichen Einsatz orientiert sich generell auf den schon vorhandenen militärischen Begriffen. Die Einteilung basiert auf den Eigenschaften Größe, Flugausdauer und weiteren Fähigkeiten der Drohnen \citep[vgl.][]{Watts2012}.
+
+\subsubsection{Vergleich von Drohnenarten}
+
+Für den Anwendungsmaßstab des Projekts in Rumänien sind zwei Arten von Drohnen geeignet (Siehe Abbildung~\ref{fig:drohnen}, S.\pageref{fig:drohnen}). Die Multikopterdrohnen können präzise Aufnahmen in einer angemessene Höhe machen, haben durch den Schwebflug aber einen höheren Energieverbrauch und somit eine kürzere Flugdauer. „Vertical Take-Off and Landing“ (VTOL) Drohnen sind UAV, die keine Start- oder Landebahn benötigen. Durch ihre Tragfläche können VTOL Drohnen eine große Fläche in geringer Zeit befliegen. Zum Starten und Laden haben sie Rotoren, die nach oben gerichtet werden. Dadurch sind sie auch in unwegsamen Gelände einsetzbar.
+Generell stehen die mögliche Flugzeit und damit auch die Größe der Fläche, die von der Drohne erfasst werden kann, in Abhängigkeit zum Gewicht der Drohne. Eine höhere Beladung, durch weitere Sensoren, beispielsweise eine Kamera mit einem größerem und schwerem Objektiv, bringen genauere Ergebnisse, aber verkürzen durch ihr Gewicht die mögliche Flugzeit. Einen großen Teil des Gewichts macht aber auch der Akku aus, dessen Größe sich aber auch positiv auf die Flugdauer auswirkt.
 
 \begin{figure}[hbt]
-    \subfigure{\includegraphics[width=0.65\textwidth,angle=0]{abb/drohnen/trinity-f9}}
-    \subfigure{\includegraphics[width=0.3\textwidth]{abb/drohnen/P4RTK}}
-\caption{Trinity F9 VTOL-Drohne (links) und DJI Phantom 4 Quadrocopter (rechts)}
-  \label{fig:drohne}
+    %\hspace{-20pt}
+    \subfigure{\includegraphics[width=0.20\textwidth]{abb/drohnen/P4RTK}}
+    \hspace{-20pt}
+    \subfigure{\includegraphics[width=0.52\textwidth]{abb/drohnen/trinity-f9}}
+        \hspace{-30pt}
+    \subfigure{\includegraphics[width=0.35\textwidth]{abb/drohnen/wingtraone}}
+     \hspace{-20pt}
+\caption[DJI Phantom 4 Quadrocopter, Trinity F9 und WintraOne VTOL-Drohnen]{\small v.l.n.r: DJI Phantom 4 Quadrocopter, Trinity F9 und WintraOne VTOL-Drohnen}
+     \hspace{-40pt}
+  \label{fig:drohnen}
 \end{figure}
 
-VTOL (, brauchen keinen bestimmten Start oder Landeplatz, fliegen nicht in übermäßiger Höhe, "hovering" Schweben verbraucht viel Energie, deshalb auch meistens keine lange Flugdauer)
-Multikopter
-Eigenschaften sind entscheidend. Bei einer Kamera mit höheren Auflösung können genauere Bilder entstehen, diese sind aber auch oftmals schwerer. Je schwerer die Drohne, desto mehr Energie wird beim Flug verbraucht. Der Akku hält also nur eine kürzere Flugdauer. Akkugröße und Gewicht sind für die Flugdauer entscheidend. 
-%+++ welche Eigenschaften sind für unsere Anwendung entscheidend? 
-Charakteristika:
-- Fluggeschwindigkeit -> Auflösung der Bilder
-- Flughöhe -> Qualität der Bilder
-- Sensoren: GPS, xyz Daten, Ausweichsensoren, Stabilisatoren?
-- Start- und Landungsart
-- Akkugröße und Gewicht -> Flugdauer 
-- Preis
-wie viel Gelände kann in wie viel Zeit erfasst werden
+Das „Projekt zum Schutz der Biodiversität in Rumänien“ behandelt zwei Aufgaben, die unterschiedliche Anforderungungen an eine Drohne stellen. Bei der Befliegung des Graslandes zur Erkennung von brachliegenden Flächen ist eine riesige Fläche zu erfassen. Eine UAV mit Starrflügeln kann im Vergleich zu Multikoptern höher fliegen und hat somit eine größere Flugausdauer, so kann eine größere Fläche abdeckt werden. Mit einer „Vertical Take Off and Landing“ Drohne (VTOL) können Schäden beim Start oder Ladung in unebenen Gelände vermieden werden. Da die Vegetation des Graslandes nur eine Höhe von 20-30 cm hat, muss zur genauen Berechnung der Höhenmodelle die möglichst genaue vertikale und horizontale Position der Drohne erfasst werden. Dementsprechend wird ein System  benötigt, dass die Ungenauigkeiten der globalen Navigationssysteme (GNSS), die üblicherweise ein paar Meter betragen, ausgleicht. Mit real-time kinematics (RTK) und post-processing kinematics (PPK) Systemen kann eine genaue Positionsbestimmung bis auf wenige Zentimeter berechnet werden. Wie der Name schon sagt, findet diese Berechnung beim RTK in unmittelbar statt, beim PPK nachgelagert. 
+Der Vorteil von RTK und PPK ist, dass die Verwendung von Bodenreferenzpunkten entfällt, was Kosten spart. Für Beide wird eine GNSS-Bodenstation benötigt, die georeferenziert ist, um ein genaues Ergebnis zu erzielen. Bei PPK kann auch falls vorhanden mit einer virtuellen Referenzstation gearbeitet werden. Bei RTK muss eine Verbindung zwischen Drohne und GNSS-Bodenstation vorhanden sein, bei Störungen kann ein genaues Ergebnis nicht berechnet werden. Bei PPK ist eine Verbindung nicht notwendig, die genaue Positionierung wird erst bei Auswertung der Log-Daten berechnet. 
 
-Das „Projekt zum Schutz der Biodiversität in Rumänien“ behandelt zwei Aufgaben, die unterschiedliche Anforderungungen an eine Drohne stellen. Zur Erkennung der brachliegenden Flächen benotigt man eine Drohne, die in kurzer Zeit eine große Fläche überfliegen und erfassen kann. 
+Für die Identifizierung von 5-8 cm großen Arnika-Blüten benötigt man hingegen eine Drohne, die Bilder in einer möglichst hohen Auflösung machen kann. Da Starrflügel UAVs eine höhere Mindestgeschwindigkeit haben als Multikopter, die auch in der Luft „stehen“ können, könnte sich die Fluggeschwindigkeit negativ auf die Qualität der Bilder auswirken. Einerseits sollen großflächige Befliegungen Flächen mit Arnica montana lokalisieren, um das Monitoring auszuweiten. Andererseits soll eine qualitative Analyse der Flächen stattfinden. Für die großflächige Befliegung eignet sich eine VTOL-Drohne, die eine möglichst hohe Auflösung erzielt dabei aber eine große Fläche befliegen kann. Für die qualitative Analyse der Flächen kann noch höhere Auflösung nötig sein, die durch eine tiefere Flughöhe mit geringer Geschwindigkeit erreicht werden. Mit einem Multikopter kann dies ohne große Umstände passieren.
 
-Für die Identifizierung von 5-8 cm großen Arnika-Blüten benötigt man hingegen eine Drohne, die Bilder in einer hohen Auflösung machen kann.
-
-\begin{table}[htbp]
+\begin{table}[hbt]
 \fontfamily{cmss}\selectfont
-\small
+\footnotesize
 \begin{tabular}{lccc} %\toprule
-
 \textbf{Technische Daten} & \textbf{DJI Phantom 4 RTK} & \textbf{Trinity F9}  & \textbf{WingtraOne} \\ %\midrule
 \hline\hline
 Flügelbreite & 0,35 m & 2,394 m & 1,25 m \\
-Max. Fluggeschwindigkeit & 50 – 58 km/h & 60 km/h & 57,6 km/h \\
+Max. Startgewicht & 1,391 kg & 4,5 kg & 4,5 kg \\
+max. Zuladung & – & 550 g & 800 g \\
+Fluggeschwindigkeit & max 50 – 58 km/h & 60 km/h & 57,6 km/h \\
 Max. Flugzeit & 30 min & 60 min & 55 min \\
 Windwiderstand am Boden & 10 m/s & 7 m/s & 8 m/s \\
 Windwiderstand im Flug & 10 m/s & 12 m/s & 12 m/s \\
 Max. Fläche & 100 ha (182 m) & 500 ha (100 m) & 320 ha (120 m) \\
 Auflösung & 1,5 cm/px (120 m) & 2,5 cm/px (100 m) & 2,8 cm/px (120 m) \\
-Max. Startgewicht & 1,391 kg & 4,5 kg & 4,5 kg \\
-max. Zuladung & ?  & 550 g & 800 g \\
-Sensoren & RTK und Gimbal* & PKK und RTK & PKK \\
-Positionierungsgenauigkeit** &  & 2 – 5 cm &  \\
-vertikal & 1,5 cm + 1 ppm (RMS) &  & 2 cm  \\
-horizontal & 1 cm + 1 ppm (RMS) &  & 1 cm + 0,003\% \\
-Preis & 7.800 EUR & 14.850 EUR & 36.678 EUR\\
-
+Sensoren & RTK und Gimbal\textsuperscript{1} & PKK & PKK \\
+Positionierungsgenauigkeit\textsuperscript{2} &  & 2 – 5 cm &  \\
+{    } vertikal & 1,5 cm + 1 ppm RMS &  & 2 cm  \\
+{    } horizontal & 1 cm + 1 ppm RMS &  & 1 cm + 0,003\% RMS\\
+Preis & ca. 7.800 EUR & ca. 14.850 EUR & ca. 36.678 EUR\\
 \hline
 \end{tabular}
-* Gimbal ist ein Bildstabilisator \\
-** 1 ppm, entspricht beispielsweise, dass für jeden Kilometer zusätzlichen Abstand die Präzision um 1 mm abnimmt.
-\caption[Tabelle]{Technische Daten der Drohnen im Vergleich}
-\label{tab:toll1}
+\\
+\scriptsize
+1: Gimbal ist ein Bildstabilisator \\
+2: RMS = Root Mean Square entspricht der Standardabweichung \\
+1 ppm = pro km nimmt Wertgenauigkeit um 1 mm ab. 
+\caption{Technische Daten der Drohnen im Vergleich}
+\label{tab:technischedaten}
 \end{table}
-\todo{es fehlt die minimale Geschwindigkeit}
-%+++ Warum diese Drohne bei dem Projekt? (Diskussion??)
 
-Bei der Befliegung des Graslandes zur Erkennung von brachliegenden Flächen ist eine riesige Fläche zu erfassen. Dafür wird eine UAV mit Starrflügeln benötigt, da diese im Vergleich zu Multikoptern höher fliegen kann und eine größere Flugausdauer haben, so kann eine größere Fläche abdeckt werden. Mit einer „Vertical Take Off and Landing“ Drohne (VTOL) können Schäden beim Start oder Ladung in unebenen Gelände vermieden werden. Da die Vegetation des Graslandes nur eine Höhe von 20-30 cm hat, muss zur genauen Berechnung der Höhenmodelle die exakten x,y und z Position der Drohne erfasst werden. Dementsprechen wird ein sehr präziser GNSS benötigt. 
-
-Einerseits die großflächige Identifizierung von neuen Flächen oligothrophen Grünlands mit dem Einsatz von Drohnen und damit einhergehend die Etablierung eines Monitorings für die nachhaltige Nutzung von Arnica montana.
-
-task b.
-hier ist es wichtig tiefer Flughöhe mit der langsamsten Geschwindigkeit -> deshalb FixWing UAV
-dann können wir sicher gehen, dass die Auflösung der bilder hoch genug ist, um das best möglichste ergebnis des logarithmus zu bekommen
-also muss die niedrigste Flughöhe gewählt werden, ohne aber in höhere Objekte wie Bäume zu fliegen, Weil eine FixWing UAV aber nicht langsamer als 16m/sec fliegen kann, ist eine sehr gute Kamera nötig mit einem sehr lichtempfindlichen Objektiv (z.B. Sony RX1RII)
-
--> Ideal wäre eine Drohne für die "Fern"-erkundung und eine für die Qualitative präzisere Erkennung. De facto wird im DBU-Antrag aber nur eine Drohne vorgeschlagen, wegen des Budgets. -> WingtraOne mit PPK
-
-PKK (= post processing kinematic) -> jedes Bild bekommt die genauen Positionierung eingespeichert 
-Kamera mit Auflösung zwischen 0,7 und 31 cm !!! -> tatsächlich für die Qualitative Erkennung von Arnica sehr schwierig. -> Test mit Bild aus 80m Flughöhe machen für die Diskussion
-
-\begin{figure}[htb]
- \centering
-  \includegraphics[width=0.6\textwidth,angle=0]{abb/drohnen/wingtraone}
- \caption{WingtraOne VTOL-Drohne}
-\label{fig:wingtraone}
-\end{figure}
-%%%%%
+Derzeit gibt es eine Vielzahl von Drohnen in allen Preissegmenten zum privaten und wissenschaftlichen Gebrauch auf dem Markt. Drei Vertreter, die für die Aufgaben des Projektes in Rumänien in Frage kommen würden, sind der Quadrocopter DJI Phantom 4 RTK, die VTOL-Drohne Trinity F9 von Quantum-Systems und die VTOL-Drohne WintraOne PPK. Ausgewählt wurden diese weil sie alle ein System zur Positionskorrektur (PPK oder RTK) besitzen. Dies ist notwendig, um genaue digitale Höhenmodelle zu berechnen. Schaut man sich die drei Drohnen an (Siehe Abbildung~\ref{fig:drohnen}, S.\pageref{fig:drohnen}), fallen zunächst die großen äußeren Unterschiede auf. Mit einer Flügelbreite von über 2 m ist die Trinity F9 die größte Drohne. Die WingtraOne ist für eine Starrflügel Drohne mit einer Flügelbreite von nur 1,25 m recht klein. Trotzdem sind beide VTOL-Drohnen, können also aus dem Stand starten. Die Trinity F9 dreht dafür ihre Rotoren nach oben und schwebt waagerecht in die Luft, vergleichbar mit einem Multikopter. Die WintraOne starten senkrecht in die Luft und dreht dann in gewünschter Höhe den Flugkörper. Vergleicht man die Technischen Daten der Drohnen (Siehe Tabelle~\ref{tab:technischedaten}, S.\pageref{tab:technischedaten}) unterscheiden sie sich im Windwiderstand, also die maximale Windgeschwindigkeit bei der mit den Drohnen geflogen werden sollte, nur geringfügig. Auch bei der Fluggeschwindigkeit scheint es nur minimale Unterschiede zu geben, allerdings ist dies bei der DJI Phantom 4 RTK die maximale Fluggeschwindigkeit, der Quadrokopter kann durchaus auch wesentlich langsamer fliegen und damit genauere Bilder aufnehmen. Bei den VTOL-Drohnen ist die angegebene Fluggeschwindigkeit die „cruise speed“ also durchschnittliche Fluggeschwindigkeit im aerodynamischen Flug, ein wesentlich geringere Fluggeschwindigkeit ist nicht möglich. Der Quadrocopter unterscheidet sich im Vergleich zu den beiden VTOL-Drohnen wesentlich in Größe, Gewicht und Zuladungsmöglichkeit. Die DJI Phantom 4 RTK Drohne wiegt nur 1391 g Größe von nur 35 cm in der Diagonale. Eine zusätzliche Zuladung ist nicht möglich, die Kamera und Sensoren sind integriert. Trotz des wesentlich geringerem Gewichts der Drohne kann sie nur etwa 30 min fliegen und damit etwa halb so lang, wie die VTOL-Drohnen. Die Fläche die von der Drohne erfasst werden kann, ist dementsprechend auch wesentlich geringer, nur 100 ha bei einer Flughöhe von 182 m. Mit der WingtraOne Drohne kann eine Fläche von 320 ha bei 120 m Flughöhe erfasst werden, mit der Trinity F9 sogar 500 ha bei 100 m Flughöhe. Allerdings haben die Bilder, die bei der Flughöhe von den VTOL-Drohnen gemacht werden nur eine Auflösung von 2,5 cm/px (Trinity F9 bei 100 m) bis 2,8 cm/px (WingtraOne bei 120m). Die DJI Phantom 4 RTK schafft bei 120 m Flughöhe eine deutlich bessere Auflösung mit 1,5 cm/px. Ein weiterer entscheidener Unterschied besteht in der Positionierungsgenauigkeit. Die DJI Phantom 4 RTK und die WingtraOne PKK erreichen eine Genauigkeit von etwa 1 bis 2 cm. Die Trinity F9 erreicht mit ihrem PKK System nur eine Positionsgenauigkeit von 2 bis 5 cm. Dies ist, neben dem Preis, der entscheidenste Unterschied zwischen den beiden VTOL-Drohnen WingtraOne und Trinity F9. Preislich ist der Quadrocopter am günstigsten mit 7800 Euro. Die Trinity F9 Drohne ist für etwa 14850 Euro erhältlich und die WingtraOne kostet 36678 Euro. %-> Ein Vorteil der DJI Phantom 4 RTK ist auch noch das Ausweichsystem, ???
+Für die Aufgabe der Erfassung von brachliegenden Flächen im „Projekts zum Schutz der Biodiversität in Rumänien“ sind die Trinity F9 und die WingtraOne Drohne geeignet. Allerdings können bei der Berechnung der digitalen Höhenmodelle mit der Trinity F9 aufgrund von der geringeren Positionierungsgenauigkeit Fehler entstehen. Die WingtraOne hat dort einen entscheidenen Vorteil. Für die Erkennung von Arnica montana könnte mit einer VTOL-Drohne ein größeres Gelände beflogen werden, um einen Hinweis auf Arnica montana zu geben, für eine präzise qualitative Analyse könnten mit der DJI Phantom 4 RTK gute Ergebnisse erzielt werden. Eine Drohne, die für beide Aufgaben mit besten Ergebnissen verwendet werden kann, ist die WingtraOne. Mit einer geringen Flughöhe und einer lichtempfindlichen Kamera kann auch die WingtraOne Bilder mit einer Auflösung machen, die eine qualitative Analyse von Arnikablüten möglich macht. 
 
 \subsubsection{Testflüge im Schwarzwald}
 %++++++ Testflüge?? im Schwarzwald 
 
-Bei Testflügen im Schwarzwald im Juli 2018 wurden erste Bilder an einem bekannter Standort von Arnica montana gemacht. Mit der Octocopterdrohne der Universität Freiburg wurden mit einer Sony Alpha 7R Kamera eine Fläche in unterschiedlichen Flughöhen erfasst. Anschließend wurden die Daten ausgewertet, Höhenmodelle berechnet und Orthofotos erstellt. Ziel war es mit den Testflügen den Bedarf und Beschaffenheit der Ausrüstung für die spezifische Aufgabe heraus zu finden. Mit den entstandenen Testdaten werden erste Methoden entwickelt und damit der System Developement Life Circle (SDLC) in Gang gesetzt (Siehe Abbildung~\ref{fig:sdlc}, S.\pageref{fig:sdlc}). Die Softwareentwicklung durchläuft verschiedene Phasen, die aufeinander aufbauen. Im Laufe der Entwicklung können sich die Phasen im Kreislauf wiederholen, um Änderungen einzuarbeiten und Fehler auszubessern. 
+Bei Testflügen im Schwarzwald im Juli 2018 wurden erste Bilder an einem bekannter Standort von Arnica montana gemacht. Mit der Octocopterdrohne der Universität Freiburg wurden mit einer Sony Alpha 7R Kamera eine Fläche in unterschiedlichen Flughöhen erfasst. Anschließend wurden die Daten ausgewertet, Höhenmodelle berechnet und Orthofotos erstellt. Ziel war es mit den Testflügen den Bedarf und Beschaffenheit der Ausrüstung für die spezifische Aufgabe heraus zu finden.
 
-\begin{figure}[htb]
- \centering
- \includegraphics[width=0.3\textwidth,angle=0]{abb/SDLC}
- \caption{System Developement Life Circle}
-\label{fig:sdlc}
-\end{figure}
+\begin{wrapfigure}{r}{0.4\textwidth}
+  \vspace{-30pt}
+  \begin{center}
+    \includegraphics[width=0.3\textwidth]{abb/SDLC}
+  \end{center}
+  \vspace{-20pt}
+  \caption[System Developement Life Circle]{\small SDLC}
+  \label{fig:sdlc}
+  \vspace{-20pt}
+\end{wrapfigure}
+Mit den entstandenen Testdaten werden erste Methoden entwickelt und damit der System Developement Life Circle (SDLC) in Gang gesetzt (Siehe Abbildung~\ref{fig:sdlc}, S.\pageref{fig:sdlc}). Die Softwareentwicklung durchläuft verschiedene Phasen, die aufeinander aufbauen. Im Laufe der Entwicklung können sich die Phasen im Kreislauf wiederholen, um Änderungen einzuarbeiten und Fehler auszubessern. 
 
-%- Das Projekt läuft über einen Zeitraum von, in dem immer wieder im X und Y Aufnahmen gemacht werden sollen
+
 %- die Testflüge dienten als erste Orientierung, um sich darauf vorbereiten zu können, heraus zu finden welches Equipment notwendig ist und mit den entstandenen Bildern die Softwareentwicklung anzustoßen, aber das ist ein langer Prozess, bis dies tatsächlich beeendet ist.
 
 %Ich nehme mir jetzt diese Testdaten und teste wie mit "einfachen" mitteln das erreicht werden kann. 
+% - Meine Software bietet die Möglichkeit sich einen Überblick zu verschaffen, für die qualitative Analyse nicht so geeignet.
+\blindtext
 
+\begin{figure}[htb]
+    \subfigure[15 m]{\includegraphics[width=0.24\textwidth]{abb/ergebnisse/gleicheblumen/DSC01525-b}}
+    \subfigure[20 m]{\includegraphics[width=0.24\textwidth]{abb/ergebnisse/gleicheblumen/DSC01298-b}}
+    \subfigure[30 m]{\includegraphics[width=0.24\textwidth]{abb/ergebnisse/gleicheblumen/DSC01757-b}}
+    \subfigure[80 m]{\includegraphics[width=0.24\textwidth]{abb/ergebnisse/gleicheblumen/DSC01959-b}}
+\caption{gleicher Bildausschnitt mit unterschiedlicher Auflösung je nach Flughöhe.}
+  \label{fig:gleicheblumen}
+\end{figure}
 
-% \begin{figure}[htb]
-%     \subfigure[15 m]{\includegraphics[width=0.24\textwidth]{abb/ergebnisse/gleicheblumen/DSC01525-b}}
-%     \subfigure[20 m]{\includegraphics[width=0.24\textwidth]{abb/ergebnisse/gleicheblumen/DSC01298-b}}
-%     \subfigure[30 m]{\includegraphics[width=0.24\textwidth]{abb/ergebnisse/gleicheblumen/DSC01757-b}}
-%     \subfigure[80 m]{\includegraphics[width=0.24\textwidth]{abb/ergebnisse/gleicheblumen/DSC01959-b}}
-% \caption{gleicher Bildausschnitt mit unterschiedlicher Auflösung je nach Flughöhe.}
-%   \label{fig:gleicheblumen}
-% \end{figure}
-%
+\blindtext
+
+% Testdaten sind Grundlage für mich zur Entwicklung des Programms und zur Bewertung der Funktion, 
+
 % Aufnahmenqualität bewerten
-%
-% \begin{figure}[htb]
-%     \subfigure[15m]{\includegraphics[width=0.24\textwidth]{abb/ergebnisse/gleicherausschnitt/DSC01525-a}}
-%     \subfigure[20m]{\includegraphics[width=0.24\textwidth]{abb/ergebnisse/gleicherausschnitt/DSC01298-a}}
-%     \subfigure[30m]{\includegraphics[width=0.24\textwidth]{abb/ergebnisse/gleicherausschnitt/DSC01757-a}}
-%     \subfigure[80m]{\includegraphics[width=0.24\textwidth]{abb/ergebnisse/gleicherausschnitt/DSC01959-a}}
-% \caption{Unterschiedlicher Bildausschnitt der Flughöhen bei gleicher Auflösung.}
-%   \label{fig:gleicherausschnitt}
-% \end{figure}
+  %- unterschiedliche Lichtverhältnisse der Aufnahmen, Sonnenschein oder Schattenwurf 
+  %- durch Bewegung unschärfe, vielleicht auch Belichtungszeit der Kamera nicht gut eingestellt?
+  %- 
 
+\begin{figure}[htb]
+    \subfigure[15m]{\includegraphics[width=0.24\textwidth]{abb/ergebnisse/gleicherausschnitt/DSC01525-a}}
+    \subfigure[20m]{\includegraphics[width=0.24\textwidth]{abb/ergebnisse/gleicherausschnitt/DSC01298-a}}
+    \subfigure[30m]{\includegraphics[width=0.24\textwidth]{abb/ergebnisse/gleicherausschnitt/DSC01757-a}}
+    \subfigure[80m]{\includegraphics[width=0.24\textwidth]{abb/ergebnisse/gleicherausschnitt/DSC01959-a}}
+\caption{Unterschiedlicher Bildausschnitt der Flughöhen bei gleicher Auflösung.}
+  \label{fig:gleicherausschnitt}
+\end{figure}
 
-++++++++++ wissenschaftlicher Kenntnissstand von Monitoring via Drohnen bzw. von automatischer Erkennung und Programmierung 
+\blindtext
+%++++++++++ wissenschaftlicher Kenntnissstand von Monitoring via Drohnen bzw. von automatischer Erkennung und Programmierung ???

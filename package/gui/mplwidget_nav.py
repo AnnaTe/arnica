@@ -14,7 +14,7 @@ class MplCanvas(FigureCanvas):
     """Class to represent the FigureCanvas widget"""
     def __init__(self):
         # setup Matplotlib Figure and Axis
-        self.fig = Figure()
+        self.fig = Figure(dpi=300)
         self.ax = self.fig.add_subplot(111)
         self.ax.axis('off')
         self.fig.tight_layout()
@@ -38,11 +38,12 @@ class MplWidget(QtWidgets.QWidget):
         self.canvas = MplCanvas()
         # create a vertical box layout
         self.vbl = QtWidgets.QVBoxLayout()
-        self.ntb = NavigationToolbar(self.canvas, parent)
-        self.ntb.move(235,48)
+        #self.ntb = NavigationToolbar(self.canvas, parent)
+        #self.ntb.move(235,48)
         # add mpl widget to the vertical box
         self.vbl.addWidget(self.canvas)
-        self.ntb.addWidget(self.win)
+        self.addToolBar(NavigationToolbar(self.canvas, self))
+        #self.ntb.addWidget(self.win)
 
         # set the layout to the vertical box
         self.setLayout(self.vbl)

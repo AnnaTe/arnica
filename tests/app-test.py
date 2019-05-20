@@ -117,6 +117,7 @@ class DesignerMainWindow(QtWidgets.QMainWindow, Ui_MainWindow, Data):
             self.mpl.canvas.draw()
             self.statusbar.showMessage('{} Flowers counted.'.format(counter))
 
+
         elif self.cbYellow.isChecked() == True:
             if percent != self.perc:
                 self.i.filter(percent, lowsize)
@@ -139,19 +140,72 @@ class DesignerMainWindow(QtWidgets.QMainWindow, Ui_MainWindow, Data):
                 self.plot(self.i.cropped)
 
     def export_image(self):
-        self.statusbar.showMessage('export is running...')
+        self.statusbar.showMessage('Export is running...')
         #a = self.parse_file()
 
         # collect values from user input
         percent= self.sbCrop.value()
         lowsize = self.sbBlob.value()
 
-        saveas = QtWidgets.QFileDialog.getSaveFileName(self, 'Save as')[0]
+        try:
+            saveas = QtWidgets.QFileDialog.getSaveFileName(self, 'Save as')[0]
+        except:
+            self.statusbar.showMessage('Export failed, try again.')
+
+        if self.cbCircle.isChecked() == True:
+            if percent != self.perc:
+                self.i.filter(percent, lowsize)
+                self.mins = lowsize
+                self.perc = percent
+            else:
+                if lowsize != self.mins:
+                    self.i.yellow(self.i.cropped, lowsize)
+                    self.mins = lowsize
+                else:
+                    try:
+                        self.mpl.canvas.fig.savefig(saveas)
+                        #self.mpl.canvas.fig.savefig(saveas, dpi=300)
+                    except:
+                        self.statusbar.showMessage('Figsave not working.')
+
+            self.mpl.canvas.ax.clear()
+            number, output, stats, centroids = cv2.connectedComponentsWithStats(self.i.blob[:, :, 0], connectivity=8)
+            center = list(zip(centroids[1:, 0].astype(int), centroids[1:, 1].astype(int)))
+            radius = stats[1:, 3]
+
+            self.mpl.canvas.ax.imshow(cv2.cvtColor(self.i.cropped, cv2.COLOR_BGR2RGB))
+            self.mpl.canvas.ax.axis("off")
+            counter = 0
+            for i in range(centroids[1:, 1].shape[0]):
+                circ = Circle(center[i], radius[i], color="r", linewidth=1, fill=False)
+                self.mpl.canvas.ax.add_patch(circ)
+                counter += 1
+            #self.mpl.canvas.draw()
+            self.statusbar.showMessage('{} Flowers counted.'.format(counter))
+
+            try:
+                self.mpl.canvas.fig.savefig(saveas)
+                #self.ntb.save_figure(saveas)
+                #self.mpl.canvas.fig.savefig(saveas, dpi=300)
+                #self.mpl.canvas.ax.figure.savefig(saveas)
+                #self.mpl.canvas.fig.savefig(saveas, dpi=300)
+                #cv2.imwrite(saveas, self.i.blob)
+            except:
+                self.statusbar.showMessage("ERROR: Not a valid file name. File type has to be JPG or PNG.")
+            else:
+                self.statusbar.clearMessage()
 
         if self.cbYellow.isChecked() == True:
-            # apply filter
-            self.i.filter(percent, lowsize)
-            # plot result
+            if percent != self.perc:
+                self.i.filter(percent, lowsize)
+                self.mins = lowsize
+                self.perc = percent
+            else:
+                if lowsize != self.mins:
+                    self.i.yellow(self.i.cropped, lowsize)
+                    self.mins = lowsize
+                else:
+                    pass
             try:
                 cv2.imwrite(saveas, self.i.blob)
             except:
@@ -159,7 +213,11 @@ class DesignerMainWindow(QtWidgets.QMainWindow, Ui_MainWindow, Data):
             else:
                 self.statusbar.clearMessage()
         else:
-            self.i.crop(percent)
+            if percent == self.perc:
+                pass
+            else:
+                self.perc = percent
+                self.i.crop(self.perc)
             try:
                 cv2.imwrite(saveas, self.i.cropped)
             except:
@@ -186,7 +244,7 @@ class DesignerMainWindow(QtWidgets.QMainWindow, Ui_MainWindow, Data):
 
         if self.cbYellowDir.isChecked() == True:
             for imagepath in paths:
-                #a = self.parse_file(imagepath)
+                self.i = Data(imagepath)
                 self.i.filter(percent, lowsize)
                 outpath = outputdir + self.i.name + 'seg' + str(lowsize) + '.png'
                 cv2.imwrite(outpath, self.i.blob)
@@ -195,14 +253,13 @@ class DesignerMainWindow(QtWidgets.QMainWindow, Ui_MainWindow, Data):
                     self.progressBar.setValue(self.completed)
         else:
             for imagepath in paths:
-                #a = self.parse_file(imagepath)
+                self.i = Data(imagepath)
                 self.i.crop(percent)
-                outpath = outputdir+ self.i.name + 'crop' + str(percent) + '.png'
+                outpath = outputdir + self.i.name + 'crop' + str(percent) + '.png'
                 cv2.imwrite(outpath, self.i.cropped)
                 if self.completed < 100:
                     self.completed += 100/self.total
                     self.progressBar.setValue(self.completed)
-        # ...same for deadflowers checkbox
 
 
 
