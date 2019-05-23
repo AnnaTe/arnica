@@ -1,18 +1,24 @@
-\contentsline {figure}{\numberline {1}{\ignorespaces \textit {Arnica montana} aus Herbarium Backwellium (Blackwell et al., 1747) (links) und K\IeC {\"o}hler's Medizinal-Pflanzen (K\IeC {\"o}hler, 1887)(rechts)}}{9}{figure.1}
-\contentsline {figure}{\numberline {2}{\ignorespaces v.l.n.r.: alpine Arnika, spanische Arnika und nordamerikanische Wiesen-Arnika}}{10}{figure.2}
-\contentsline {figure}{\numberline {3}{\ignorespaces Arnikapfl\IeC {\"u}ckerInnen in den Karparten (Foto: Marco Mestrovic)}}{14}{figure.3}
-\contentsline {figure}{\numberline {4}{\ignorespaces Stakeholder map \citep [nach][]{DBU2018}}}{16}{figure.4}
-\contentsline {figure}{\numberline {5}{\ignorespaces Apuseni Gebirge mit traditioneller Heuernte}}{18}{figure.5}
-\contentsline {figure}{\numberline {6}{\ignorespaces DJI Phantom 4 Quadrocopter, Trinity F9 und WintraOne VTOL-Drohnen}}{20}{figure.6}
-\contentsline {figure}{\numberline {7}{\ignorespaces System Developement Life Circle}}{22}{figure.7}
-\contentsline {figure}{\numberline {8}{\ignorespaces gleicher Bildausschnitt mit unterschiedlicher Aufl\IeC {\"o}sung je nach Flugh\IeC {\"o}he.}}{23}{figure.8}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {15 m}}}{23}{figure.8}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {20 m}}}{23}{figure.8}
-\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {30 m}}}{23}{figure.8}
-\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {80 m}}}{23}{figure.8}
-\contentsline {figure}{\numberline {9}{\ignorespaces Unterschiedlicher Bildausschnitt der Flugh\IeC {\"o}hen bei gleicher Aufl\IeC {\"o}sung.}}{23}{figure.9}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {15m}}}{23}{figure.9}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {20m}}}{23}{figure.9}
-\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {30m}}}{23}{figure.9}
-\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {80m}}}{23}{figure.9}
-\contentsline {figure}{\numberline {10}{\ignorespaces Programm flowchart}}{27}{figure.10}
+\contentsline {figure}{\numberline {1}{\ignorespaces \textit {Arnica montana} aus \citet {Blackwell1757} (a) und \citet {Kohler1887} (b)}}{8}{figure.1}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {}}}{8}{figure.1}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {}}}{8}{figure.1}
+\contentsline {figure}{\numberline {2}{\ignorespaces v.l.n.r.: alpine Arnika \citep {Moro2019}, spanische Arnika \citep {Pereira2019} und nordamerikanische Wiesen-Arnika \citep {Rowlin2019}}}{9}{figure.2}
+\contentsline {figure}{\numberline {3}{\ignorespaces Arnikapfl\IeC {\"u}ckerInnen in den Karparten \citep {Mestrovic2019}}}{13}{figure.3}
+\contentsline {figure}{\numberline {4}{\ignorespaces Stakeholder map \citep [In Anlehnung an][]{DBU2018}}}{15}{figure.4}
+\contentsline {figure}{\numberline {5}{\ignorespaces Apuseni Gebirge mit traditioneller Heuernte \citep {Farcas2019}}}{16}{figure.5}
+\contentsline {figure}{\numberline {6}{\ignorespaces v.l.n.r: DJI Phantom 4 Quadrocopter \citep {DJI2019}, Trinity F9 \citep {QSGH2019} und WintraOne VTOL-Drohnen \citep {Wingtra2019}}}{19}{figure.6}
+\contentsline {figure}{\numberline {7}{\ignorespaces System Developement Life Circle \citep {Smartsheet2019}}}{21}{figure.7}
+\contentsline {figure}{\numberline {8}{\ignorespaces Gleicher Ausschnitt von 2168px bei unterschiedlicher Flugh\IeC {\"o}he}}{22}{figure.8}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Flug 1}}}{22}{figure.8}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Flug 2}}}{22}{figure.8}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Flug 3}}}{22}{figure.8}
+\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {Flug 4}}}{22}{figure.8}
+\contentsline {figure}{\numberline {9}{\ignorespaces Gleicher Bildausschnitt mit unterschiedlicher Aufl\IeC {\"o}sung je nach Flugh\IeC {\"o}he.}}{22}{figure.9}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Flug 1}}}{22}{figure.9}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Flug 2}}}{22}{figure.9}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Flug 3}}}{22}{figure.9}
+\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {Flug 4}}}{22}{figure.9}
+\contentsline {figure}{\numberline {10}{\ignorespaces Programm flowchart}}{24}{figure.10}
+\contentsline {figure}{\numberline {11}{\ignorespaces Ein gro\IeC {\ss }er Kreis um zusammenh\IeC {\"a}ngende Blumen}}{26}{figure.11}
+\contentsline {figure}{\numberline {12}{\ignorespaces Schematische Darstellung verschiedener Seitenverh\IeC {\"a}tnisse}}{27}{figure.12}
+\contentsline {figure}{\numberline {13}{\ignorespaces Kreise bei nicht proportionalen CC hinzugef\IeC {\"u}gt (blau)}}{27}{figure.13}
+\contentsline {figure}{\numberline {14}{\ignorespaces Kreise nur bei gro\IeC {\ss }en CC hinzugef\IeC {\"u}gt (blau)}}{28}{figure.14}

@@ -1,10 +1,66 @@
 \section{Ergebnisse}
 
-Auswertung
+Einleitende Zusammenfassung etc.
+\subsection{Auswertung}
 Alle Ergebnisse werden hinsichtlich der Zielsetzung (Anfangshypothesen) bewertet
 Alle Ergebnisse werden mit relevanter Literatur verglichen und bewertet
 
+
+\subsection{Schwierigkeiten}
+\subsubsection{Problem: Kreise um zusammenhängende Blumen}
+
+Bei der Visualisierung der Blumen durch Kreise gibt es ein Problem, wenn mehrere Blumen zusammenhängen. 
+Bei einer Gruppe von Blüten, die überlappen, wird ein zusammenhängende Fläche (ConnectedComponents) bei der gelben Segmentierung heraus gefiltert. Möchte man die Blumen mit Kreisen visualisieren wird der Geometrischer Schwerpunkt der Connected Components (CC) als Mittelpunkt des Kreises gewählt. Als Radius wurde die Höhe oder Breite des CC gewählt, je nachdem welche geringer ist. Hängen nun aber mehrerer Blüten zusammen kann nur ein Kreis mit den Mittelpunkt des gesamten CC gezeichnet werden (Siehe Abbildung~\ref{fig:Kreis}, S. \pageref{fig:Kreis}).
+ 
+\begin{figure}[htb]
+ \centering
+ \includegraphics[width=0.4\textwidth,angle=0]{abb/ergebnisse/probleme/bigblob}
+ \caption{Ein großer Kreis um zusammenhängende Blumen}
+\label{fig:Kreis}
+\end{figure}
+
+\paragraph{Lösungsansatz:}
+Anstatt einfach den Bildschwerpunkt, der von der Statistik der ConnectedComponents Funktion von OpenCV geliefert wird, wurde versucht die großen CC in ihrem Seitenverhältnis von Höhe zu Breite bzw. Breite zu Höhe zu teilen und mehrere Mittelpunkte anzulegen. 
+Idee: center der Kreise bei 1:2, 1:3, 1:4 und 1:5 Verhältnis von Höhe /Breite bzw. Breite zu Höhe verschieben und duplizieren,
+\begin{figure}[htb]
+ \centering
+ \includegraphics[width=0.5\textwidth,angle=0]{abb/ergebnisse/probleme/seitenverhaeltnis}
+ \caption{Schematische Darstellung verschiedener Seitenverhätnisse}
+\label{fig:Schema}
+\end{figure}
+
+
+Problem dabei: Wenn eine einzelne Blume aber nicht frontal sondern eher seitlich aufgenommen wurde, hat sie auch dieses Seitenverhältnis und wird auch doppelt gezählt.
+
+\begin{figure}[htb]
+ \centering
+ \includegraphics[width=0.4\textwidth,angle=0]{abb/ergebnisse/probleme/circles}
+ \caption{Kreise bei nicht proportionalen CC hinzugefügt (blau)}
+\label{fig:Kreis-blau}
+\end{figure}
+
+Also müsste man das Seitenverhältnis mit der Größe der CC kombinieren. Also die Analyse des Seitenverhältnisses nur bei einer bestimmten Größe beginnen. 
+also nicht nur max size, sondern if size > maxsize: die center hinzufügen?
+
+\begin{figure}[htb]
+ \centering
+ \includegraphics[width=0.4\textwidth,angle=0]{abb/ergebnisse/probleme/circles-adjust}
+ \caption{Kreise nur bei großen CC hinzugefügt (blau)}
+\label{fig:Kreis-blau2}
+\end{figure}
+
+Kritische Reflektion, ob das so erfolgreich war...
+
+\subsubsection{Problem: Blume wird durch Schatten gestückelt}
+
+Idee: Smoothing edges vor segmentation um trennungen der Blüten rückgängig zu machen
+
+
 Verbesserungsmöglichkeiten
-Schwierigkeiten Probleme (-> Verwechslungspotential Arnika?) 
 Die eigenen Ergebnisse werden nicht über- oder unterbewertet
+
+\subsubsection{Problem: Verwechslungspotential Arnica montana}
+
+ schwer zu verhindern, aber durch andere faktoren identifikation -> GSM und Höhe der Pflanzen oder Bodensäure?
+
 

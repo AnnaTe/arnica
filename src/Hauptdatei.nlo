@@ -1,21 +1,23 @@
-\nomenclatureentry{aBfN@[{BfN}]\begingroup Bundesamt für Naturschutz\nomeqref {0}|nompageref}{6}
-\nomenclatureentry{aBRD@[{BRD}]\begingroup Bundesrepublik Deutschland\nomeqref {0}|nompageref}{6}
-\nomenclatureentry{aDDR@[{DDR}]\begingroup Deutsche Demokratische Republik\nomeqref {0}|nompageref}{6}
-\nomenclatureentry{aRL@[{RL}]\begingroup Rote Liste gefährdeter Tiere, Pflanzen und Pilze Deutschlands\nomeqref {0}|nompageref}{6}
-\nomenclatureentry{aSL@[{SL}]\begingroup Sesquinterpenlactone\nomeqref {0}|nompageref}{6}
-\nomenclatureentry{aFNR@[{FNR}]\begingroup Fachagentur Nachwachsender Rohstoffe e.V.\nomeqref {0}|nompageref}{6}
-\nomenclatureentry{aFFH-Richtlinie@[{FFH-Richtlinie}]\begingroup Fauna-Flora-Habitat-Richtlinie\nomeqref {0}|nompageref}{6}
-\nomenclatureentry{aPSF@[{PSF}]\begingroup Python Software Foundation\nomeqref {0}|nompageref}{6}
-\nomenclatureentry{aALU-FR@[{ALU-FR}]\begingroup Albert-Ludwigs-Universität Freiburg\nomeqref {0}|nompageref}{6}
-\nomenclatureentry{aBFA@[{BFA}]\begingroup Bioflora Apuseni\nomeqref {0}|nompageref}{6}
-\nomenclatureentry{aUSAMV@[{USAMV}]\begingroup Universität für Agrarwissenschaften und Tiermedizin Cluj-Napoca\nomeqref {0}|nompageref}{6}
-\nomenclatureentry{aBMBF@[{BMBF}]\begingroup Bundesministerium für Bildung und Forschung\nomeqref {0}|nompageref}{6}
-\nomenclatureentry{aWWF@[{WWF}]\begingroup World Wide Fund For Nature\nomeqref {0}|nompageref}{6}
-\nomenclatureentry{aUAV@[{UAV}]\begingroup Unmanned Aircraft Vehicels\nomeqref {0}|nompageref}{6}
-\nomenclatureentry{aUAS@[{UAS}]\begingroup Unmanned Aircraft Systems\nomeqref {0}|nompageref}{6}
-\nomenclatureentry{aDOM@[{DOM}]\begingroup Digitales Oberflächenmodell\nomeqref {0}|nompageref}{6}
-\nomenclatureentry{aDGM@[{DGM}]\begingroup Digitales Geländemodell\nomeqref {0}|nompageref}{6}
-\nomenclatureentry{aGNSS@[{GNSS}]\begingroup Globales Navigationssatellitensystem\nomeqref {0}|nompageref}{6}
-\nomenclatureentry{aRTK@[{RTK}]\begingroup real-time kinematics\nomeqref {0}|nompageref}{6}
-\nomenclatureentry{aPPK@[{PPK}]\begingroup post-processing kinematics\nomeqref {0}|nompageref}{6}
-\nomenclatureentry{aGUI@[{GUI}]\begingroup graphische Benutzeroberfläche\nomeqref {0}|nompageref}{6}
+\nomenclatureentry{aBfN@[{BfN}]\begingroup Bundesamt für Naturschutz\nomeqref {0}|nompageref}{5}
+\nomenclatureentry{aBRD@[{BRD}]\begingroup Bundesrepublik Deutschland\nomeqref {0}|nompageref}{5}
+\nomenclatureentry{aDDR@[{DDR}]\begingroup Deutsche Demokratische Republik\nomeqref {0}|nompageref}{5}
+\nomenclatureentry{aRL@[{RL}]\begingroup Rote Liste gefährdeter Tiere, Pflanzen und Pilze Deutschlands\nomeqref {0}|nompageref}{5}
+\nomenclatureentry{aSL@[{SL}]\begingroup Sesquinterpenlactone\nomeqref {0}|nompageref}{5}
+\nomenclatureentry{aFNR@[{FNR}]\begingroup Fachagentur Nachwachsender Rohstoffe e.V.\nomeqref {0}|nompageref}{5}
+\nomenclatureentry{aFFH-Richtlinie@[{FFH-Richtlinie}]\begingroup Fauna-Flora-Habitat-Richtlinie\nomeqref {0}|nompageref}{5}
+\nomenclatureentry{aPSF@[{PSF}]\begingroup Python Software Foundation\nomeqref {0}|nompageref}{5}
+\nomenclatureentry{aALU-FR@[{ALU-FR}]\begingroup Albert-Ludwigs-Universität Freiburg\nomeqref {0}|nompageref}{5}
+\nomenclatureentry{aBFA@[{BFA}]\begingroup Bioflora Apuseni\nomeqref {0}|nompageref}{5}
+\nomenclatureentry{aUSAMV@[{USAMV}]\begingroup Universität für Agrarwissenschaften und Tiermedizin Cluj-Napoca\nomeqref {0}|nompageref}{5}
+\nomenclatureentry{aBMBF@[{BMBF}]\begingroup Bundesministerium für Bildung und Forschung\nomeqref {0}|nompageref}{5}
+\nomenclatureentry{aWWF@[{WWF}]\begingroup World Wide Fund For Nature\nomeqref {0}|nompageref}{5}
+\nomenclatureentry{aUAV@[{UAV}]\begingroup Unmanned Aircraft Vehicels\nomeqref {0}|nompageref}{5}
+\nomenclatureentry{aUAS@[{UAS}]\begingroup Unmanned Aircraft Systems\nomeqref {0}|nompageref}{5}
+\nomenclatureentry{aDOM@[{DOM}]\begingroup Digitales Oberflächenmodell\nomeqref {0}|nompageref}{5}
+\nomenclatureentry{aDGM@[{DGM}]\begingroup Digitales Geländemodell\nomeqref {0}|nompageref}{5}
+\nomenclatureentry{aGNSS@[{GNSS}]\begingroup Globales Navigationssatellitensystem\nomeqref {0}|nompageref}{5}
+\nomenclatureentry{aRTK@[{RTK}]\begingroup real-time kinematics\nomeqref {0}|nompageref}{5}
+\nomenclatureentry{aPPK@[{PPK}]\begingroup post-processing kinematics\nomeqref {0}|nompageref}{5}
+\nomenclatureentry{aGUI@[{GUI}]\begingroup graphische Benutzeroberfläche\nomeqref {0}|nompageref}{5}
+\nomenclatureentry{aCC@[{CC}]\begingroup Connected Components\nomeqref {0}|nompageref}{5}
+\nomenclatureentry{asubsp.@[{subsp.}]\begingroup Subspezies oder Unterart\nomeqref {0}|nompageref}{5}

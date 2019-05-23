@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Debian) (preloaded format=pdflatex 2019.3.6)  20 MAY 2019 10:29
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Debian) (preloaded format=pdflatex 2019.3.6)  23 MAY 2019 13:01
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1158,18 +1158,38 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 )
 \Hy@SectionHShift=\skip68
 )
+
+Class scrartcl Warning: Usage of package `fancyhdr' together
+(scrartcl)              with a KOMA-Script class is not recommended.
+(scrartcl)              I'd suggest to use 
+(scrartcl)              package `scrlayer-scrpage'.
+(scrartcl)              Nevertheless, using requested
+(scrartcl)              package `fancyhdr' on input line 72.
+
+(/usr/share/texlive/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty
+Package: fancyhdr 2016/09/06 3.8 Extensive control of page headers and footers
+\fancy@headwidth=\skip69
+\f@ncyO@elh=\skip70
+\f@ncyO@erh=\skip71
+\f@ncyO@olh=\skip72
+\f@ncyO@orh=\skip73
+\f@ncyO@elf=\skip74
+\f@ncyO@erf=\skip75
+\f@ncyO@olf=\skip76
+\f@ncyO@orf=\skip77
+)
 (/usr/share/texlive/texmf-dist/tex/latex/tools/array.sty
 Package: array 2016/10/06 v2.4d Tabular extension package (FMi)
 \col@sep=\dimen173
 \extrarowheight=\dimen174
 \NC@list=\toks39
-\extratabsurround=\skip69
-\backup@length=\skip70
+\extratabsurround=\skip78
+\backup@length=\skip79
 )
 (/usr/share/texlive/texmf-dist/tex/latex/natbib/natbib.sty
 Package: natbib 2010/09/13 8.31b (PWD, AO)
-\bibhang=\skip71
-\bibsep=\skip72
+\bibhang=\skip80
+\bibsep=\skip81
 LaTeX Info: Redefining \cite on input line 694.
 \c@NAT@ctr=\count154
 )
@@ -1219,7 +1239,7 @@ Writing index file Hauptdatei.idx
 Package: nomencl 2005/09/22 v4.2 Nomenclature package (LN)
 \nomlabelwidth=\dimen179
 \nom@tempdim=\dimen180
-\nomitemsep=\skip73
+\nomitemsep=\skip82
 )
 \@nomenclaturefile=\write6
 \openout6 = `Hauptdatei.nlo'.
@@ -1354,7 +1374,7 @@ LaTeX Font Info:    Font shape `T1/phv/b/n' will be
 (Font)              scaled to size 16.41594pt on input line 148.
 
 (./latex_einstellungen/deckblatt.tex
-<abb/unilogo.png, id=134, 139.9629pt x 165.2574pt>
+<abb/unilogo.png, id=150, 139.9629pt x 165.2574pt>
 File: abb/unilogo.png Graphic file (type png)
  <use abb/unilogo.png>
 Package pdftex.def Info: abb/unilogo.png used on input line 22.
@@ -1418,40 +1438,27 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7> not available
  [3
 
 ] (./Hauptdatei.lof
-Overfull \hbox (0.13527pt too wide) in paragraph at lines 2--2
- [][] [][]\T1/ptm/m/n/12 v.l.n.r.: al-pi-ne Ar-ni-ka, spa-ni-sche Ar-ni-ka und 
-nord-ame-ri-ka-ni-sche Wiesen-Arnika[] [][]  
+Overfull \hbox (12.13474pt too wide) in paragraph at lines 8--8
+ [][] [][]\T1/ptm/m/n/12 v.l.n.r: DJI Phan-tom 4 Qua-dro-co-pter ([]DJI[], []20
+19[]), Tri-ni-ty F9 ([]Quantum-Systems 
  []
 
 )
 \tf@lof=\write9
 \openout9 = `Hauptdatei.lof'.
 
- [4] (./Hauptdatei.lot)
+ (./Hauptdatei.lot
+Overfull \hbox (12.57922pt too wide) in paragraph at lines 1--1
+ [][] [][]\T1/ptm/m/n/12 Technische Da-ten der Droh-nen im Ver-gleich (vgl. []D
+JI[], []2019[]; []Quantum-Systems 
+ []
+
+)
 \tf@lot=\write10
 \openout10 = `Hauptdatei.lot'.
 
-
-
-Class scrartcl Warning: \float@listhead detected!
-(scrartcl)              Implementation of \float@listhead became
-(scrartcl)              deprecated in KOMA-Script v3.01 2008/11/14 and
-(scrartcl)              has been replaced by several more flexible
-(scrartcl)              features of package `tocbasic`.
-(scrartcl)              Maybe implementation of \float@listhead will
-(scrartcl)              be removed from KOMA-Script soon.
-(scrartcl)              Loading of package `scrhack' may help to
-(scrartcl)              avoid this warning, if you are using a
-(scrartcl)              a package that still implements the
-(scrartcl)              deprecated \float@listhead interface  on input line 211
-.
-
-(./Hauptdatei.lol)
-\tf@lol=\write11
-\openout11 = `Hauptdatei.lol'.
-
- [5] (./latex_einstellungen/abkuezungen/abkuerzungen.tex)
-(./Hauptdatei.nls) [6] (./1_einleitung.tex
+ [4] (./latex_einstellungen/abkuezungen/abkuerzungen.tex) (./Hauptdatei.nls)
+[5] (./1_einleitung.tex
 LaTeX Font Info:    Try loading font information for OMS+ptm on input line 6.
 
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/omsptm.fd
@@ -1459,12 +1466,12 @@ File: omsptm.fd
 )
 LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <12> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 6.
- [7]
+ [6]
 LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <14.4> not available
 (Font)              Font shape `T1/phv/b/n' tried instead on input line 78.
 LaTeX Font Info:    Font shape `T1/phv/b/n' will be
 (Font)              scaled to size 13.67995pt on input line 78.
-) [8]
+) [7]
 (./2_Arnika.tex
 LaTeX Font Info:    Font shape `T1/phv/bx/it' in size <14.4> not available
 (Font)              Font shape `T1/phv/b/it' tried instead on input line 11.
@@ -1473,239 +1480,322 @@ LaTeX Font Info:    Font shape `T1/phv/b/it' in size <14.4> not available
 LaTeX Font Info:    Font shape `T1/phv/b/sl' will be
 (Font)              scaled to size 13.67995pt on input line 11.
 
-<abb/herbarium-blackwell.jpg, id=253, 749.80125pt x 1031.855pt>
+<abb/herbarium-blackwell.jpg, id=324, 749.80125pt x 1031.855pt>
 File: abb/herbarium-blackwell.jpg Graphic file (type jpg)
 
 <use abb/herbarium-blackwell.jpg>
-Package pdftex.def Info: abb/herbarium-blackwell.jpg used on input line 19.
+Package pdftex.def Info: abb/herbarium-blackwell.jpg used on input line 20.
 (pdftex.def)             Requested size: 216.1011pt x 297.38814pt.
 
-<abb/Koehler-medizinal-pflanzen.png, id=254, 698.3691pt x 961.4319pt>
+<abb/Koehler-medizinal-pflanzen.png, id=325, 698.3691pt x 961.4319pt>
 File: abb/Koehler-medizinal-pflanzen.png Graphic file (type png)
 
 <use abb/Koehler-medizinal-pflanzen.png>
 Package pdftex.def Info: abb/Koehler-medizinal-pflanzen.png used on input line 
-20.
+21.
 (pdftex.def)             Requested size: 216.1011pt x 297.49802pt.
- [9 <./abb/herbarium-blackwell.jpg> <./abb/Koehler-medizinal-pflanzen.png (PNG 
+ [8 <./abb/herbarium-blackwell.jpg> <./abb/Koehler-medizinal-pflanzen.png (PNG 
 copy)>]
-<abb/Arnika/arnica-900x300.png, id=278, 216.81pt x 72.27pt>
+<abb/Arnika/arnica-900x300.png, id=358, 216.81pt x 72.27pt>
 File: abb/Arnika/arnica-900x300.png Graphic file (type png)
 
 <use abb/Arnika/arnica-900x300.png>
-Package pdftex.def Info: abb/Arnika/arnica-900x300.png used on input line 32.
+Package pdftex.def Info: abb/Arnika/arnica-900x300.png used on input line 34.
 (pdftex.def)             Requested size: 441.01773pt x 147.0241pt.
- [10 <./abb/Arnika/arnica-900x300.png>]
-Overfull \hbox (7.99373pt too wide) in paragraph at lines 42--43
+ [9 <./abb/Arnika/arnica-900x300.png>]
+Overfull \hbox (7.99373pt too wide) in paragraph at lines 44--45
 []\T1/ptm/m/n/12 Arnika wirkt ent-zün-dungs-hem-mend, schmerz-stil-lend, an-ti-
 sep-ti-sche, durch-blu-tungs-stei-gernd
  []
 
-[11]
-Overfull \hbox (7.63437pt too wide) in paragraph at lines 55--56
+[10]
+Overfull \hbox (7.63437pt too wide) in paragraph at lines 57--58
 \T1/ptm/m/n/12 (Bun-des-ar-ten-schutz-ver-ord-nung - BArtSchV). Laut dem Bun-de
 s-na-tur-schutz-ge-setz (BNatSchG)
  []
 
-[12]
-Overfull \hbox (3.86595pt too wide) in paragraph at lines 71--72
+[11]
+Overfull \hbox (3.86595pt too wide) in paragraph at lines 73--74
 \T1/ptm/m/n/12 Sie ge-deiht am bes-ten auf nähr-stoff-ar-men, gut durch-lüf-te-
 tem Bo-den mit ei-ner gu-ten Wasserzu-
  []
 
-[13] <abb/Arnika/Arnikapfluecker-1024x768.jpg, id=397, 1027.84pt x 770.88pt>
+[12] <abb/Arnika/Arnikapfluecker-1024x768.jpg, id=490, 1027.84pt x 770.88pt>
 File: abb/Arnika/Arnikapfluecker-1024x768.jpg Graphic file (type jpg)
 
 <use abb/Arnika/Arnikapfluecker-1024x768.jpg>
 Package pdftex.def Info: abb/Arnika/Arnikapfluecker-1024x768.jpg used on input 
-line 82.
+line 84.
 (pdftex.def)             Requested size: 352.81552pt x 264.61295pt.
 ) (./3_Projekt.tex
-Overfull \hbox (1.58621pt too wide) in paragraph at lines 87--1
+Overfull \hbox (1.58621pt too wide) in paragraph at lines 89--1
 []\T1/ptm/m/n/12 Der Arznei- und Na-tur-kos-me-tik-her-stel-ler We-le-da aus Sc
 hwä-bisch Gmünd setzt, nach eben-
  []
 
-[14 <./abb/Arnika/Arnikapfluecker-1024x768.jpg>] [15]
-<abb/Stakeholder-map.png, id=424, 737.75626pt x 431.6125pt>
+
+Overfull \hbox (14.66672pt too wide) in paragraph at lines 89--1
+\T1/ptm/m/n/12 2010 be-ste-hen-den ru-mä-ni-schen Un-ter-neh-men Bio-flo-ra Apu
+-se-ni führt nach-hal-ti-ge Wild-pflückun-
+ []
+
+[13 <./abb/Arnika/Arnikapfluecker-1024x768.jpg>] [14]
+<abb/Stakeholder-map.png, id=521, 737.75626pt x 431.6125pt>
 File: abb/Stakeholder-map.png Graphic file (type png)
 
 <use abb/Stakeholder-map.png>
 Package pdftex.def Info: abb/Stakeholder-map.png used on input line 21.
 (pdftex.def)             Requested size: 308.71106pt x 180.60425pt.
- [16 <./abb/Stakeholder-map.png>]
-<abb/Arnika/apusenimountain2016.jpg, id=437, 1110.3081pt x 353.8821pt>
+ [15 <./abb/Stakeholder-map.png>]
+<abb/Arnika/apusenimountain2016.jpg, id=534, 1110.3081pt x 353.8821pt>
 File: abb/Arnika/apusenimountain2016.jpg Graphic file (type jpg)
 
 <use abb/Arnika/apusenimountain2016.jpg>
 Package pdftex.def Info: abb/Arnika/apusenimountain2016.jpg used on input line 
-39.
+37.
 (pdftex.def)             Requested size: 441.01773pt x 140.56215pt.
+ [16 <./abb/Arnika/apusenimountain2016.jpg>]
 Package hyperref Info: bookmark level for unknown todo defaults to 0 on input l
 ine 44.
- [17] [18 <./abb/Arnika/apusenimountain2016.jpg>] <abb/drohnen/P4RTK.jpg, id=45
-1, 770.88pt x 768.8725pt>
+ [17] <abb/drohnen/P4RTK.jpg, id=552, 770.88pt x 768.8725pt>
 File: abb/drohnen/P4RTK.jpg Graphic file (type jpg)
 
 <use abb/drohnen/P4RTK.jpg>
 Package pdftex.def Info: abb/drohnen/P4RTK.jpg used on input line 66.
 (pdftex.def)             Requested size: 88.2022pt x 87.96678pt.
 
-<abb/drohnen/trinity-f9.png, id=452, 963.6pt x 386.44376pt>
+<abb/drohnen/trinity-f9.png, id=553, 963.6pt x 386.44376pt>
 File: abb/drohnen/trinity-f9.png Graphic file (type png)
 
 <use abb/drohnen/trinity-f9.png>
 Package pdftex.def Info: abb/drohnen/trinity-f9.png used on input line 68.
 (pdftex.def)             Requested size: 229.3311pt x 91.97003pt.
 
-<abb/drohnen/wingtraone.png, id=453, 770.88pt x 514.92375pt>
+<abb/drohnen/wingtraone.png, id=554, 770.88pt x 514.92375pt>
 File: abb/drohnen/wingtraone.png Graphic file (type png)
 
 <use abb/drohnen/wingtraone.png>
 Package pdftex.def Info: abb/drohnen/wingtraone.png used on input line 70.
 (pdftex.def)             Requested size: 154.35889pt x 103.10077pt.
- [19]
+ [18]
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 85.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7.4> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 85.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <6> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 85.
- [20 <./abb/drohnen/P4RTK.jpg> <./abb/drohnen/trinity-f9.png> <./abb/drohnen/wi
-ngtraone.png>] [21]
-<abb/SDLC.jpg, id=480, 821.0675pt x 831.105pt>
+ [19 <./abb/drohnen/P4RTK.jpg> <./abb/drohnen/trinity-f9.png> <./abb/drohnen/wi
+ngtraone.png>] [20]
+<abb/SDLC.jpg, id=608, 821.0675pt x 831.105pt>
 File: abb/SDLC.jpg Graphic file (type jpg)
  <use abb/SDLC.jpg>
-Package pdftex.def Info: abb/SDLC.jpg used on input line 124.
-(pdftex.def)             Requested size: 132.30666pt x 133.91795pt.
- [22 <./abb/SDLC.jpg>]
-<abb/ergebnisse/gleicheblumen/DSC01525-b.png, id=487, 752.8125pt x 752.8125pt>
-File: abb/ergebnisse/gleicheblumen/DSC01525-b.png Graphic file (type png)
-
-<use abb/ergebnisse/gleicheblumen/DSC01525-b.png>
-Package pdftex.def Info: abb/ergebnisse/gleicheblumen/DSC01525-b.png used on in
-put line 141.
-(pdftex.def)             Requested size: 105.84666pt x 105.84102pt.
-
-<abb/ergebnisse/gleicheblumen/DSC01298-b.png, id=488, 108.405pt x 108.405pt>
-File: abb/ergebnisse/gleicheblumen/DSC01298-b.png Graphic file (type png)
-
-<use abb/ergebnisse/gleicheblumen/DSC01298-b.png>
-Package pdftex.def Info: abb/ergebnisse/gleicheblumen/DSC01298-b.png used on in
-put line 142.
-(pdftex.def)             Requested size: 105.84666pt x 105.8524pt.
-
-<abb/ergebnisse/gleicheblumen/DSC01757-b.png, id=489, 75.98674pt x 75.98674pt>
-File: abb/ergebnisse/gleicheblumen/DSC01757-b.png Graphic file (type png)
-
-<use abb/ergebnisse/gleicheblumen/DSC01757-b.png>
-Package pdftex.def Info: abb/ergebnisse/gleicheblumen/DSC01757-b.png used on in
-put line 143.
-(pdftex.def)             Requested size: 105.84666pt x 105.84966pt.
-
-<abb/ergebnisse/gleicheblumen/DSC01959-b.png, id=490, 43.15552pt x 43.15552pt>
-File: abb/ergebnisse/gleicheblumen/DSC01959-b.png Graphic file (type png)
-
-<use abb/ergebnisse/gleicheblumen/DSC01959-b.png>
-Package pdftex.def Info: abb/ergebnisse/gleicheblumen/DSC01959-b.png used on in
-put line 144.
-(pdftex.def)             Requested size: 105.84666pt x 105.8636pt.
-
-<abb/ergebnisse/gleicherausschnitt/DSC01525-a.png, id=491, 2176.13pt x 2176.13p
+Package pdftex.def Info: abb/SDLC.jpg used on input line 123.
+(pdftex.def)             Requested size: 176.40439pt x 178.55727pt.
+ [21 <./abb/SDLC.jpg>]
+<abb/ergebnisse/gleicherausschnitt/DSC01525-a.png, id=624, 2176.13pt x 2176.13p
 t>
 File: abb/ergebnisse/gleicherausschnitt/DSC01525-a.png Graphic file (type png)
  <use abb/ergebnisse/gleicherausschnitt/DSC01525-a.png>
 Package pdftex.def Info: abb/ergebnisse/gleicherausschnitt/DSC01525-a.png used 
-on input line 159.
+on input line 157.
 (pdftex.def)             Requested size: 105.84666pt x 105.82442pt.
 
-<abb/ergebnisse/gleicherausschnitt/DSC01298-a.JPG, id=492, 447.66103pt x 447.66
+<abb/ergebnisse/gleicherausschnitt/DSC01298-a.JPG, id=625, 447.66103pt x 447.66
 103pt>
 File: abb/ergebnisse/gleicherausschnitt/DSC01298-a.JPG Graphic file (type jpg)
  <use abb/ergebnisse/gleicherausschnitt/DSC01298-a.JPG>
 Package pdftex.def Info: abb/ergebnisse/gleicherausschnitt/DSC01298-a.JPG used 
-on input line 160.
+on input line 158.
 (pdftex.def)             Requested size: 105.84666pt x 105.84244pt.
 
-<abb/ergebnisse/gleicherausschnitt/DSC01757-a.png, id=493, 447.66103pt x 447.66
+<abb/ergebnisse/gleicherausschnitt/DSC01757-a.png, id=626, 447.66103pt x 447.66
 103pt>
 File: abb/ergebnisse/gleicherausschnitt/DSC01757-a.png Graphic file (type png)
  <use abb/ergebnisse/gleicherausschnitt/DSC01757-a.png>
 Package pdftex.def Info: abb/ergebnisse/gleicherausschnitt/DSC01757-a.png used 
-on input line 161.
+on input line 159.
 (pdftex.def)             Requested size: 105.84666pt x 105.84244pt.
 
-<abb/ergebnisse/gleicherausschnitt/DSC01959-a.png, id=494, 447.66103pt x 447.66
+<abb/ergebnisse/gleicherausschnitt/DSC01959-a.png, id=627, 447.66103pt x 447.66
 103pt>
 File: abb/ergebnisse/gleicherausschnitt/DSC01959-a.png Graphic file (type png)
  <use abb/ergebnisse/gleicherausschnitt/DSC01959-a.png>
 Package pdftex.def Info: abb/ergebnisse/gleicherausschnitt/DSC01959-a.png used 
-on input line 162.
+on input line 160.
 (pdftex.def)             Requested size: 105.84666pt x 105.84244pt.
- [23 <./abb/ergebnisse/gleicheblumen/DSC01525-b.png> <./abb/ergebnisse/gleicheb
-lumen/DSC01298-b.png (PNG copy)> <./abb/ergebnisse/gleicheblumen/DSC01757-b.png
- (PNG copy)> <./abb/ergebnisse/gleicheblumen/DSC01959-b.png (PNG copy)> <./abb/
-ergebnisse/gleicherausschnitt/DSC01525-a.png> <./abb/ergebnisse/gleicherausschn
-itt/DSC01298-a.JPG> <./abb/ergebnisse/gleicherausschnitt/DSC01757-a.png (PNG co
-py)> <./abb/ergebnisse/gleicherausschnitt/DSC01959-a.png (PNG copy)>]) [24] (./
-4_Programm.tex
-[25] <abb/prozess-flow.png, id=524, 1102.1175pt x 770.88pt>
+
+<abb/ergebnisse/gleicheblumen/DSC01525-b.png, id=628, 752.8125pt x 752.8125pt>
+File: abb/ergebnisse/gleicheblumen/DSC01525-b.png Graphic file (type png)
+
+<use abb/ergebnisse/gleicheblumen/DSC01525-b.png>
+Package pdftex.def Info: abb/ergebnisse/gleicheblumen/DSC01525-b.png used on in
+put line 166.
+(pdftex.def)             Requested size: 105.84666pt x 105.84102pt.
+
+<abb/ergebnisse/gleicheblumen/DSC01298-b.png, id=629, 108.405pt x 108.405pt>
+File: abb/ergebnisse/gleicheblumen/DSC01298-b.png Graphic file (type png)
+
+<use abb/ergebnisse/gleicheblumen/DSC01298-b.png>
+Package pdftex.def Info: abb/ergebnisse/gleicheblumen/DSC01298-b.png used on in
+put line 167.
+(pdftex.def)             Requested size: 105.84666pt x 105.8524pt.
+
+<abb/ergebnisse/gleicheblumen/DSC01757-b.png, id=630, 75.98674pt x 75.98674pt>
+File: abb/ergebnisse/gleicheblumen/DSC01757-b.png Graphic file (type png)
+
+<use abb/ergebnisse/gleicheblumen/DSC01757-b.png>
+Package pdftex.def Info: abb/ergebnisse/gleicheblumen/DSC01757-b.png used on in
+put line 168.
+(pdftex.def)             Requested size: 105.84666pt x 105.84966pt.
+
+<abb/ergebnisse/gleicheblumen/DSC01959-b.png, id=631, 43.15552pt x 43.15552pt>
+File: abb/ergebnisse/gleicheblumen/DSC01959-b.png Graphic file (type png)
+
+<use abb/ergebnisse/gleicheblumen/DSC01959-b.png>
+Package pdftex.def Info: abb/ergebnisse/gleicheblumen/DSC01959-b.png used on in
+put line 169.
+(pdftex.def)             Requested size: 105.84666pt x 105.8636pt.
+) [22 <./abb/ergebnisse/gleicherausschnitt/DSC01525-a.png> <./abb/ergebnisse/gl
+eicherausschnitt/DSC01298-a.JPG> <./abb/ergebnisse/gleicherausschnitt/DSC01757-
+a.png (PNG copy)> <./abb/ergebnisse/gleicherausschnitt/DSC01959-a.png (PNG copy
+)> <./abb/ergebnisse/gleicheblumen/DSC01525-b.png> <./abb/ergebnisse/gleicheblu
+men/DSC01298-b.png (PNG copy)> <./abb/ergebnisse/gleicheblumen/DSC01757-b.png (
+PNG copy)> <./abb/ergebnisse/gleicheblumen/DSC01959-b.png (PNG copy)>] (./4_Pro
+gramm.tex [23]
+<abb/prozess-flow.png, id=654, 1102.1175pt x 770.88pt>
 File: abb/prozess-flow.png Graphic file (type png)
 
 <use abb/prozess-flow.png>
-Package pdftex.def Info: abb/prozess-flow.png used on input line 50.
+Package pdftex.def Info: abb/prozess-flow.png used on input line 39.
 (pdftex.def)             Requested size: 441.01773pt x 308.47592pt.
 
-Overfull \hbox (3.75847pt too wide) in paragraph at lines 55--57
+Overfull \hbox (3.75847pt too wide) in paragraph at lines 44--46
 []\T1/ptm/m/n/12 Die in-ne-ren Pro-zes-se ei-ner Plo-t-ab-fra-ge wer-den in Ab-
-bil-dung []10[] (S.[]27[]) dar-ge-stellt. Hauptin-
+bil-dung []10[] (S.[]24[]) dar-ge-stellt. Hauptin-
  []
 
-) [26] [27 <./abb/prozess-flow.png>] (./5_Ergebnisse.tex) [28] (./8_fazit.tex)
-[29] (./Hauptdatei.bbl
-Underfull \hbox (badness 10000) in paragraph at lines 52--59
-\T1/ptm/m/n/12 URL []$\T1/pcr/m/n/12 https : / / www . kneipp . com / de _ de /
- unternehmen / wie -[] wir -[]
+[24 <./abb/prozess-flow.png>]) [25] (./5_Ergebnisse.tex
+<abb/ergebnisse/probleme/bigblob.png, id=671, 433.62pt x 469.755pt>
+File: abb/ergebnisse/probleme/bigblob.png Graphic file (type png)
+
+<use abb/ergebnisse/probleme/bigblob.png>
+Package pdftex.def Info: abb/ergebnisse/probleme/bigblob.png used on input line
+ 17.
+(pdftex.def)             Requested size: 176.40439pt x 191.1027pt.
+
+<abb/ergebnisse/probleme/seitenverhaeltnis.png, id=672, 1180.41pt x 864.22874pt
+>
+File: abb/ergebnisse/probleme/seitenverhaeltnis.png Graphic file (type png)
+ <use abb/ergebnisse/probleme/seitenverhaeltnis.png>
+Package pdftex.def Info: abb/ergebnisse/probleme/seitenverhaeltnis.png used on 
+input line 30.
+(pdftex.def)             Requested size: 220.50887pt x 161.43588pt.
+
+<abb/ergebnisse/probleme/circles.png, id=673, 469.2732pt x 556.9608pt>
+File: abb/ergebnisse/probleme/circles.png Graphic file (type png)
+
+<use abb/ergebnisse/probleme/circles.png>
+Package pdftex.def Info: abb/ergebnisse/probleme/circles.png used on input line
+ 40.
+(pdftex.def)             Requested size: 176.40439pt x 209.36969pt.
+ [26 <./abb/ergebnisse/probleme/bigblob.png>] (/usr/share/texlive/texmf-dist/te
+x/latex/listings/lstlang1.sty
+File: lstlang1.sty 2015/06/04 1.6 listings language file
+)
+Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on i
+nput line 50.
+
+[27 <./abb/ergebnisse/probleme/seitenverhaeltnis.png> <./abb/ergebnisse/problem
+e/circles.png>]
+Overfull \hbox (176.98856pt too wide) in paragraph at lines 51--53
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <10> not available
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 55.
+
+Overfull \hbox (104.98782pt too wide) in paragraph at lines 55--57
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <10> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 59.
+
+Overfull \hbox (176.98856pt too wide) in paragraph at lines 69--70
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
+][][][][][][][][][][][][][][][][][][] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 52--59
-\T1/pcr/m/n/12 arbeiten / nachhaltigkeit / rohstoffe /  and https : / / www . k
-neipp .
+Overfull \hbox (164.98843pt too wide) in paragraph at lines 70--71
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
+][][][][][][][][][][][][][][][] 
+ []
+
+<abb/ergebnisse/probleme/circles-adjust.png, id=686, 467.346pt x 555.9972pt>
+File: abb/ergebnisse/probleme/circles-adjust.png Graphic file (type png)
+
+<use abb/ergebnisse/probleme/circles-adjust.png>
+Package pdftex.def Info: abb/ergebnisse/probleme/circles-adjust.png used on inp
+ut line 76.
+(pdftex.def)             Requested size: 176.40439pt x 209.86432pt.
+ [28 <./abb/ergebnisse/probleme/circles-adjust.png>]) [29] (./8_fazit.tex) [30]
+ (./Hauptdatei.bbl
+Underfull \hbox (badness 10000) in paragraph at lines 39--43
+[]$\T1/pcr/m/n/12 https : / / de . m . wikipedia . org / wiki / Datei : Apuseni
+ _ Mountains _
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 52--59
-\T1/pcr/m/n/12 com / de _ de / unternehmen / wie -[] wir -[] arbeiten / nachhal
-tigkeit /
+Underfull \hbox (badness 10000) in paragraph at lines 70--75
+[]$\T1/pcr/m/n/12 https : / / www . kneipp . com / de _ de / unternehmen / wie 
+-[] wir -[] arbeiten /
  []
 
 
-Underfull \hbox (badness 3302) in paragraph at lines 61--65
+Underfull \hbox (badness 3302) in paragraph at lines 82--86
 []\T1/ptm/m/n/12 Markenverband.  Kneipp: Das arnika-anbau-projekt, April 2019. 
  URL []$\T1/pcr/m/n/12 http :
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 61--65
+Underfull \hbox (badness 10000) in paragraph at lines 82--86
 \T1/pcr/m/n/12 / / www . wachstum -[] mit -[] verantwortung . de / 2013 / 06 / 
 kneipp -[] das -[]
  []
 
+[31
 
-Underfull \hbox (badness 2057) in paragraph at lines 77--81
+]
+Underfull \hbox (badness 2057) in paragraph at lines 119--123
 []\T1/ptm/m/n/12 Yves Ro-cher.  Ar-ni-ka, April 2019.  URL []$\T1/pcr/m/n/12 ht
 tps : / / www . yves -[] rocher . de /
  []
 
-[30
 
-]) [31] (./anhang/anhang.tex) [32]
+Underfull \hbox (badness 3525) in paragraph at lines 132--135
+[]\T1/ptm/m/n/12 Kirsten Row-lin.  Ar-ni-ka - ar-ni-ca cha-mis-so-nis, May 2019
+.  URL []$\T1/pcr/m/n/12 https : / /
+ []
+
+
+Underfull \hbox (badness 3989) in paragraph at lines 201--205
+[]\T1/ptm/m/n/12 Wingtra AG.  Wing-trao-ne tech-ni-cal spe-ci-fi-ca-ti-on, May 
+2019.  URL []$\T1/pcr/m/n/12 https :
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 201--205
+\T1/pcr/m/n/12 / / wingtra . b -[] cdn . net / wp -[] content / uploads / Wingt
+ra -[] Technical -[]
+ []
+
+) [32] (./anhang/anhang.tex) [33]
 \openout2 = `erklaerung.aux'.
 
- (./erklaerung.tex) [33
+ (./erklaerung.tex) [34
 
-] [34
+] [35
 
 ]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 285.
@@ -1715,17 +1805,17 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 285.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 285.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 285.
 Package rerunfilecheck Info: File `Hauptdatei.out' has not changed.
-(rerunfilecheck)             Checksum: 5CF65A901368A2E7B79DD3DCF68A5CBD;2310.
+(rerunfilecheck)             Checksum: EA94479488C829B455A40B0715EAB38E;2725.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 285.
  ) 
 Here is how much of TeX's memory you used:
- 23130 strings out of 494893
- 419626 string characters out of 6178673
- 598130 words of memory out of 5000000
- 25754 multiletter control sequences out of 15000+600000
- 68550 words of font info for 105 fonts, out of 8000000 for 9000
+ 23808 strings out of 494893
+ 427206 string characters out of 6178673
+ 612922 words of memory out of 5000000
+ 26377 multiletter control sequences out of 15000+600000
+ 74696 words of font info for 111 fonts, out of 8000000 for 9000
  19 hyphenation exceptions out of 8191
- 73i,12n,76p,8858b,708s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 73i,12n,76p,8858b,1323s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}{/usr/share/texmf/
 fonts/enc/dvips/cm-super/cm-super-t1.enc}</usr/share/texlive/texmf-dist/fonts/t
 ype1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/p
@@ -1739,10 +1829,10 @@ ve/texmf-dist/fonts/type1/urw/helvetic/uhvbo8a.pfb></usr/share/texlive/texmf-di
 st/fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/
 urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmri
 8a.pfb>
-Output written on Hauptdatei.pdf (34 pages, 73857831 bytes).
+Output written on Hauptdatei.pdf (35 pages, 77221549 bytes).
 PDF statistics:
- 656 PDF objects out of 1000 (max. 8388607)
- 571 compressed objects within 6 object streams
- 126 named destinations out of 1000 (max. 500000)
- 369 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 860 PDF objects out of 1000 (max. 8388607)
+ 736 compressed objects within 8 object streams
+ 169 named destinations out of 1000 (max. 500000)
+ 421 words of extra memory for PDF output out of 10000 (max. 10000000)
 

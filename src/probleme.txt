@@ -29,3 +29,27 @@ dead flowers
 --------------------
 
 verwechslungspotential mit anderen Blumen: schwer zu verhindern, aber durch andere faktoren identifikation -> GSM und Höhe der Pflanzen oder Bodensäure?
+
+
+Problem: Kreise um zusammenhängende Blumen
+
+Bei der Visualisierung der Blumen durch Kreise gibt es ein Problem, wenn mehrere Blumen zusammenhängen. 
+
+Bei einer Gruppe von Blüten, die überlappen, wird ein zusammenhängende Fläche (ConnectedComponents) bei der gelben Segmentierung heraus gefiltert. Möchte man die Blumen mit Kreisen visualisieren wird der Geometrischer Schwerpunkt der Connected Components (CC) als Mittelpunkt des Kreises gewählt. Als Radius wurde die Höhe oder Breite des CC gewählt, je nachdem welche geringer ist. Hängen nun aber mehrerer Blüten zusammen kann nur ein Kreis mit den Mittelpunkt des gesamten CC gezeichnet werden. 
+
+ 
+
+
+
+Idee: center der Kreise bei 1:2, 1:3, 1:4 und 1:5 Verhältnis von Höhe /Breite bzw. Breite zu Höhe verschieben und duplizieren,
+
+und mit Größe der Blobs kombinieren.
+also nicht nur max size, sondern if size > maxsize: die center hinzufügen?
+
+
+
+
+Problem: Blume wird durch schatten gestückelt
+
+Idee: Smoothing edges vor segmentation um trennungen der Blüten rückgängig zu machen
+

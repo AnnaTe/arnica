@@ -67,16 +67,16 @@
 %\hypersetup{colorlinks, citecolor=green, linkcolor=black, urlcolor=red}
 %\hypersetup{colorlinks, citecolor=black, linkcolor=black, urlcolor=black}
 
-%% neue Kopfzeilen mit fancypaket
-%\usepackage{fancyhdr} %Paket laden
-%\pagestyle{fancy} %eigener Seitenstil
-%\fancyhf{} %alle Kopf- und Fußzeilenfelder bereinigen
-%\fancyhead[L]{\nouppercase{\leftmark}} %Kopfzeile links
-%\fancyhead[C]{} %zentrierte Kopfzeile
-%\fancyhead[R]{\thepage} %Kopfzeile rechts
-%\renewcommand{\headrulewidth}{0.4pt} %obere Trennlinie
-%%\fancyfoot[C]{\thepage} %Seitennummer
-%%\renewcommand{\footrulewidth}{0.4pt} %untere Trennlinie
+% neue Kopfzeilen mit fancypaket
+\usepackage{fancyhdr} %Paket laden
+\pagestyle{fancy} %eigener Seitenstil
+\fancyhf{} %alle Kopf- und Fußzeilenfelder bereinigen
+\fancyhead[L]{\nouppercase{\leftmark}} %Kopfzeile links
+\fancyhead[C]{} %zentrierte Kopfzeile
+\fancyhead[R]{\thepage} %Kopfzeile rechts
+\renewcommand{\headrulewidth}{0.4pt} %obere Trennlinie
+%\fancyfoot[C]{\thepage} %Seitennummer
+%\renewcommand{\footrulewidth}{0.4pt} %untere Trennlinie
 
 % für Tabellen
 \usepackage{array}
@@ -177,7 +177,7 @@
 \listoffigures
 
 % das Tabellenverzeichnis
-\newpage
+%\newpage
 % Abbildungsverzeichnis soll im Inhaltsverzeichnis auftauchen
 \addcontentsline{toc}{section}{Tabellenverzeichnis}
 % \fancyhead[L]{Abbildungsverzeichnis / Abkürzungsverzeichnis} %Kopfzeile links
@@ -205,10 +205,10 @@
 % das Listingverzeichnis
 %\newpage
 % Listingverzeichnis soll im Inhaltsverzeichnis auftauchen
-\addcontentsline{toc}{section}{Listingverzeichnis}
-%\fancyhead[L]{Abbildungs- / Tabellen- / Listingverzeichnis} %Kopfzeile links
-\renewcommand{\lstlistlistingname}{Listingverzeichnis}
-\lstlistoflistings
+% \addcontentsline{toc}{section}{Listingverzeichnis}
+% %\fancyhead[L]{Abbildungs- / Tabellen- / Listingverzeichnis} %Kopfzeile links
+% \renewcommand{\lstlistlistingname}{Listingverzeichnis}
+% \lstlistoflistings
 %%%%
 
 % das Abkürzungsverzeichnis

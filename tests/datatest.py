@@ -52,10 +52,10 @@ class Data:
         # self.blobelimination(lowsize)
 
     def circleplot(self):
-        #from matplotlib.patches import Circle
-        #import matplotlib.pyplot as plt
+        from matplotlib.patches import Circle
+        import matplotlib.pyplot as plt
 
-        #fig, ax = plt.subplots(1, figsize=(15, 10))
+        fig, ax = plt.subplots(1, figsize=(15, 10))
         ax.set_aspect('equal')
         number, output, stats, centroids = cv2.connectedComponentsWithStats(self.blob[:, :, 0], connectivity=8)
         center = list(zip(centroids[1:, 0].astype(int), centroids[1:, 1].astype(int)))
@@ -72,7 +72,7 @@ class Data:
         #plt.savefig(name, dpi=300)
 
         # Show the image
-        #return plt.show()
+        return plt.show()
 
 
 if __name__ == "__main__":

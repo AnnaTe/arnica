@@ -5,56 +5,74 @@ The style file: plainnat.bst
 A level-1 auxiliary file: abstract.aux
 A level-1 auxiliary file: erklaerung.aux
 Database file #1: jabbib.bib
-Warning--entry type for "Markenverband2019" isn't style-file defined
---line 132 of file jabbib.bib
-Warning--entry type for "Kneipp2019" isn't style-file defined
---line 150 of file jabbib.bib
-Warning--entry type for "Rocher2019" isn't style-file defined
---line 159 of file jabbib.bib
+Warning--entry type for "Wingtra2019" isn't style-file defined
+--line 11 of file jabbib.bib
 Warning--entry type for "Weleda2019" isn't style-file defined
---line 168 of file jabbib.bib
+--line 21 of file jabbib.bib
+Warning--entry type for "DJI2019" isn't style-file defined
+--line 30 of file jabbib.bib
+Warning--entry type for "Rocher2019" isn't style-file defined
+--line 49 of file jabbib.bib
+Warning--entry type for "QSGH2019" isn't style-file defined
+--line 58 of file jabbib.bib
 Warning--entry type for "PSF2019" isn't style-file defined
---line 187 of file jabbib.bib
+--line 68 of file jabbib.bib
+Warning--entry type for "Markenverband2019" isn't style-file defined
+--line 78 of file jabbib.bib
+Warning--entry type for "Kneipp2019" isn't style-file defined
+--line 87 of file jabbib.bib
+Warning--entry type for "Pereira2019" isn't style-file defined
+--line 274 of file jabbib.bib
+Warning--entry type for "Moro2019" isn't style-file defined
+--line 283 of file jabbib.bib
+Warning--entry type for "Rowlin2019" isn't style-file defined
+--line 293 of file jabbib.bib
+Warning--entry type for "Mestrovic2019" isn't style-file defined
+--line 302 of file jabbib.bib
+Warning--entry type for "Farcas2019" isn't style-file defined
+--line 312 of file jabbib.bib
+Warning--entry type for "Smartsheet2019" isn't style-file defined
+--line 322 of file jabbib.bib
 Warning--can't use both author and editor fields in Franke2012
-You've used 22 entries,
+You've used 33 entries,
             2773 wiz_defined-function locations,
-            732 strings with 8599 characters,
-and the built_in function-call counts, 7465 in all, are:
-= -- 612
-> -- 367
-< -- 16
-+ -- 133
-- -- 111
-* -- 499
-:= -- 1212
-add.period$ -- 69
-call.type$ -- 22
-change.case$ -- 92
-chr.to.int$ -- 22
-cite$ -- 45
-duplicate$ -- 407
-empty$ -- 694
-format.name$ -- 133
-if$ -- 1541
+            797 strings with 10094 characters,
+and the built_in function-call counts, 11092 in all, are:
+= -- 912
+> -- 536
+< -- 26
++ -- 195
+- -- 162
+* -- 735
+:= -- 1768
+add.period$ -- 102
+call.type$ -- 33
+change.case$ -- 140
+chr.to.int$ -- 33
+cite$ -- 67
+duplicate$ -- 586
+empty$ -- 1053
+format.name$ -- 195
+if$ -- 2307
 int.to.chr$ -- 1
 int.to.str$ -- 1
-missing$ -- 26
-newline$ -- 121
-num.names$ -- 88
-pop$ -- 247
+missing$ -- 29
+newline$ -- 176
+num.names$ -- 133
+pop$ -- 389
 preamble$ -- 1
-purify$ -- 81
+purify$ -- 120
 quote$ -- 0
-skip$ -- 286
+skip$ -- 434
 stack$ -- 0
-substring$ -- 69
-swap$ -- 27
-text.length$ -- 0
+substring$ -- 91
+swap$ -- 48
+text.length$ -- 1
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 182
+type$ -- 293
 warning$ -- 1
-while$ -- 68
+while$ -- 101
 width$ -- 0
-write$ -- 291
-(There were 6 warnings)
+write$ -- 423
+(There were 15 warnings)
