@@ -1,14 +1,10 @@
 import cv2
-import glob
-import os, errno
 import numpy as np
 import matplotlib.pyplot as plt
-import matplotlib.animation as animation
 
-from filter.colorsegmentation import yellow
-from filter.imageplots import subplot12
-from filter.openfiles import crop
-from filter.blobelimination import BlobDetection, applyMask
+from tests.colorsegmentation import yellow
+from tests.openfiles import crop
+from tests.blobelimination import BlobDetection, applyMask
 
 path = "/home/rio/Dokumente/Uni/Bachelorarbeit/arnika/Beispielbilder/Beispielordner/DSC01506.JPG"
 

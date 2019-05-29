@@ -8,7 +8,7 @@ from matplotlib.patches import Circle
 
 from PyQt5 import QtWidgets, QtGui
 
-from package.gui.guidesign import Ui_MainWindow
+from gui.pyqt5backend.guidesign import Ui_MainWindow
 
 from datatest import Data
 
@@ -53,6 +53,8 @@ class DesignerMainWindow(QtWidgets.QMainWindow, Ui_MainWindow, Data):
         # try to plot input, raise Error if not an image
         try:
             self.initial_plot()
+            self.perc = 100
+            self.mins = None
         except:
             self.statusbar.showMessage('ERROR: File has to be an image. Try JPG or PNG Type.')
 
@@ -111,7 +113,7 @@ class DesignerMainWindow(QtWidgets.QMainWindow, Ui_MainWindow, Data):
             self.mpl.canvas.ax.axis("off")
             counter = 0
             for i in range(centroids[1:, 1].shape[0]):
-                circ = Circle(center[i], radius[i], color="r", linewidth=1, fill=False)
+                circ = Circle(center[i], radius[i], color="r", linewidth=0.5, fill=False)
                 self.mpl.canvas.ax.add_patch(circ)
                 counter += 1
             self.mpl.canvas.draw()
@@ -141,61 +143,48 @@ class DesignerMainWindow(QtWidgets.QMainWindow, Ui_MainWindow, Data):
 
     def export_image(self):
         self.statusbar.showMessage('Export is running...')
-        #a = self.parse_file()
 
         # collect values from user input
         percent= self.sbCrop.value()
         lowsize = self.sbBlob.value()
 
-        try:
-            saveas = QtWidgets.QFileDialog.getSaveFileName(self, 'Save as')[0]
-        except:
-            self.statusbar.showMessage('Export failed, try again.')
-
         if self.cbCircle.isChecked() == True:
-            if percent != self.perc:
-                self.i.filter(percent, lowsize)
-                self.mins = lowsize
-                self.perc = percent
+            if percent == self.perc and lowsize == self.mins:
+                try:
+                    self.mpl.ntb.save_figure()
+                except:
+                    self.statusbar.showMessage('Figsave not working.')
             else:
-                if lowsize != self.mins:
+                if percent != self.perc:
+                    self.i.filter(percent, lowsize)
+                    self.mins = lowsize
+                    self.perc = percent
+                else:
                     self.i.yellow(self.i.cropped, lowsize)
                     self.mins = lowsize
-                else:
-                    try:
-                        self.mpl.canvas.fig.savefig(saveas)
-                        #self.mpl.canvas.fig.savefig(saveas, dpi=300)
-                    except:
-                        self.statusbar.showMessage('Figsave not working.')
 
-            self.mpl.canvas.ax.clear()
-            number, output, stats, centroids = cv2.connectedComponentsWithStats(self.i.blob[:, :, 0], connectivity=8)
-            center = list(zip(centroids[1:, 0].astype(int), centroids[1:, 1].astype(int)))
-            radius = stats[1:, 3]
+                #self.mpl.canvas.ax.clear()
+                number, output, stats, centroids = cv2.connectedComponentsWithStats(self.i.blob[:, :, 0], connectivity=8)
+                center = list(zip(centroids[1:, 0].astype(int), centroids[1:, 1].astype(int)))
+                radius = stats[1:, 3]
+                image = np.copy(self.i.cropped)
 
-            self.mpl.canvas.ax.imshow(cv2.cvtColor(self.i.cropped, cv2.COLOR_BGR2RGB))
-            self.mpl.canvas.ax.axis("off")
-            counter = 0
-            for i in range(centroids[1:, 1].shape[0]):
-                circ = Circle(center[i], radius[i], color="r", linewidth=1, fill=False)
-                self.mpl.canvas.ax.add_patch(circ)
-                counter += 1
-            #self.mpl.canvas.draw()
-            self.statusbar.showMessage('{} Flowers counted.'.format(counter))
+                counter = 0
+                for i in range(centroids[1:, 1].shape[0]):
+                    cv2.circle(image, center[i], radius[i], color = (0, 0, 255), thickness = 3)
+                    #circ = Circle(center[i], radius[i], color="k", linewidth=0.5, fill=False)
+                    #self.mpl.canvas.ax.add_patch(circ)
+                    counter += 1
 
+                self.plot(image)
+                self.mpl.ntb.save_figure()
+                self.statusbar.showMessage('{} Flowers counted.'.format(counter))
+
+        elif self.cbYellow.isChecked() == True:
             try:
-                self.mpl.canvas.fig.savefig(saveas)
-                #self.ntb.save_figure(saveas)
-                #self.mpl.canvas.fig.savefig(saveas, dpi=300)
-                #self.mpl.canvas.ax.figure.savefig(saveas)
-                #self.mpl.canvas.fig.savefig(saveas, dpi=300)
-                #cv2.imwrite(saveas, self.i.blob)
+                saveas = QtWidgets.QFileDialog.getSaveFileName(self, 'Save as')[0]
             except:
-                self.statusbar.showMessage("ERROR: Not a valid file name. File type has to be JPG or PNG.")
-            else:
-                self.statusbar.clearMessage()
-
-        if self.cbYellow.isChecked() == True:
+                self.statusbar.showMessage('Export failed, try again.')
             if percent != self.perc:
                 self.i.filter(percent, lowsize)
                 self.mins = lowsize
@@ -213,6 +202,10 @@ class DesignerMainWindow(QtWidgets.QMainWindow, Ui_MainWindow, Data):
             else:
                 self.statusbar.clearMessage()
         else:
+            try:
+                saveas = QtWidgets.QFileDialog.getSaveFileName(self, 'Save as')[0]
+            except:
+                self.statusbar.showMessage('Export failed, try again.')
             if percent == self.perc:
                 pass
             else:
@@ -226,6 +219,8 @@ class DesignerMainWindow(QtWidgets.QMainWindow, Ui_MainWindow, Data):
                 self.statusbar.clearMessage()
 
     def run_export(self):
+        self.statusbar.showMessage('Export is running...')
+
         # list of images
         path = self.lineEditDirIn.text() + '/*.*'
         paths = glob.glob(path)
@@ -245,21 +240,23 @@ class DesignerMainWindow(QtWidgets.QMainWindow, Ui_MainWindow, Data):
         if self.cbYellowDir.isChecked() == True:
             for imagepath in paths:
                 self.i = Data(imagepath)
-                self.i.filter(percent, lowsize)
+                try:
+                    self.i.filter(percent, lowsize)
+                except:
+                    self.statusbar.showMessage("ERROR: Images in import directory not found. Try again.")
                 outpath = outputdir + self.i.name + 'seg' + str(lowsize) + '.png'
                 cv2.imwrite(outpath, self.i.blob)
-                if self.completed < 100:
-                    self.completed += 100/self.total
-                    self.progressBar.setValue(self.completed)
+                self.completed += 1
+                self.statusbar.showMessage("Running: {} of {} image exported.".format(self.completed, self.total))
         else:
             for imagepath in paths:
                 self.i = Data(imagepath)
                 self.i.crop(percent)
                 outpath = outputdir + self.i.name + 'crop' + str(percent) + '.png'
                 cv2.imwrite(outpath, self.i.cropped)
-                if self.completed < 100:
-                    self.completed += 100/self.total
-                    self.progressBar.setValue(self.completed)
+                self.completed += 1
+                self.statusbar.showMessage("Running: {} of {} image exported.".format(self.completed, self.total))
+        self.statusbar.showMessage("Process finished.", 500)
 
 
 

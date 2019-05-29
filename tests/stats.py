@@ -136,3 +136,12 @@ test.blob = cv2.bitwise_and(test.seg, test.seg, mask=mask)
 
 
 test.circleplot()
+----------------------------
+
+test.img = test.img[:250,400:600,:]
+
+maskBGR = cv2.inRange(test.img, minBGR, maxBGR)
+
+blur = cv2.GaussianBlur(maskBGR,(15,15),0)
+
+bilateral = cv2.bilateralFilter(maskBGR,15,75,75)

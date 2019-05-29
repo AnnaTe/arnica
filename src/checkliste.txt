@@ -1,0 +1,20 @@
+
+Abbildungen:
+
+- Kreise in Ergebnisbildern dicker machen
+
+
+Recherche:
+Problem 3 ökologische Ausschlusskriterien von Beispielen
+
+
+Programmieren:
+
+- Problem 2: edge filter
+- Kommentierung PEP 8
+- Setup.py
+- Main.py
+- GUI ändern
+- 
+
+

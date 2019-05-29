@@ -6,7 +6,23 @@ Das „Flower Segmentation Tool“ ist so konzipiert, dass schnelle Berechnungen
 %Anforderungen an den Code
 Die wichtigste Anforderung an das Programm ist dabei trotz großer Datenmengen noch in angemessener Schnelligkeit zu agieren. Um eine einfache Installation zu ermöglichen, wurde darauf geachtet niedrigschwellige Soft- und Hardwarevoraussetzungen zu fordern. 
 %Anforderungen an die Benutzeroberfläche
-Die Grafische Benutzeroberfläche besteht aus zwei Teilen. Einerseits soll die grafische Darstellung der Bilder zum Ausprobieren der Parameter möglich sein. Dabei ist ein vielseitiger Plotfenster mit der Möglichkeit den Ausschnitt zu verändern und Teile des Bildes zu vergrößern eine wichtige Funktion. Andererseits soll eine einfacher Anwendung der Berechnung auf einen großen Datensatz möglich sein. Bei beiden Anwendungen soll eine Statusanzeige einen Überblick verschaffen, welche Prozesse im Hintergrund laufen.
+
+\begin{figure}[hbt]
+ \centering
+ \includegraphics[width=\textwidth,angle=0]{abb/gui/plot-fenster-mit}
+ \caption{Grafische Oberfläche mit Plotfenster}
+\label{fig:gui-plot}
+\end{figure}
+
+Die Grafische Benutzeroberfläche besteht aus zwei Teilen. Einerseits soll die grafische Darstellung der Bilder zum Ausprobieren der Parameter möglich sein (Siehe Abbildung~\ref{fig:gui-plot}, S.~\pageref{fig:gui-plot}). Dabei ist ein vielseitiger Plotfenster mit der Möglichkeit den Ausschnitt zu verändern und Teile des Bildes zu vergrößern eine wichtige Funktion. Andererseits soll eine einfache Anwendung der Berechnung auf einen großen Datensatz möglich sein. Deshalb gibt es unter dem Tab „Directory“ die Eingabe oder Auswahl eines Ordners (Input-Directory), aus dem alle Bilddateien bearbeitet werden (Siehe Abbildung~\ref{fig:gui-dir}, S.~\pageref{fig:gui-dir}). Bei beiden Tabs verschafft eine Statusanzeige im unteren Rand des Anwendungsfensters einen Überblick, welche Prozesse im Hintergrund laufen.
+
+\begin{figure}[htb]
+ \centering
+ \includegraphics[width=\textwidth,angle=0]{abb/gui/directory-fenster}
+ \caption{Grafische Oberfläche zur Anwendung auf Ordner}
+\label{fig:gui-dir}
+\end{figure}
+
 
 \subsection{Programmiersprache}
 Python ist eine Open Source Programmiersprache, die plattformübergreifend auf allen gängigen Betriebssystemen anwendbar ist. Die interpretierte Skriptsprache wurde 1994 von dem niederländischen Programmierer Guido Rossum als Python 1.0 veröffentlicht. Der Name Python hat Rossum von der britischen Komikergruppe Monty Python abgeleitet.
@@ -23,8 +39,8 @@ Python 2 gibt es seit 2000, Python 3 seit 2008. Dies beinhaltet so tiefgreifende
 
 %Verwendete Pakete???
 \subsection{Anwendungsbereich} %Zusammenfassung Anwendungsmöglichkeiten des Programms
-Das Programm soll zur Bildanalyse und Auswertung von Luftaufnahmen, die von Drohne aufgenommen wurden, angewendet werden. Es können RGB Fotos eingelesen und analysiert werden. Da bei der 
-Es werden aus RGB Fotos die gelben Farbebereiche angezeigt. Diese können in der Größe beschränkt werden. Auf verschiedene Arten können so gelbe Blumen im Bild erkannt und das Ergebnis auf verschiedene Weise angezeigt werden. Der User? kann die Parameter selbst festlegen und sich das Ergebnis im Plotfenster ansehen, heran zoomen, Parameter anpassen. Die Berechnung kann auf einzelne Bilder angewendet und diese dann exportiert werden, oder auf alle Bilder eines Ordners, und so große Datenmengen mit einem Aufruf? verarbeitet werden. 
+Das Programm soll zur Bildanalyse und Auswertung von Luftaufnahmen, die von Drohne aufgenommen wurden, angewendet werden. Es können RGB Fotos eingelesen und analysiert werden. Bei der Erfassung einer Fläche mit einer Drohne werden die Bilder so aufgenommen, dass es immer eine große Überlappung gibt. Dies ist notwendig, damit auch sichergestellt werden kann, dass die gesamte Fläche erfasst ist. Das Programm kann diese Überlappung manuell durch Zuschnitt auf die Mitte des Bildes verringern. Von den RGB Fotos kann dann durch Segmentierung allein der gelbe Farbbereich angezeigt werden. Dabei kann die Anzeige auf eine Mindestgröße für zusammenhängenden gelbe Farbpixel eingestellt werden, damit z.B. deutlich kleinere Blumen heraus gefiltert werden können. Eine weitere Möglichkeit der visuellen Darstellung ist die Umrandung von gefundenen zusammenhängenden Komponenten (Connected Components, kurz: CC). Auch dabei lässt sich die Mindestgröße wieder manuell festlegen. So können verschiedene Parameter ausprobiert, im Plotfenster dargestellt und angepasst werden. Hierbei ist die Navigationsleiste des Plotfenster sehr hilfreich, die verschiedene Zoom und Anzeigefunktionen besitzt. Die Berechnung und Darstellung des einzelnen Bildes kann dann exportiert werden.
+Um einen gesamten Datensatz einer Drohnenbefliegung bearbeiten zu können, lassen sich Berechnungen mit gewählten Parametern auch auf alle Bilder eines Ordners anwenden.  
 
 % Einordnung in die "Aufgabe des Programms" für das Projekt???
 %genaue Funktionen (zentrierter Crop, Bilder plotten lassen, exportieren, segmentieren, circles, dabei größe anpassen)
@@ -50,16 +66,35 @@ genaue Beschreibung der Methoden (Wie wird der Bereich heraus gefiltert, Datenst
 nach welchen Kriterien und warum diese gewählt -> Quellen?
 
 Methoden: 
-- Filtern nach Farbebereich -> liegt der Bildpunkt nicht in dem Bereich wird ihm 0 zugeordnet, sonst 255. So entsteht eine Maske des Bildes mit allen gelben Bereichen.
-Diese kann wieder auf das original Bild übertragen werden. 
+- Filtern nach Farbebereich ->
+Allen Bildpunkten, die nicht in dem Farbbereich zwischen RGB (200, 133, 0) und (255, 255, 122) liegen, wird mit der Hilfe einer Maske 0 zugeordnert. 
+
+- 
+
 % dafür wird das Bild als dreidimensioneller BGR-Array mit je einer Ebene je Farbband. Mit der Funktion cv2.inRange() wird eine Maske erstellt, die für alle Pixel, die nicht in dem Bereich sind 0 zuordnet und für alle die in dem Bereich sind 255. Diese Maske lässt sich auf das originale Bild mit cv2.bitwise() übertragen. Dabei werden zwei Bilder zusammengefügt, im Bereich einer Maske.??doppelt?? 
 Warum nach Farbbereich filter:
+strong argument -> Starkes Charakteristika der Arnika Blume ist die Farbe. Dies als erstes Erkennungsmerkmal gewählt.
+
+
+Datenstruktur:
+Dazu einleitung: Objektorientierte Programmierung, vorteile?
+Es gibt die Data class, die ein Bild als Instanz lädt und deren Objekte die durch Methoden veränderte Bilder sind. 
+DesignerMainWindow class als gesamt GUI, die dann alle anderen Dinge "erbt" bzw. aufruft.
+Es gibt das MplWidget als class, die die Canvas class aufruft und das Plotfenster bildet und Teil der Gui ist. 
+Gui mit pyqt5 Backend geschrieben und mit dem Qt5Designer erstellt.
 
 \subsubsection{Parameterbeschreibung}
 
 
 \subsection{Implementierung / Aufruf}    
-- Flow-Chart für die GUI und den Programmaufruf, quasi als "Anleitung der Benutzung"
+% Flow-Chart für die GUI und den Programmaufruf, quasi als "Anleitung der Benutzung"
+
+% Beschreibung der genauen Eingabe, wie im ersten Abschnitt mit den Gui-screenshots schon angefangen. 
+
+%Navigationtoolbar beschreiben: 
+%https://github.com/matplotlib/matplotlib/blob/master/doc/users/navigation_toolbar.rst
+
+
 \subsubsection{Hard- und Softwarevoraussetzungen}
 \subsubsection{(Notwendige) In- und Output-Dateien und deren Formate}
 

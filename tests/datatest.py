@@ -82,7 +82,7 @@ if __name__ == "__main__":
 
 
     #path = "/home/rio/Dokumente/Uni/project/beispiel/testbilder/flug15/*.JPG"
-    img = "/home/rio/Dokumente/Uni/project/beispiel/testbilder/flug20/DSC01310.JPG"
+    img = "/home/rio/Dokumente/Uni/beispiel/testbilder/flug20/DSC01310.JPG"
     import matplotlib.pyplot as plt
     #fpaths = glob.glob(path)
     test = Data(img)

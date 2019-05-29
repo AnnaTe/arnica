@@ -19,7 +19,7 @@ Im Anschluss startete ein weiteres Projekt, diesmal mit dem Schwerpunkt auf \tex
 \begin{figure}[htb]
  \centering
  \includegraphics[width=0.7\textwidth,angle=0]{abb/Stakeholder-map}
- \caption{Stakeholder map \citep[nach][]{DBU2018}}
+ \caption{Stakeholder map \citep[In Anlehnung an][]{DBU2018}}
 \label{fig:stakeholdermap}
 \end{figure}
 
@@ -35,7 +35,7 @@ Vor 1989 war die Waldwirtschaft in Rumänien streng geregelt und kontrolliert. I
 \begin{figure}[htb]
  \centering
   \includegraphics[width=\textwidth,angle=0]{abb/Arnika/apusenimountain2016}
- \caption{Apuseni Gebirge mit traditioneller Heuernte}
+ \caption{Apuseni Gebirge mit traditioneller Heuernte \citep{Farcas2019}}
 \label{fig:apuseni}
 \end{figure}
 
@@ -69,7 +69,7 @@ Generell stehen die mögliche Flugzeit und damit auch die Größe der Fläche, d
         \hspace{-30pt}
     \subfigure{\includegraphics[width=0.35\textwidth]{abb/drohnen/wingtraone}}
      \hspace{-20pt}
-\caption[DJI Phantom 4 Quadrocopter, Trinity F9 und WintraOne VTOL-Drohnen]{\small v.l.n.r: DJI Phantom 4 Quadrocopter, Trinity F9 und WintraOne VTOL-Drohnen}
+\caption{ v.l.n.r: DJI Phantom 4 Quadrocopter \citep{DJI2019}, Trinity F9 \citep{QSGH2019} und WintraOne VTOL-Drohnen \citep{Wingtra2019}}
      \hspace{-40pt}
   \label{fig:drohnen}
 \end{figure}
@@ -106,7 +106,7 @@ Preis & ca. 7.800 EUR & ca. 14.850 EUR & ca. 36.678 EUR\\
 1: Gimbal ist ein Bildstabilisator \\
 2: RMS = Root Mean Square entspricht der Standardabweichung \\
 1 ppm = pro km nimmt Wertgenauigkeit um 1 mm ab. 
-\caption{Technische Daten der Drohnen im Vergleich}
+\caption{Technische Daten der Drohnen im Vergleich \citep[vgl.][]{DJI2019,QSGH2019,Wingtra2019}}
 \label{tab:technischedaten}
 \end{table}
 
@@ -123,7 +123,7 @@ Bei Testflügen im Schwarzwald im Juli 2018 wurden erste Bilder an einem bekannt
     \includegraphics[width=0.4\textwidth]{abb/SDLC}
   \end{center}
   \vspace{-20pt}
-  \caption[System Developement Life Circle]{\small SDLC}
+  \caption[System Developement Life Circle \citep{Smartsheet2019}]{\footnotesize SDLC \citep{Smartsheet2019}}
   \label{fig:sdlc}
   \vspace{-30pt}
 \end{wrapfigure}
@@ -147,7 +147,7 @@ Auflösung am Boden & 1,32 mm/px & 1,89 mm/px & 2,6 mm/px & 5,93 mm/px \\
 Erfasste Fläche & 1.04e+03 m\textsuperscript{2} & 633 m\textsuperscript{2} & 950 m\textsuperscript{2} & 0.0174 km\textsuperscript{2} \\
 \hline
 \end{tabular}
-\caption{Testflüge im Vergleich}
+\caption{Technische Daten? der Testflüge}
 \label{tab:flugvergleich}
 \end{table}
 

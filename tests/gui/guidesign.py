@@ -421,4 +421,4 @@ class Ui_MainWindow(object):
         self.actionClose.setText(_translate("MainWindow", "Close"))
         self.actionSingle.setText(_translate("MainWindow", "Open Image"))
 
-from gui.mplwidget_nav import MplWidget
+from gui.mplwidget import MplWidget

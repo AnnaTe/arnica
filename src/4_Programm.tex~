@@ -6,7 +6,23 @@ Das „Flower Segmentation Tool“ ist so konzipiert, dass schnelle Berechnungen
 %Anforderungen an den Code
 Die wichtigste Anforderung an das Programm ist dabei trotz großer Datenmengen noch in angemessener Schnelligkeit zu agieren. Um eine einfache Installation zu ermöglichen, wurde darauf geachtet niedrigschwellige Soft- und Hardwarevoraussetzungen zu fordern. 
 %Anforderungen an die Benutzeroberfläche
-Die Grafische Benutzeroberfläche besteht aus zwei Teilen. Einerseits soll die grafische Darstellung der Bilder zum Ausprobieren der Parameter möglich sein. Dabei ist ein vielseitiger Plotfenster mit der Möglichkeit den Ausschnitt zu verändern und Teile des Bildes zu vergrößern eine wichtige Funktion. Andererseits soll eine einfacher Anwendung der Berechnung auf einen großen Datensatz möglich sein. Bei beiden Anwendungen soll eine Statusanzeige einen Überblick verschaffen, welche Prozesse im Hintergrund laufen.
+
+\begin{figure}[hbt]
+ \centering
+ \includegraphics[width=\textwidth,angle=0]{abb/gui/plot-fenster-mit}
+ \caption{Grafische Oberfläche mit Plotfenster}
+\label{fig:gui-plot}
+\end{figure}
+
+Die Grafische Benutzeroberfläche besteht aus zwei Teilen. Einerseits soll die grafische Darstellung der Bilder zum Ausprobieren der Parameter möglich sein (Siehe Abbildung~\ref{fig:gui-plot}, S.~\pageref{fig:gui-plot}). Dabei ist ein vielseitiger Plotfenster mit der Möglichkeit den Ausschnitt zu verändern und Teile des Bildes zu vergrößern eine wichtige Funktion. Andererseits soll eine einfache Anwendung der Berechnung auf einen großen Datensatz möglich sein. Deshalb gibt es unter dem Tab „Directory“ die Eingabe oder Auswahl eines Ordners (Input-Directory), aus dem alle Bilddateien bearbeitet werden (Siehe Abbildung~\ref{fig:gui-dir}, S.~\pageref{fig:gui-dir}). Bei beiden Tabs verschafft eine Statusanzeige einen Überblick, welche Prozesse im Hintergrund laufen.
+
+\begin{figure}[htb]
+ \centering
+ \includegraphics[width=\textwidth,angle=0]{abb/gui/directory-fenster}
+ \caption{Grafische Oberfläche zur Anwendung auf Ordner}
+\label{fig:gui-dir}
+\end{figure}
+
 
 \subsection{Programmiersprache}
 Python ist eine Open Source Programmiersprache, die plattformübergreifend auf allen gängigen Betriebssystemen anwendbar ist. Die interpretierte Skriptsprache wurde 1994 von dem niederländischen Programmierer Guido Rossum als Python 1.0 veröffentlicht. Der Name Python hat Rossum von der britischen Komikergruppe Monty Python abgeleitet.
@@ -59,7 +75,14 @@ Warum nach Farbbereich filter:
 
 
 \subsection{Implementierung / Aufruf}    
-- Flow-Chart für die GUI und den Programmaufruf, quasi als "Anleitung der Benutzung"
+% Flow-Chart für die GUI und den Programmaufruf, quasi als "Anleitung der Benutzung"
+
+% Beschreibung der genauen Eingabe, wie im ersten Abschnitt mit den Gui-screenshots schon angefangen. 
+
+%Navigationtoolbar beschreiben: 
+%https://github.com/matplotlib/matplotlib/blob/master/doc/users/navigation_toolbar.rst
+
+
 \subsubsection{Hard- und Softwarevoraussetzungen}
 \subsubsection{(Notwendige) In- und Output-Dateien und deren Formate}
 

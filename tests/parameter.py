@@ -175,7 +175,7 @@ for a in range(len(centers)):
 
 #name = self.path[:-12] + self.path[-19:-13] + "circ/" + self.name + "circ" + ".png"
 
-plt.savefig("/home/rio/Dokumente/Uni/project/src/abb/ergebnisse/probleme/circles-adjust.png", dpi=300)
+#plt.savefig("/home/rio/Dokumente/Uni/project/src/abb/ergebnisse/probleme/circles-adjust.png", dpi=300)
 #plt.title("{} flowers counted.".format(count))
 plt.show()
 

@@ -2,14 +2,22 @@
 
 Einleitende Zusammenfassung etc.
 \subsection{Auswertung}
-Alle Ergebnisse werden hinsichtlich der Zielsetzung (Anfangshypothesen) bewertet
-Alle Ergebnisse werden mit relevanter Literatur verglichen und bewertet
+%Alle Ergebnisse werden hinsichtlich der Zielsetzung (Anfangshypothesen) bewertet
 
+Ist es möglich mit dem Programm Arnika zu erkennen? Begründetes und differenziertes ja: Beispielbilder der verschiedenen Flüghöhen, jeweils Original, Segmentierung, Umrandung
+Ist es möglich Arnika zu quantifizieren? Schwierig, siehe Probleme. 
+Ist es möglich Arnika zu differenzieren von anderen Blumen? teilweise ja (in den Testbildern ja,1. durch die farbe, 2. da die gewählte Methode zum Ausschluss kleinerer Blüten selber Farbe funktioniert. Bei anderen Blumen, müssen ökologische und geographische Faktoren mitberücksichtigt werden, oder ein anderer Ansatz wie in Literatur -> NN gewählt werden)
+
+
+%Alle Ergebnisse werden mit relevanter Literatur verglichen und bewertet
+NN Beispiel(e) aus der DBU Antrag
+weitere?
 
 \subsection{Schwierigkeiten}
 \subsubsection{Problem: Kreise um zusammenhängende Blumen}
 
-Bei der Visualisierung der Blumen durch Kreise gibt es ein Problem, wenn mehrere Blumen zusammenhängen. 
+Bei der Visualisierung der Blumen durch Umrandung, werden vom Programm mehrere Blumen, die zusammenhängen oder überlappen nur mit einem großen Kreis erfasst.
+
 Bei einer Gruppe von Blüten, die überlappen, wird ein zusammenhängende Fläche (ConnectedComponents) bei der gelben Segmentierung heraus gefiltert. Möchte man die Blumen mit Kreisen visualisieren wird der Geometrischer Schwerpunkt der Connected Components (CC) als Mittelpunkt des Kreises gewählt. Als Radius wurde die Höhe oder Breite des CC gewählt, je nachdem welche geringer ist. Hängen nun aber mehrerer Blüten zusammen kann nur ein Kreis mit den Mittelpunkt des gesamten CC gezeichnet werden (Siehe Abbildung~\ref{fig:Kreis}, S. \pageref{fig:Kreis}).
  
 \begin{figure}[htb]
@@ -45,35 +53,35 @@ Problem dabei: Wenn eine einzelne Blume aber nicht frontal sondern eher seitlich
 Also müsste man das Seitenverhältnis mit der Größe der CC kombinieren. Also die Analyse des Seitenverhältnisses nur bei einer bestimmten Größe beginnen. 
 also nicht nur max size, sondern if size > maxsize: die center hinzufügen?
 
-\blindtext
-\lstset{language=python}
-\begin{lstlisting}[frame=htrbl, caption={Das Listing zeigt Python Quellcode}, label={lst:result2}]
-number, output, stats, centroids = cv2.connectedComponentsWithStats(test.blob[:, :, 0], connectivity=8)
-
-width = stats[1:,2]
-height = stats[1:,3]
-sizes = stats[1:,4]
-number = number - 1
-lowsize = np.mean(sizes)*2
-
-center = np.array((centroids[1:, 0].astype(int), centroids[1:, 1].astype(int))).transpose()
-
-centers = []
-radius = []
-for i in range(0, number):
-    if sizes[i] >= lowsize:
-        if width[i]/height[i] >= 0.75 and width[i]/height[i] < 1.5:
-            # 1:1 do nothing
-            pass
-        elif width[i]/height[i] < 0.75 and width[i]/height[i] >= 0.415:
-            center[i] = np.array([(width[i] / 2) + stats[i + 1, 0], (height[i] / 4) + stats[i + 1, 1]])
-            centers.append([(width[i] / 2) + stats[i + 1, 0], (height[i] / 4) * 3 + stats[i + 1, 1]])
-            radius.append(np.min(stats[i + 1, 2:4]))
-\end{lstlisting}
+% \blindtext
+% \lstset{language=python}
+% \begin{lstlisting}[frame=htrbl, caption={Das Listing zeigt Python Quellcode}, label={lst:result2}]
+% number, output, stats, centroids = cv2.connectedComponentsWithStats(test.blob[:, :, 0], connectivity=8)
+%
+% width = stats[1:,2]
+% height = stats[1:,3]
+% sizes = stats[1:,4]
+% number = number - 1
+% lowsize = np.mean(sizes)*2
+%
+% center = np.array((centroids[1:, 0].astype(int), centroids[1:, 1].astype(int))).transpose()
+%
+% centers = []
+% radius = []
+% for i in range(0, number):
+%     if sizes[i] >= lowsize:
+%         if width[i]/height[i] >= 0.75 and width[i]/height[i] < 1.5:
+%             # 1:1 do nothing
+%             pass
+%         elif width[i]/height[i] < 0.75 and width[i]/height[i] >= 0.415:
+%             center[i] = np.array([(width[i] / 2) + stats[i + 1, 0], (height[i] / 4) + stats[i + 1, 1]])
+%             centers.append([(width[i] / 2) + stats[i + 1, 0], (height[i] / 4) * 3 + stats[i + 1, 1]])
+%             radius.append(np.min(stats[i + 1, 2:4]))
+% \end{lstlisting}
 
 \begin{figure}[htb]
  \centering
- \includegraphics[width=0.4\textwidth,angle=0]{abb/ergebnisse/probleme/circles-adjust}
+ \includegraphics[width=0.4\textwidth,angle=0]{abb/ergebnisse/probleme/circles-adjust2}
  \caption{Kreise nur bei großen CC hinzugefügt (blau)}
 \label{fig:Kreis-blau2}
 \end{figure}
@@ -91,4 +99,3 @@ Die eigenen Ergebnisse werden nicht über- oder unterbewertet
 \subsubsection{Problem: Verwechslungspotential Arnica montana}
 
  schwer zu verhindern, aber durch andere faktoren identifikation -> GSM und Höhe der Pflanzen oder Bodensäure?
-

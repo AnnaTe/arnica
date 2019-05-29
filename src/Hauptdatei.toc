@@ -16,22 +16,22 @@
 \contentsline {subsubsection}{\numberline {2.3.1}Vergleich von Drohnenarten}{18}{subsubsection.2.3.1}
 \contentsline {subsubsection}{\numberline {2.3.2}Testfl\IeC {\"u}ge im Schwarzwald}{21}{subsubsection.2.3.2}
 \contentsline {section}{\numberline {3}Programmbeschreibung}{23}{section.3}
-\contentsline {subsection}{\numberline {3.1}Programmiersprache}{23}{subsection.3.1}
-\contentsline {subsection}{\numberline {3.2}Anwendungsbereich}{24}{subsection.3.2}
-\contentsline {subsection}{\numberline {3.3}Programmaufbau}{24}{subsection.3.3}
-\contentsline {subsection}{\numberline {3.4}Vorgehensweise Methoden?}{25}{subsection.3.4}
-\contentsline {subsubsection}{\numberline {3.4.1}Parameterbeschreibung}{25}{subsubsection.3.4.1}
-\contentsline {subsection}{\numberline {3.5}Implementierung / Aufruf}{25}{subsection.3.5}
-\contentsline {subsubsection}{\numberline {3.5.1}Hard- und Softwarevoraussetzungen}{25}{subsubsection.3.5.1}
-\contentsline {subsubsection}{\numberline {3.5.2}(Notwendige) In- und Output-Dateien und deren Formate}{25}{subsubsection.3.5.2}
-\contentsline {section}{\numberline {4}Ergebnisse}{26}{section.4}
-\contentsline {subsection}{\numberline {4.1}Auswertung}{26}{subsection.4.1}
-\contentsline {subsection}{\numberline {4.2}Schwierigkeiten}{26}{subsection.4.2}
-\contentsline {subsubsection}{\numberline {4.2.1}Problem: Kreise um zusammenh\IeC {\"a}ngende Blumen}{26}{subsubsection.4.2.1}
-\contentsline {paragraph}{\nonumberline L\IeC {\"o}sungsansatz:}{26}{section*.9}
-\contentsline {subsubsection}{\numberline {4.2.2}Problem: Blume wird durch Schatten gest\IeC {\"u}ckelt}{28}{subsubsection.4.2.2}
-\contentsline {subsubsection}{\numberline {4.2.3}Problem: Verwechslungspotential Arnica montana}{29}{subsubsection.4.2.3}
-\contentsline {section}{\numberline {5}Fazit}{30}{section.5}
-\contentsline {section}{Literaturverzeichnis}{31}{section.5}
-\contentsline {section}{Anhang}{33}{section*.10}
-\contentsline {section}{Eidesstattliche Erkl\IeC {\"a}rung}{33}{section*.11}
+\contentsline {subsection}{\numberline {3.1}Programmiersprache}{24}{subsection.3.1}
+\contentsline {subsection}{\numberline {3.2}Anwendungsbereich}{25}{subsection.3.2}
+\contentsline {subsection}{\numberline {3.3}Programmaufbau}{25}{subsection.3.3}
+\contentsline {subsection}{\numberline {3.4}Vorgehensweise Methoden?}{26}{subsection.3.4}
+\contentsline {subsubsection}{\numberline {3.4.1}Parameterbeschreibung}{27}{subsubsection.3.4.1}
+\contentsline {subsection}{\numberline {3.5}Implementierung / Aufruf}{27}{subsection.3.5}
+\contentsline {subsubsection}{\numberline {3.5.1}Hard- und Softwarevoraussetzungen}{27}{subsubsection.3.5.1}
+\contentsline {subsubsection}{\numberline {3.5.2}(Notwendige) In- und Output-Dateien und deren Formate}{27}{subsubsection.3.5.2}
+\contentsline {section}{\numberline {4}Ergebnisse}{28}{section.4}
+\contentsline {subsection}{\numberline {4.1}Auswertung}{28}{subsection.4.1}
+\contentsline {subsection}{\numberline {4.2}Schwierigkeiten}{28}{subsection.4.2}
+\contentsline {subsubsection}{\numberline {4.2.1}Problem: Kreise um zusammenh\IeC {\"a}ngende Blumen}{28}{subsubsection.4.2.1}
+\contentsline {paragraph}{\nonumberline L\IeC {\"o}sungsansatz:}{29}{section*.9}
+\contentsline {subsubsection}{\numberline {4.2.2}Problem: Blume wird durch Schatten gest\IeC {\"u}ckelt}{30}{subsubsection.4.2.2}
+\contentsline {subsubsection}{\numberline {4.2.3}Problem: Verwechslungspotential Arnica montana}{30}{subsubsection.4.2.3}
+\contentsline {section}{\numberline {5}Fazit}{31}{section.5}
+\contentsline {section}{Literaturverzeichnis}{32}{section.5}
+\contentsline {section}{Anhang}{34}{section*.10}
+\contentsline {section}{Eidesstattliche Erkl\IeC {\"a}rung}{34}{section*.11}
