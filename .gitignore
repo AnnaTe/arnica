@@ -1,0 +1,7 @@
+scripts/
+src/abb/*
+src/raus/*
+src/anhang/*
+src/latex_einstellungen/*
+src/Hauptdatei.pdf
+tests/*

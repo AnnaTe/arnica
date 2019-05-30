@@ -12,7 +12,18 @@ setuptools.setup(
     long_description=long_description,
     long_description_content_type="text/markdown",
     url="https://github.com/AnnaTe/arnica",
-    packages=setuptools.find_packages(),
+    packages=setuptools.find_packages(exclude=['tests*', 'scripts', 'src']),
+    py_modules=['main'],
+    python_requires='>=3.6',
+    install_requires=[
+        'cv2'
+        'sys'
+        'PyQt5'
+        'numpy'
+        'glob'
+        'matplotlib'
+        'os'
+    ],
     classifiers=[
         "Programming Language :: Python :: 3",
         "License :: OSI Approved :: GNU General Public License v3 (GPLv3)",

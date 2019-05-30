@@ -78,13 +78,22 @@ strong argument -> Starkes Charakteristika der Arnika Blume ist die Farbe. Dies 
 
 Datenstruktur:
 Dazu einleitung: Objektorientierte Programmierung, vorteile?
+- Inheritence (Vererbung)
+- Composition (Aufbau)
+Multiple instances
+Customization via inheritance
+Operator overloading
 Es gibt die Data class, die ein Bild als Instanz lädt und deren Objekte die durch Methoden veränderte Bilder sind. 
 DesignerMainWindow class als gesamt GUI, die dann alle anderen Dinge "erbt" bzw. aufruft.
 Es gibt das MplWidget als class, die die Canvas class aufruft und das Plotfenster bildet und Teil der Gui ist. 
 Gui mit pyqt5 Backend geschrieben und mit dem Qt5Designer erstellt.
 
-\subsubsection{Parameterbeschreibung}
 
+
+\subsubsection{Parameterbeschreibung}
+Der Percent parameter geht immer vom original bild aus und schneidet es auf die gewünschte Prozentzahl mittig zu. Bei änderung, wird wieder auf das original bild referenziert
+
+Min Size in pixel: 
 
 \subsection{Implementierung / Aufruf}    
 % Flow-Chart für die GUI und den Programmaufruf, quasi als "Anleitung der Benutzung"
@@ -96,6 +105,10 @@ Gui mit pyqt5 Backend geschrieben und mit dem Qt5Designer erstellt.
 
 
 \subsubsection{Hard- und Softwarevoraussetzungen}
+
+Python 3 
+
+
 \subsubsection{(Notwendige) In- und Output-Dateien und deren Formate}
 
 
