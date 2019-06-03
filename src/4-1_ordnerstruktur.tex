@@ -1,0 +1,54 @@
+
+\begin{figure}[htb]
+\small
+  \begin{forest}
+    pic dir tree,
+    where level=0{}{
+      directory,
+    },
+    [segmentationtool
+      [build
+      ]
+      [filter
+        [\textunderscore \textunderscore init\textunderscore \textunderscore .py, file
+        ]
+        [data.py, file
+        ]
+      ]
+      [gui
+        [pyqt5backend
+          [\textunderscore \textunderscore init\textunderscore \textunderscore .py, file
+          ]
+          [guidesign.py, file
+          ]
+          [mplwidget\textunderscore nav.py, file
+          ]
+          [new.ui, file
+          ]
+        ]
+        [\textunderscore \textunderscore init\textunderscore \textunderscore .py, file
+        ]
+        [app.py, file
+        ]
+      ]
+      [tests
+      ]
+      [images
+        [testimages
+        ]
+        [output
+        ]
+      ]
+      [main.py, file
+      ]
+      [setup.py, file
+      ]
+      [README.md, file
+      ]
+      [LICENSE, file
+      ]
+    ] 
+  \end{forest}
+  \caption{Ordnerstruktur}
+  \label{fig:folders}
+\end{figure}

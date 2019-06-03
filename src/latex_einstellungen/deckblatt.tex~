@@ -16,19 +16,25 @@
 %\begin{figure}[t]
 % \includegraphics[width=0.6\textwidth]{abb/fh_koeln_logo}
 %\end{figure}
+\begin{verbatim}
 
-\begin{figure}[t]
- \begin{flushright}
- \includegraphics{abb/unilogo}
- \end{flushright}
-\end{figure}
+\end{verbatim}
+% \begin{figure}[t]
+%  \begin{flushright}
+%  \includegraphics{abb/unilogo}
+%  \end{flushright}
+% \end{figure}
 
+\begin{verbatim}
+
+\end{verbatim}
 \begin{verbatim}
 
 \end{verbatim}
 
 \begin{center}
 \Large{Fakultät für Umwelt und natürliche Ressourcen}
+\Large{Albert-Ludwigs-Universität Freiburg}
 \end{center}
 \begin{verbatim}
 
@@ -59,13 +65,24 @@
 
 
 \end{verbatim}
+\begin{verbatim}
+
+
+
+\end{verbatim}
+\begin{verbatim}
+
+
+
+\end{verbatim}
+
 \begin{flushleft}
 \begin{tabular}{llll}
 & & \\
 \textbf{Autorin:} & & Anna Tenberg & \\
 & & MatNr. 3327360 & \\
 & & \\
-\textbf{Version vom:} & & \today &\\
+\textbf{Abgabe:} & & 03. Juli 2019 &\\
 & & \\
 \textbf{1. Betreuer:} & & Dr.-Ing. Holger Weinacker &\\
 \textbf{2. Betreuer:} & & Prof. Dr. Albert Reif &\\

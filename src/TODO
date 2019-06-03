@@ -1,31 +1,38 @@
 TODO:
 
-- Bildqualität der Testflüge beschreiben
 - Bilder raussuchen für Screenshots der GUI
 - Stichprobe nehmen, vllt 5 Bilder pro flug und dann sehr nach ran zoomen, also nicht 50% sondern 80% Crop und plotten, zählen, wie viele erkannt? wie viele kleine Blumen raus sortiert? mit vorgeschlagenem Parameter? mit anderem Parameter (STD) ?
 
  raussuchen für eine quanti- und qualitative Analyse mit fancy Grafiken
+
+Text:
+- ökologischer hintergrund apuseni
+- testbilder bewertung, flugplanung mit einbeziehen
+- ergebnisse (rückbezug auf bewertung der testbilder)
+
+
+Abbildungen:
+- Ergebnisbilder vorher nacher segmentiert, Umrandet
+
+
+Analyse:
+- zählen mit punkten und Strichliste
 
 
 LATEX:
 - Punktierung der Quellenangaben ändern
 - Formatierung des Literaturverzeichnisses
 
-
-PYTHON:
-- Code checken ob bei Folder alles genauso läuft wie bei single Image
-- 
+ 
+programm:
+- setup.py mit sip und zlib
 - Kommentierung 
 - PEP 8 -> pylind
+
+
 - Anmerkungen von Weinacker einarbeiten (v.A. Parameter aus Bilddaten vorschlagen)
-- Modulvorraussetzungen und Fehlermeldungen programmieren
-- Struktur ändern -> app.py nur indirekt durch main.py ausführen
-- "dead flowers" übertragen
-
-
 
 - Softwaretests -> Debugging
-
 
 
 

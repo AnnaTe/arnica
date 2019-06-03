@@ -1,6 +1,6 @@
 Metadata-Version: 2.1
 Name: flower-sementation-tool
-Version: 0.0.1
+Version: 0.1.3
 Summary: A tool to segment yellow flowers in rgb images
 Home-page: https://github.com/AnnaTe/arnica
 Author: Anna Tenberg
@@ -8,7 +8,7 @@ Author-email: Anna.Tenberg@saturn.uni-freiburg.de
 License: UNKNOWN
 Description: # arnica filter
         
-        This is an software application  ... in construction.
+        This is an software application in construction.
         
         Dies ist eine Anwendungssoftware zum Monitoring von Arnika Blumen durch die Auswertung von Luftbildern von Drohnen
         
@@ -20,18 +20,6 @@ Description: # arnica filter
         
         - Softwaretests -> Debugging
         
-        Default size aus der Flughöhe angeben und Auflösung der Kamera
-        -> Blobsize in px aus Auflösung berechnen
-        
-        helligkeit des bildes erkennen und daran den gelbwert anpassen?? -> histogramm?
-        warum werden auf den testbildern die dunklen blumen nicht erkannt/die blumen im schatten nicht erkannt
-        
-        Anzeige: Bild 5 von 100
-        
-        Maybe/nice to have:
-        - support of other imageformats .png, etc?
-        - help html
-        
         - Kommentierung 
         - PEP 8 -> pylind
 Platform: UNKNOWN
@@ -40,4 +28,5 @@ Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
 Classifier: Operating System :: POSIX :: Linux
 Classifier: Topic :: Scientific/Engineering :: Image Recognition
 Classifier: Intended Audience :: Science/Research
+Requires-Python: >=3.6
 Description-Content-Type: text/markdown

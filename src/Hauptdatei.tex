@@ -2,8 +2,6 @@
 \documentclass[a4paper,12pt,headsepline]{scrartcl}
 \input{latex_einstellungen/variablen}
 
-\usepackage{todonotes}
-
 % weitere Pakete
 % Grafiken aus PNG Dateien einbinden
 \usepackage{graphicx}
@@ -31,6 +29,7 @@
 
 % floatende Bilder ermöglichen
 %\usepackage{floatflt}
+\usepackage{float}
 
 % mehrseitige Tabellen ermöglichen
 \usepackage{longtable}
@@ -40,7 +39,7 @@
 %\newcommand{\changefont}[3]{ 
 %\fontfamily{#1} \fontseries{#2} \fontshape{#3} \selectfont}
 \usepackage{mathptmx} % Hier steckt Times drin
-\usepackage[scaled]{helvet}
+\usepackage[scaled=0.86]{helvet}
 \usepackage{courier}
 
 % Packet für Seitenrandabständex und Einstellung für Seitenränder
@@ -95,6 +94,9 @@
 
 % für Bildbezeichner
 \usepackage{capt-of}
+\usepackage{caption}
+\captionsetup[figure]{labelfont={sf,sc}, textfont=sf}
+\captionsetup[table]{labelfont={sf,sc}, textfont=sf}
 
 % für Stichwortverzeichnis
 \usepackage{makeidx}
@@ -102,7 +104,51 @@
 % für Listings
 \usepackage{listings}
 \lstset{numbers=left, numberstyle=\tiny, numbersep=5pt, keywordstyle=\color{black}\bfseries, stringstyle=\ttfamily,showstringspaces=false,basicstyle=\footnotesize,captionpos=b}
-\lstset{language=java}
+\lstset{language=python}
+
+\usepackage[edges]{forest}
+\definecolor{folderbg}{RGB}{124,166,198}
+\definecolor{folderborder}{RGB}{110,144,169}
+\newlength\Size
+\setlength\Size{4pt}
+\tikzset{%
+  folder/.pic={%
+    \filldraw [draw=folderborder, top color=folderbg!50, bottom color=folderbg] (-1.05*\Size,0.2\Size+5pt) rectangle ++(.75*\Size,-0.2\Size-5pt);
+    \filldraw [draw=folderborder, top color=folderbg!50, bottom color=folderbg] (-1.15*\Size,-\Size) rectangle (1.15*\Size,\Size);
+  },
+  file/.pic={%
+    \filldraw [draw=folderborder, top color=folderbg!5, bottom color=folderbg!10] (-\Size,.4*\Size+5pt) coordinate (a) |- (\Size,-1.2*\Size) coordinate (b) -- ++(0,1.6*\Size) coordinate (c) -- ++(-5pt,5pt) coordinate (d) -- cycle (d) |- (c) ;
+  },
+}
+\forestset{%
+  declare autowrapped toks={pic me}{},
+  pic dir tree/.style={%
+    for tree={%
+      folder,
+      font=\ttfamily,
+      grow'=0,
+    },
+    before typesetting nodes={%
+      for tree={%
+        edge label+/.option={pic me},
+      },
+    },
+  },
+  pic me set/.code n args=2{%
+    \forestset{%
+      #1/.style={%
+        inner xsep=2\Size,
+        pic me={pic {#2}},
+      }
+    }
+  },
+  pic me set={directory}{folder},
+  pic me set={file}{file},
+}
+
+\usepackage{todonotes}
+\newcommand{\tg}[1]{\todo[color=green!40]{#1}}
+\newcommand{\fio}[1]{\todo[color=blue!40]{#1}}
 
 % Indexerstellung
 \makeindex
@@ -184,6 +230,8 @@
 % Abbildungsverzeichnis endgueltig anzeigen
 \listoftables
 
+\addcontentsline{toc}{section}{Todoliste}
+\listoftodos
 %% WORKAROUND für Listings
 %\makeatletter% --> De-TeX-FAQ
 %\renewcommand*{\lstlistoflistings}{%

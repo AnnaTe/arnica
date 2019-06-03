@@ -5,24 +5,21 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="flower-sementation-tool",
-    version="0.0.1",
+    version="0.1.3",
     author="Anna Tenberg",
     author_email="Anna.Tenberg@saturn.uni-freiburg.de",
     description="A tool to segment yellow flowers in rgb images",
     long_description=long_description,
     long_description_content_type="text/markdown",
     url="https://github.com/AnnaTe/arnica",
-    packages=setuptools.find_packages(exclude=['tests*', 'scripts', 'src']),
-    py_modules=['main'],
+    packages=setuptools.find_packages(exclude=['tests*', 'scripts', 'src', '*.git']),
     python_requires='>=3.6',
     install_requires=[
-        'cv2'
-        'sys'
-        'PyQt5'
-        'numpy'
-        'glob'
-        'matplotlib'
-        'os'
+        'opencv-python',
+        'PyQt5-sip',
+        'pyqt5',
+        'numpy',
+        'matplotlib',
     ],
     classifiers=[
         "Programming Language :: Python :: 3",
