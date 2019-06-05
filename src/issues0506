@@ -1,0 +1,18 @@
+Issues:
+
+Methoden:
+- parameter und methoden erstmal zusammen erklären
+- 
+
+Auswertung:
+- Bilder erstellen von 15, 20, 30, 80 Meter Flughöhe mit original, crop,  segmentierung, umrandung.
+- Bilder kurz und pregnant schreiben und ergebnisse bewerten, dabei rückbezug auf aufgabe
+
+
+- setup.py mit sip und zlib
+- test in ENV
+- test in windows-VM
+- README.md mit Installationsbeschreibung
+- Hard- und Software Vorraussetzungen und Installation
+- Implementierung Aufruf
+-

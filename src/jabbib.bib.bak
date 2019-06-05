@@ -329,4 +329,11 @@
   url          = {https://www.smartsheet.com/software-development-project-management},
 }
 
+@Book{Lutz2013,
+  title  = {Learning Python: Powerful Object-Oriented Programming},
+  year   = {2013},
+  author = {Lutz, Mark},
+  editor = {OReilly Media},
+}
+
 @Comment{jabref-meta: databaseType:bibtex;}

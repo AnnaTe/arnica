@@ -62,7 +62,7 @@ img3 = "/home/rio/Dokumente/Uni/project/src/abb/ergebnisse/probleme/image.png"
 
 import matplotlib.pyplot as plt
 
-test = Data(img3)
+test = Data(img)
 #test.crop(50)
 
 # minBGR = np.array((0, 133, 200))

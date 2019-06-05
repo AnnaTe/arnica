@@ -2,7 +2,7 @@
 
 % Problemstellung/Fragestellung:
 Die Anwendungssoftware „Flower Segmentation Tool“ wurde zur Erkennung von Arnica montana durch die Auswertung von Drohnenluftbildern entwickelt. Ziel ist es das Monitoring von Arnica montana durch eine nachhaltige Pflückung auf bisher nicht genutzte Flächen auszuweiten. Durch den Drohneneinsatz können auch in unwegsamen Gelände Erkenntnisse über den Bestand von Arnika gewonnen werden. Als Datengrundlage bei der Entwicklung dienten die Aufnahmen der Testflüge aus dem Schwarzwald des „Projekt zum Schutz der Biodiversität in Rumänien“.
-Das „Flower Segmentation Tool“ ist so konzipiert, dass schnelle Berechnungen Aussagen über den Bestand getroffen werden können, die dann vor Ort weiter untersucht werden. Es soll also unterstützend zur Feldarbeit wirken und dabei eine Einschätzung liefern, wo diese stattfinden kann. 
+Das „Flower Segmentation Tool“ ist so konzipiert, dass schnelle Berechnungen Aussagen über den Bestand getroffen werden können, die dann vor Ort weiter untersucht werden. Es soll also unterstützend zur Feldarbeit wirken und dabei eine Einschätzung liefern, wo diese stattfinden kann.
 %Anforderungen an den Code
 Die wichtigste Anforderung an das Programm ist dabei trotz großer Datenmengen noch in angemessener Schnelligkeit zu agieren. Um eine einfache Installation zu ermöglichen, wurde darauf geachtet niedrigschwellige Soft- und Hardwarevoraussetzungen zu fordern. 
 %Anforderungen an die Benutzeroberfläche
@@ -41,19 +41,20 @@ Das Programm zur automatischen Erkennung von Arnika soll zur Bildanalyse und Aus
 %genaue Funktionen (zentrierter Crop, Bilder plotten lassen, exportieren, segmentieren, circles, dabei größe anpassen)
 \subsection{Programmaufbau}
 
-Der Programmaufbau des Flower Segmentation Tools ist als Python Paket strukturiert. Es kann deshalb auch mit pip aus dem Python Package Index (PyPI) heruntergeladen und installiert werden. In Abbildung \ref{fig:folders} auf S. \pageref{fig:folders} ist die Ordnerstruktur dargestellt. Das Paket befindet sich im Ordner \texttt{segmentationtool}, welches aus mehreren Unterpaketen besteht. Im Paket \texttt{filter} befindet sich das \texttt{data.py} Modul mit der \texttt{Data class}. Im Ordner \texttt{gui} sind alle Pakete und Module, die die Grafische Benutzeroberfläche (grafical user interface, kurz: GUI) bilden. Dazu gehört auch das \texttt{pyqt5backend} das mit dem Programm Qt5Designer erstellt wurde. 
-test, build, Readme license setup
+Der Programmaufbau des Flower Segmentation Tools ist als Python Programmpaket strukturiert. Es kann deshalb auch mit pip aus dem Python Package Index (PyPI) heruntergeladen und installiert werden. In Abbildung \ref{fig:folders} auf S. \pageref{fig:folders} ist die Ordnerstruktur dargestellt. Das Paket befindet sich im Ordner \texttt{segmentationtool}, welches aus mehreren Unterpaketen besteht. Im Paket \texttt{filter} befindet sich das \texttt{data.py} Modul mit der \texttt{Data class}. Im Ordner \texttt{gui} sind alle Pakete und Module, die die Grafische Benutzeroberfläche (grafical user interface, kurz: GUI) bilden. Dazu gehört auch das \texttt{pyqt5backend} das mit dem Programm Qt5Designer erstellt wurde. Mit der Datei \texttt{main.py} kann das Programm mit der GUI aufgerufen werden. Die Verzeichnisse \texttt{build}, \texttt{dist} und \texttt{flower\textunderscore sementation\textunderscore tool.egg-info} wurden automatisch durch die \texttt{setup.py} Datei erstellt und werden für die Versionierung und Weitergabe durch den PyPI benötigt. Die Datei \texttt{README.md} gibt einen Überblick was das Programm macht und wie es installiert werden kann. Die Veröffentlichung des Programms läuft unter der GNU GLPv3-Lizenz, die in der Datei \texttt{LICENSE} genauer erläutert wird.
 
-\texttt{main.py}
 
-\begin{figure}[htb]
-\small
+\begin{figure}[H]
+\footnotesize
+\hspace{50pt}
   \begin{forest}
     pic dir tree,
     where level=0{}{
       directory,
     },
     [segmentationtool
+      [dist
+      ]
       [build
       ]
       [filter
@@ -100,17 +101,15 @@ test, build, Readme license setup
   \label{fig:folders}
 \end{figure}
 
-
-Die inneren Prozesse einer Plotabfrage werden in Abbildung \ref{fig:flowchart} (S. \pageref{fig:flowchart}) dargestellt. Hauptintention dabei stellt die Minimierung von Zeitverzögerungen da. Vor Allem die Wiederholung von unnötigen Berechnungen soll durch if-else Schleifen vermieden werden. Es werden je nach Prozess der berechnet wird zunächst erstmal abgefragt, ob sich die Parameter überhaupt verändert haben. 
-Ist dies nicht oder nur teilweise der Fall kann eine erneute komplette Berechung nicht notwenig sein und der angefragte Prozess auf ein schon gespeichertes Bild oder eine Teilfunktion direkt zurückgreifen kann. Der Aufruf des Gesamtfilters, der die gelben Bildteile mit einer Mindestgröße segmentiert, ruft Funktionen auf, die jeweils auch direkt von anderen Anfragen angesprochen werden können. Dabei werden die Zwischenergebnisse als Objekte der Klasse gespeichert. Insgesamt kann so die Ausgabe effizienter und schneller wiedergegeben werden, gerade bei Bilder, die eine große Dateimenge einnehmen.
-
+Die inneren Prozesse einer Plotabfrage werden in Abbildung \ref{fig:flowchart} (S. \pageref{fig:flowchart}) in einer Flowchart, auch Programmablaufplan genannt, dargestellt. Bei der Aktualisierung des dargestellten Bildes mit veränderten Parametern ist die Codestruktur so angelegt, dass möglichst keine Wiederholung unnötiger Berechnungen stattfindet. Hauptintention dabei stellt die Minimierung von Zeitverzögerungen da. 
 \begin{figure}[htb]
  \centering
- \includegraphics[width=\textwidth,angle=0]{abb/prozess-flow}
- \caption{Programm flowchart}
+ \includegraphics[width=\textwidth,angle=0]{abb/programm/prozesse}
+ \caption{Programmablaufplan der Plotabfrage}
 \label{fig:flowchart}
 \end{figure}
-
+Die Formen der Elemente in einem Programmablaufplans sind abhängig von ihrer Funktion kategorisiert. Die Start- oder Stop-Elemente sind als gelbe Rechtecke mit gerundeten Ecken gekennzeichnet. Ein Parallelogramm symbolisiert eine Ein- oder Ausgabe. In diesem Fall nur Ausgabe, die auch gleichzeitig das Ende der Abfrage bedeutet. Daher ist die Ausgabe hier in der selben Farbe, wie die Startelemente dargestellt. Die Rechtecke zeigen eine Tätigkeit oder Operation, in diesem Fall Methoden der Data Klasse, an. Entscheidungen werden als Rauten dargestellt, dessen Abfrage mit „Ja” beantwortet immer nach unten weiter verläuft.
+Nach dem ersten Öffnen des Bildes wird es als Objekt der Data Klasse instanziiert. Die \texttt{initial plot} Abfrage kann es als Klasseninstanz \texttt{img} darstellen. Soll der dargestellte Plot nun mit Parametern verändert werden, wird beim Aufruf der \texttt{update plot} Funktion stufenweise in if-else Schleifen abgefragt, welche Darstellung gewünscht ist und welche Parameter sich verändert haben. Haben sich Parameter nicht oder nur teilweise verändert ist eine erneute komplette Berechung nicht notwenig. Der angefragte Prozess kann dann auf ein schon gespeichertes Bild oder eine Teilfunktion direkt zurückgreifen. Haben sich alle Parameter verändert, wird die Funktion \texttt{filter} der Data Klasse aufgerufen, die eine komplette Berechung durch Aufruf der einzelnen Teilfunktionen startet. Es werden dabei erneut Zwischenergebnisse als Objekte der Klasse gespeichert auf die in späteren Aufrufen der \texttt{update plot} Funktion wieder zurückgegriffen werden kann. Insgesamt kann so die Plot-Ausgabe effizienter und schneller wiedergegeben werden, gerade bei Bilder, die eine große Datenmenge einnehmen.
 
 \subsection{Vorgehensweise Methoden?}
 

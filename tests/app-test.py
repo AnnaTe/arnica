@@ -6,9 +6,9 @@ import glob
 import numpy as np
 from matplotlib.patches import Circle
 
-from PyQt5 import QtWidgets, QtGui
+from PyQt5 import QtWidgets
 
-from gui.pyqt5backend.guidesign import Ui_MainWindow
+from gui.guidesign import Ui_MainWindow
 
 from datatest import Data
 
@@ -106,18 +106,89 @@ class DesignerMainWindow(QtWidgets.QMainWindow, Ui_MainWindow, Data):
                     pass
             self.mpl.canvas.ax.clear()
             number, output, stats, centroids = cv2.connectedComponentsWithStats(self.i.blob[:, :, 0], connectivity=8)
-            center = list(zip(centroids[1:, 0].astype(int), centroids[1:, 1].astype(int)))
-            radius = stats[1:, 3]
+            nb_components = number - 1
+            left = stats[1:, 0]
+            top = stats[1:, 1]
+            width = stats[1:, 2]
+            height = stats[1:, 3]
+            sizes = stats[1:, 4]
+
+            center = np.array((centroids[1:, 0].astype(int), centroids[1:, 1].astype(int))).transpose()
+
+            lowsize = np.mean(sizes) * 2
+            centers = []
+            radius = []
+            for i in range(0, nb_components):
+                if sizes[i] >= lowsize:
+                    if width[i] / height[i] >= 0.75 and width[i] / height[i] < 1.5:
+                        pass
+                    elif width[i] / height[i] < 0.75 and width[i] / height[i] >= 0.415:
+                        center[i] = np.array([(width[i] / 2) + left[i], (height[i] / 4) + top[i]])
+                        centers.append([(width[i] / 2) + left[i], (height[i] / 4) * 3 + top[i]])
+                        radius.append(np.min((width[i], height[i])))
+                    elif width[i] / height[i] < 2.5 and width[i] / height[i] >= 1.5:
+                        center[i] = np.array([(width[i] / 4) + left[i], (height[i] / 2) + top[i]])
+                        centers.append([(width[i] / 4) * 3 + left[i], (height[i] / 2) + top[i]])
+                        radius.append(np.min((width[i], height[i])))
+                    elif width[i] / height[i] >= 2.5 and width[i] / height[i] < 3.5:
+                        centers.append([(width[i] / 4) + left[i], (height[i] / 2) + top[i]])
+                        radius.append(np.min((width[i], height[i])))
+                        centers.append([(width[i] / 4) * 3 + left[i], (height[i] / 2) + top[i]])
+                        radius.append(np.min((width[i], height[i])))
+                    elif width[i] / height[i] < 0.415 and width[i] / height[i] >= 0.29:
+                        centers.append([(width[i] / 2) + left[i], (height[i] / 4) + top[i]])
+                        radius.append(np.min((width[i], height[i])))
+                        centers.append([(width[i] / 2) + left[i], (height[i] / 4) * 3 + top[i]])
+                        radius.append(np.min((width[i], height[i])))
+                    elif width[i] / height[i] < 0.29 and width[i] / height[i] >= 0.225:
+                        center[i] = np.array([(width[i] / 2) + left[i], (height[i] / 5) + top[i]])
+                        centers.append([(width[i] / 2) + left[i], (height[i] / 5) * 2 + top[i]])
+                        radius.append(np.min((width[i], height[i])))
+                        centers.append([(width[i] / 2) + left[i], (height[i] / 5) * 3 + top[i]])
+                        radius.append(np.min((width[i], height[i])))
+                        centers.append([(width[i] / 2) + left[i], (height[i] / 5) * 4 + top[i]])
+                        radius.append(np.min((width[i], height[i])))
+                    elif width[i] / height[i] >= 3.5 and width[i] / height[i] < 4.5:
+                        center[i] = np.array([(width[i] / 5) + left[i], (height[i] / 2) + top[i]])
+                        centers.append([(width[i] / 5) * 2 + left[i], (height[i] / 2) + top[i]])
+                        radius.append(np.min((width[i], height[i])))
+                        centers.append([(width[i] / 5) * 3 + left[i], (height[i] / 2) + top[i]])
+                        radius.append(np.min((width[i], height[i])))
+                        centers.append([(width[i] / 5) * 4 + left[i], (height[i] / 2) + top[i]])
+                        radius.append(np.min((width[i], height[i])))
+                    elif width[i] / height[i] < 0.225:
+                        centers.append([(width[i] / 2) + left[i], (height[i] / 6) + top[i]])
+                        radius.append(np.min((width[i], height[i])))
+                        centers.append([(width[i] / 2) + left[i], (height[i] / 6) * 2 + top[i]])
+                        radius.append(np.min((width[i], height[i])))
+                        centers.append([(width[i] / 2) + left[i], (height[i] / 6) * 4 + top[i]])
+                        radius.append(np.min((width[i], height[i])))
+                        centers.append([(width[i] / 2) + left[i], (height[i] / 6) * 5 + top[i]])
+                        radius.append(np.min((width[i], height[i])))
+                    elif width[i] / height[i] >= 4.5:
+                        centers.append([(width[i] / 6) + left[i], (height[i] / 2) + top[i]])
+                        radius.append(np.min((width[i], height[i])))
+                        centers.append([(width[i] / 6) * 2 + left[i], (height[i] / 2) + top[i]])
+                        radius.append(np.min((width[i], height[i])))
+                        centers.append([(width[i] / 6) * 5 + left[i], (height[i] / 2) + top[i]])
+                        radius.append(np.min((width[i], height[i])))
+                        centers.append([(width[i] / 6) * 4 + left[i], (height[i] / 2) + top[i]])
+                        radius.append(np.min((width[i], height[i])))
 
             self.mpl.canvas.ax.imshow(cv2.cvtColor(self.i.cropped, cv2.COLOR_BGR2RGB))
             self.mpl.canvas.ax.axis("off")
-            counter = 0
+            count = 0
+            count1 = 0
             for i in range(centroids[1:, 1].shape[0]):
-                circ = Circle(center[i], radius[i], color="r", linewidth=0.5, fill=False)
+                circ = Circle(tuple(center[i]), np.min(stats[i + 1, 2:4]), color="r", linewidth=0.5, fill=False)
                 self.mpl.canvas.ax.add_patch(circ)
-                counter += 1
+                count += 1
+            for a in range(len(centers)):
+                circ2 = Circle(tuple(centers[a]), int(radius[a]), color="b", linewidth=0.5, fill=False)
+                self.mpl.canvas.ax.add_patch(circ2)
+                count1 += 1
             self.mpl.canvas.draw()
-            self.statusbar.showMessage('{} Flowers counted.'.format(counter))
+            self.statusbar.showMessage('{} Flowers counted. {} blue'.format(count, count1))
 
 
         elif self.cbYellow.isChecked() == True:

@@ -11,6 +11,8 @@
 		\nompageref{6}
   \item [{BRD}]\begingroup Bundesrepublik Deutschland\nomeqref {0}
 		\nompageref{6}
+  \item [{CC}]\begingroup Connected Components\nomeqref {0}
+		\nompageref{6}
   \item [{DDR}]\begingroup Deutsche Demokratische Republik\nomeqref {0}
 		\nompageref{6}
   \item [{DGM}]\begingroup Digitales Geländemodell\nomeqref {0}
@@ -23,11 +25,17 @@
 		\nompageref{6}
   \item [{GNSS}]\begingroup Globales Navigationssatellitensystem\nomeqref {0}
 		\nompageref{6}
-  \item [{GUI}]\begingroup graphische Benutzeroberfläche\nomeqref {0}
+  \item [{GNU GPLv3}]\begingroup GNU General Public License Version 3\nomeqref {0}
+		\nompageref{6}
+  \item [{GUI}]\begingroup Grafische Benutzeroberfläche\nomeqref {0}
+		\nompageref{6}
+  \item [{OOP}]\begingroup Objektorientierte Programmierung\nomeqref {0}
 		\nompageref{6}
   \item [{PPK}]\begingroup post-processing kinematics\nomeqref {0}
 		\nompageref{6}
   \item [{PSF}]\begingroup Python Software Foundation\nomeqref {0}
+		\nompageref{6}
+  \item [{PyPI}]\begingroup Python Package Index\nomeqref {0}
 		\nompageref{6}
   \item [{RL}]\begingroup Rote Liste gefährdeter Tiere, Pflanzen und Pilze Deutschlands\nomeqref {0}
 		\nompageref{6}
@@ -35,13 +43,15 @@
 		\nompageref{6}
   \item [{SL}]\begingroup Sesquinterpenlactone\nomeqref {0}
 		\nompageref{6}
+  \item [{subsp.}]\begingroup Subspezies oder Unterart\nomeqref {0}
+		\nompageref{6}
   \item [{UAS}]\begingroup Unmanned Aircraft Systems\nomeqref {0}
 		\nompageref{6}
   \item [{UAV}]\begingroup Unmanned Aircraft Vehicels\nomeqref {0}
 		\nompageref{6}
   \item [{USAMV}]\begingroup Universität für Agrarwissenschaften und Tiermedizin Cluj-Napoca\nomeqref {0}
 		\nompageref{6}
-  \item [{WWF}]\begingroup (World Wide Fund For Nature\nomeqref {0}
+  \item [{WWF}]\begingroup World Wide Fund For Nature\nomeqref {0}
 		\nompageref{6}
 
 \end{thenomenclature}

@@ -2,8 +2,6 @@
 \documentclass[a4paper,12pt,headsepline]{scrartcl}
 \input{latex_einstellungen/variablen}
 
-\usepackage{todonotes}
-
 % weitere Pakete
 % Grafiken aus PNG Dateien einbinden
 \usepackage{graphicx}
@@ -31,6 +29,7 @@
 
 % floatende Bilder ermöglichen
 %\usepackage{floatflt}
+\usepackage{float}
 
 % mehrseitige Tabellen ermöglichen
 \usepackage{longtable}
@@ -40,7 +39,7 @@
 %\newcommand{\changefont}[3]{ 
 %\fontfamily{#1} \fontseries{#2} \fontshape{#3} \selectfont}
 \usepackage{mathptmx} % Hier steckt Times drin
-\usepackage[scaled]{helvet}
+\usepackage[scaled=0.86]{helvet}
 \usepackage{courier}
 
 % Packet für Seitenrandabständex und Einstellung für Seitenränder
@@ -95,6 +94,9 @@
 
 % für Bildbezeichner
 \usepackage{capt-of}
+\usepackage{caption}
+\captionsetup[figure]{labelfont={sf,sc}, textfont=sf}
+\captionsetup[table]{labelfont={sf,sc}, textfont=sf}
 
 % für Stichwortverzeichnis
 \usepackage{makeidx}
@@ -125,6 +127,7 @@
       folder,
       font=\ttfamily,
       grow'=0,
+      inner sep=1pt,
     },
     before typesetting nodes={%
       for tree={%
@@ -143,6 +146,10 @@
   pic me set={directory}{folder},
   pic me set={file}{file},
 }
+
+\usepackage{todonotes}
+\newcommand{\tg}[1]{\todo[color=green!40]{#1}}
+\newcommand{\fio}[1]{\todo[color=blue!40]{#1}}
 
 % Indexerstellung
 \makeindex
@@ -224,6 +231,8 @@
 % Abbildungsverzeichnis endgueltig anzeigen
 \listoftables
 
+\addcontentsline{toc}{section}{Todoliste}
+\listoftodos
 %% WORKAROUND für Listings
 %\makeatletter% --> De-TeX-FAQ
 %\renewcommand*{\lstlistoflistings}{%
@@ -281,9 +290,8 @@
 \newpage
 \input{5_Ergebnisse}
 \newpage
-%\input{7_Diskussion}
+\input{7_Diskussion}
 \newpage
-
 \input{8_fazit}
 
 %\input{beispiel}

@@ -12,6 +12,7 @@ class Data:
         self.blob = np.copy(self.cropped)
         self.path = path
         self.name = self.path.split('/')[-1].split('.')[0]
+        self.count = 0
 
     @staticmethod
     def _open(path):
@@ -42,11 +43,13 @@ class Data:
             # blob dectection including sizes
             nb_components, output, stats, centroids = cv2.connectedComponentsWithStats(maskBGR, connectivity=8)
             sizes = stats[1:, -1]
-            nb_components = nb_components - 1
+            number = nb_components - 1
             mask = np.zeros(maskBGR.shape, dtype='uint8')
-            for i in range(0, nb_components):
+            self.count = 0
+            for i in range(0, number):
                 if sizes[i] >= lowsize:
                     mask[output == i + 1] = 255
+                    self.count +=1
             self.blob = cv2.bitwise_and(image, image, mask=mask)
             return self.blob
 
@@ -62,7 +65,7 @@ class Data:
 
         fig, ax = plt.subplots(1, figsize=(15, 10))
         ax.set_aspect('equal')
-        number, output, stats, centroids = cv2.connectedComponentsWithStats(self.blob[:, :, 0], connectivity=8)
+        number, output, stats, centroids = cv2.connectedComponentsWithStats(self.blob[:, :, 2], connectivity=8)
         center = list(zip(centroids[1:, 0].astype(int), centroids[1:, 1].astype(int)))
         radius = stats[1:, 3]
 

@@ -41,13 +41,12 @@ Das Programm zur automatischen Erkennung von Arnika soll zur Bildanalyse und Aus
 %genaue Funktionen (zentrierter Crop, Bilder plotten lassen, exportieren, segmentieren, circles, dabei größe anpassen)
 \subsection{Programmaufbau}
 
-Der Programmaufbau des Flower Segmentation Tools ist als Python Programmpaket strukturiert. Es kann deshalb auch mit pip aus dem Python Package Index (PyPI) heruntergeladen und installiert werden. In Abbildung \ref{fig:folders} auf S. \pageref{fig:folders} ist die Ordnerstruktur dargestellt. Das Paket befindet sich im Ordner \texttt{segmentationtool}, welches aus mehreren Unterpaketen besteht. Im Paket \texttt{filter} befindet sich das \texttt{data.py} Modul mit der \texttt{Data class}. Im Ordner \texttt{gui} sind alle Pakete und Module, die die Grafische Benutzeroberfläche (grafical user interface, kurz: GUI) bilden. Dazu gehört auch das \texttt{pyqt5backend} das mit dem Programm Qt5Designer erstellt wurde. Mit der Datei \texttt{main.py} kann das Programm mit der GUI aufgerufen werden. 
-
-test, build, Readme license setup
+Der Programmaufbau des Flower Segmentation Tools ist als Python Programmpaket strukturiert. Es kann deshalb auch mit pip aus dem Python Package Index (PyPI) heruntergeladen und installiert werden. In Abbildung \ref{fig:folders} auf S. \pageref{fig:folders} ist die Ordnerstruktur dargestellt. Der Ordner \texttt{segmentationtool} umfasst das gesamte Paket, welches aus mehreren Unterpaketen besteht. Im Ordner \texttt{filter} befindet sich das \texttt{data.py} Modul mit der \texttt{Data class}. Im Ordner \texttt{gui} sind alle Pakete und Module, die die Grafische Benutzeroberfläche (grafical user interface, kurz: GUI) bilden. Dazu gehört auch das \texttt{pyqt5backend} das mit dem Programm Qt5Designer erstellt wurde. Mit der Datei \texttt{main.py} kann das Programm mit der GUI aufgerufen werden. Die Verzeichnisse \texttt{build}, \texttt{dist} und \texttt{flower\textunderscore sementation\textunderscore tool.egg-info} wurden automatisch durch die \texttt{setup.py} Datei erstellt und werden für die Versionierung und Weitergabe durch den PyPI benötigt. Die Datei \texttt{README.md} gibt einen Überblick was das Programm macht und wie es installiert werden kann. Die Veröffentlichung des Programms läuft unter der GNU GLPv3-Lizenz, die in der Datei \texttt{LICENSE} genauer erläutert wird.
 
 
 \begin{figure}[H]
 \footnotesize
+\hspace{50pt}
   \begin{forest}
     pic dir tree,
     where level=0{}{
@@ -102,61 +101,54 @@ test, build, Readme license setup
   \label{fig:folders}
 \end{figure}
 
-Die inneren Prozesse einer Plotabfrage werden in Abbildung \ref{fig:flowchart} (S. \pageref{fig:flowchart}) in einer Flowchart, auch Programmablaufplan genannt, dargestellt. Bei der Aktualisierung des dargestellten Bildes mit veränderten Parametern ist die Codestruktur so angelegt, dass möglichst keine Wiederholung unnötiger Berechnungen stattfindet. Hauptintention dabei stellt die Minimierung von Zeitverzögerungen da. Mit der Verwendung von if-else Schleifen werden je nach Prozess der berechnet wird zunächst erstmal abgefragt, ob sich die Parameter überhaupt verändert haben. Ist dies nicht oder nur teilweise der Fall kann eine erneute komplette Berechung nicht notwenig sein und der angefragte Prozess auf ein schon gespeichertes Bild oder eine Teilfunktion direkt zurückgreifen kann. 
-
-Bei der Darstellung der Elemente eines Programmablaufplans ist nach ihrer Funktion in der Programmabfrage kategorisiert. Die Start- oder Stop-Elemente sind als gelbe Rechtecke mit gerundeten Ecken gekenntzeichnet. Ein Parallelogramm symbolisiert eine Ein- oder Ausgabe. In diesem Fall nur Ausgabe, die auch gleichzeitig das Ende der Abfrage bedeutet und daher hier in der selben Farbe, wie die Startelemente dargestellt. Die Rechtecke zeigen eine Tätigkeit oder Operation, in diesem Fall Methoden der Data Klasse, an. Entscheidungen werden als Rauten dargestellt, dessen Abfrage mit „Ja” beantwortet immer nach unten weiter verläuft.
-Die \texttt{initial plot} Abfrage wird nach dem ersten Öffnen des Bildes aufgerufen. Das Bild wird als Objekt der Data class instanziiert und kann als (\texttt{self.img}) abgerufen werden. 
-
-
-
-Der Aufruf des Gesamtfilters, der die gelben Bildteile mit einer Mindestgröße segmentiert, ruft Funktionen auf, die jeweils auch direkt von anderen Anfragen angesprochen werden können. Dabei werden die Zwischenergebnisse als Objekte der Klasse gespeichert. Insgesamt kann so die Ausgabe effizienter und schneller wiedergegeben werden, gerade bei Bilder, die eine große Datenmenge einnehmen.
-
-%- cb erklären, Symbole erklären, Detailiert den Verlauf der Abfrage erklären. 
-
+Die inneren Prozesse einer Plotabfrage werden in Abbildung \ref{fig:flowchart} (S. \pageref{fig:flowchart}) in einer Flowchart, auch Programmablaufplan genannt, dargestellt. Bei der Aktualisierung des dargestellten Bildes mit veränderten Parametern ist die Codestruktur so angelegt, dass möglichst keine Wiederholung unnötiger Berechnungen stattfindet. Hauptintention dabei stellt die Minimierung von Zeitverzögerungen da. 
 \begin{figure}[htb]
  \centering
  \includegraphics[width=\textwidth,angle=0]{abb/programm/prozesse}
  \caption{Programmablaufplan der Plotabfrage}
 \label{fig:flowchart}
 \end{figure}
+Die Formen der Elemente in einem Programmablaufplans sind abhängig von ihrer Funktion kategorisiert. Die Start- oder Stop-Elemente sind als gelbe Rechtecke mit gerundeten Ecken gekennzeichnet. Ein Parallelogramm symbolisiert eine Ein- oder Ausgabe. In diesem Fall nur Ausgabe, die auch gleichzeitig das Ende der Abfrage bedeutet. Daher ist die Ausgabe hier in der selben Farbe, wie die Startelemente dargestellt. Die Rechtecke zeigen eine Tätigkeit oder Operation, in diesem Fall Methoden der Data Klasse, an. Entscheidungen werden als Rauten dargestellt, dessen Abfrage mit „Ja” beantwortet immer nach unten weiter verläuft.
+Nach dem ersten Öffnen des Bildes wird es als Objekt der Data Klasse instanziiert. Die \texttt{initial plot} Abfrage kann es als Klasseninstanz \texttt{img} darstellen. Soll der dargestellte Plot nun mit Parametern verändert werden, wird beim Aufruf der \texttt{update plot} Funktion stufenweise in if-else Schleifen abgefragt, welche Darstellung gewünscht ist und welche Parameter sich verändert haben. Haben sich Parameter nicht oder nur teilweise verändert ist eine erneute komplette Berechung nicht notwenig. Der angefragte Prozess kann dann auf ein schon gespeichertes Bild oder eine Teilfunktion direkt zurückgreifen. Haben sich alle Parameter verändert, wird die Funktion \texttt{filter} der Data Klasse aufgerufen, die eine komplette Berechung durch Aufruf der einzelnen Teilfunktionen startet. Es werden dabei erneut Zwischenergebnisse als Objekte der Klasse gespeichert auf die in späteren Aufrufen der \texttt{update plot} Funktion wieder zurückgegriffen werden kann. Insgesamt kann so die Plot-Ausgabe effizienter und schneller wiedergegeben werden, gerade bei Bilder, die eine große Datenmenge einnehmen.
 
-\subsection{Vorgehensweise Methoden?}
+\subsection{Methoden}
+
+- nach Farbe und warum? 
+- Größe und warum?
+- Umkreisung und Zählmethode und warum?
 
 genaue Beschreibung der Methoden (Wie wird der Bereich heraus gefiltert, Datenstruktur?, GUI, Parameter)
 nach welchen Kriterien und warum diese gewählt -> Quellen?
 
-Methoden: 
-- Filtern nach Farbebereich ->
-Allen Bildpunkten, die nicht in dem Farbbereich zwischen RGB (200, 133, 0) und (255, 255, 122) liegen, wird mit der Hilfe einer Maske 0 zugeordnert. 
 
-- 
+
+
+Methoden: 
+- Filtern nach Farbebereich 
+  - Begründung auf Auswahl des Kriteriums
+  - technische Umsetzung
+  - 
+
+%Allen Bildpunkten, die nicht in dem Farbbereich zwischen RGB (200, 133, 0) und (255, 255, 122) liegen, wird mit der Hilfe einer Maske 0 zugeordnert. 
 
 % dafür wird das Bild als dreidimensioneller BGR-Array mit je einer Ebene je Farbband. Mit der Funktion cv2.inRange() wird eine Maske erstellt, die für alle Pixel, die nicht in dem Bereich sind 0 zuordnet und für alle die in dem Bereich sind 255. Diese Maske lässt sich auf das originale Bild mit cv2.bitwise() übertragen. Dabei werden zwei Bilder zusammengefügt, im Bereich einer Maske.??doppelt?? 
 Warum nach Farbbereich filter:
 strong argument -> Starkes Charakteristika der Arnika Blume ist die Farbe. Dies als erstes Erkennungsmerkmal gewählt.
-
-
-Datenstruktur:
-Dazu einleitung: Objektorientierte Programmierung, vorteile?
-- Inheritence (Vererbung)
-- Composition (Aufbau)
-Multiple instances
-Customization via inheritance
-Operator overloading
-Es gibt die Data class, die ein Bild als Instanz lädt und deren Objekte die durch Methoden veränderte Bilder sind. 
-DesignerMainWindow class als gesamt GUI, die dann alle anderen Dinge "erbt" bzw. aufruft.
-Es gibt das MplWidget als class, die die Canvas class aufruft und das Plotfenster bildet und Teil der Gui ist. 
-Gui mit pyqt5 Backend geschrieben und mit dem Qt5Designer erstellt.
-
-
 
 \subsubsection{Parameterbeschreibung}
 Der Percent parameter geht immer vom original bild aus und schneidet es auf die gewünschte Prozentzahl mittig zu. Bei änderung, wird wieder auf das original bild referenziert
 
 Min Size in pixel: 
 
-\subsection{Implementierung / Aufruf}    
+\subsubsection{Objektorientierte Programmierung}
 
+Die Objektorientierte Programmierung (OOP) in Python wird durch Klassen verwirklicht. Mit Klassen können Daten und Funktionen in einer Einheit verbunden werden. Sie fungieren als Fabrik für Objekte, die der Klasse übergeben werden. Es können nach dem Modell der Klasse viele Objekte instanziiert werden, die alle die gleiche Datenstruktur durch die Klasse bekommen. Die großen Vorteile der OOP ist die Möglichkeit diese Organisationseinheiten vielschichtig zu strukturieren und die Möglichkeit der Vererbung von Klassen. Eine Klasse kann auf die Attribute und Methoden einer anderen durch Vererbung zugreifen. Die neue Klasse kann dann Attribute und Methoden für sich verändern, erweitern und für die genaue Verwendung individuell einrichten \citep[vgl.][]{Lutz2013}.
+
+Die grundsätzliche Bildverarbeitung wird durch die \texttt{Data} Klasse im \texttt{filter} Paket implementiert. Auf diese wird durch Vererbung von der \texttt{DesignerMainWindow} Klasse zugegriffen. Dadurch können die Attribute, in diesem Fall die Bilder in ihren diversen Bearbeitungsstadien, in der GUI mehrfach abgerufen werden. Ohne Vererbung müsste bei einer Aktualisierung der Abfrage in der GUI das Objekt erneut instanziiert und die Bild-Bearbeitung vollständig neu berechnet werden. Die OOP ist also essentielle Grundlage der schnellen stufenabhängigen Berechnung, wie in der Abbildung \ref{fig:flowchart} auf S. \pageref{fig:flowchart} dargestellt. 
+
+Die \texttt{DesignerMainWindow} Klasse in der \texttt{app} Datei erbt nicht nur die Data Klasse, sondern auch die \texttt{QtWidgets.QMainWindow} Klasse und die \texttt{Ui\textunderscore MainWindow} Klasse. Beide sind Teil der Programmierung der GUI. Die \texttt{QtWidgets.QMainWindow} Klasse wird direkt aus dem Paket \texttt{PyQt5} importiert. Qt ist ein Anwendungsframework und GUI-Toolkit, dass nach dem Signal-und-Slot-Konzept funktioniert?. Dabei wird das Signal, zum Beispiel ein Mausklick, mit einem Slot, zum Beispiel eine Funktion verknüpft. Die \texttt{Ui\textunderscore MainWindow} Klasse ist die individuell angepasste PyQt5-GUI, die mit Hilfe des Programms Qt5 Designer erstellt wurde. Sie ist Teil des Unterpakets \texttt{pyqt5backend}, welches auch die Qt5 Designer Datei \texttt{designerg.ui} und das Modul \texttt{mplwidget\textunderscore nav.py} enthält. Letzteres ist die Programmierung des Plotfenster in der GUI.
+
+\subsection{Implementierung / Aufruf}    
 
 % Flow-Chart für die GUI und den Programmaufruf, quasi als "Anleitung der Benutzung"
 

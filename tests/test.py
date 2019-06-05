@@ -2,9 +2,9 @@ import cv2
 import numpy as np
 import matplotlib.pyplot as plt
 
-from tests.colorsegmentation import yellow
-from tests.openfiles import crop
-from tests.blobelimination import BlobDetection, applyMask
+from tests.filter.colorsegmentation import yellow
+from tests.filter.openfiles import crop
+from tests.filter.blobelimination import BlobDetection, applyMask
 
 path = "/home/rio/Dokumente/Uni/Bachelorarbeit/arnika/Beispielbilder/Beispielordner/DSC01506.JPG"
 

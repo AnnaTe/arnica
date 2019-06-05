@@ -1,4 +1,4 @@
-\begin{thebibliography}{33}
+\begin{thebibliography}{34}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -77,6 +77,11 @@ Kneipp.
 F.~K{\"o}hler, W.~Brandt, and M.~G{\"u}rke.
 \newblock \emph{K{\"o}hlers Medizinal-Pflanzen}.
 \newblock Gera-Untermhaus: Fr. Eugen K{\"o}hler, 1887.
+
+\bibitem[Lutz(2013)]{Lutz2013}
+Mark Lutz.
+\newblock \emph{Learning Python: Powerful Object-Oriented Programming}.
+\newblock 2013.
 
 \bibitem[Markenverband(2019)]{Markenverband2019}
 Markenverband.

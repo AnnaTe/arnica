@@ -124,20 +124,18 @@ class DesignerMainWindow(QtWidgets.QMainWindow, Ui_MainWindow, Data):
                 else:
                     pass
             self.mpl.canvas.ax.clear()
-            number, output, stats, centroids = cv2.connectedComponentsWithStats(self.i.blob[:, :, 0], connectivity=8)
+            number, output, stats, centroids = cv2.connectedComponentsWithStats(self.i.blob[:, :, 2], connectivity=8)
             center = list(zip(centroids[1:, 0].astype(int), centroids[1:, 1].astype(int)))
             radius = stats[1:, 3]
 
             self.mpl.canvas.ax.imshow(cv2.cvtColor(self.i.cropped, cv2.COLOR_BGR2RGB))
             self.mpl.canvas.ax.axis("off")
-            counter = 0
+
             for i in range(centroids[1:, 1].shape[0]):
                 circ = Circle(center[i], radius[i], color="r", linewidth=0.5, fill=False)
                 self.mpl.canvas.ax.add_patch(circ)
-                counter += 1
             self.mpl.canvas.draw()
-            self.statusbar.showMessage('{} Flowers counted.'.format(counter))
-
+            self.statusbar.showMessage('{} Flowers counted.'.format(number-1))
 
         elif self.cbYellow.isChecked() == True:
             if percent != self.perc:
@@ -151,6 +149,7 @@ class DesignerMainWindow(QtWidgets.QMainWindow, Ui_MainWindow, Data):
                 else:
                     pass
             self.plot(self.i.blob)
+            self.statusbar.showMessage('{} Flowers counted.'.format(self.i.count))
 
         else:
             if percent == self.perc:

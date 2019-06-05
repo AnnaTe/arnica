@@ -1,7 +1,7 @@
-\BOOKMARK [1][-]{section*.4}{Abbildungsverzeichnis}{}% 1
-\BOOKMARK [1][-]{section*.5}{Tabellenverzeichnis}{}% 2
-\BOOKMARK [1][-]{section*.6}{Todoliste}{}% 3
-\BOOKMARK [1][-]{section*.7}{Abk\374rzungsverzeichnis}{}% 4
+\BOOKMARK [1][-]{section*.3}{Abbildungsverzeichnis}{}% 1
+\BOOKMARK [1][-]{section*.4}{Tabellenverzeichnis}{}% 2
+\BOOKMARK [1][-]{section*.5}{Todoliste}{}% 3
+\BOOKMARK [1][-]{section*.6}{Abk\374rzungsverzeichnis}{}% 4
 \BOOKMARK [1][-]{section.1}{1 Einleitung}{}% 5
 \BOOKMARK [2][-]{subsection.1.1}{1.1 Ziele}{section.1}% 6
 \BOOKMARK [1][-]{section.2}{2 Hintergrund}{}% 7
@@ -20,18 +20,20 @@
 \BOOKMARK [2][-]{subsection.3.1}{3.1 Programmiersprache}{section.3}% 20
 \BOOKMARK [2][-]{subsection.3.2}{3.2 Anwendungsbereich}{section.3}% 21
 \BOOKMARK [2][-]{subsection.3.3}{3.3 Programmaufbau}{section.3}% 22
-\BOOKMARK [2][-]{subsection.3.4}{3.4 Vorgehensweise Methoden?}{section.3}% 23
+\BOOKMARK [2][-]{subsection.3.4}{3.4 Methoden}{section.3}% 23
 \BOOKMARK [3][-]{subsubsection.3.4.1}{3.4.1 Parameterbeschreibung}{subsection.3.4}% 24
-\BOOKMARK [2][-]{subsection.3.5}{3.5 Implementierung / Aufruf}{section.3}% 25
-\BOOKMARK [3][-]{subsubsection.3.5.1}{3.5.1 Hard- und Softwarevoraussetzungen}{subsection.3.5}% 26
-\BOOKMARK [3][-]{subsubsection.3.5.2}{3.5.2 \(Notwendige\) In- und Output-Dateien und deren Formate}{subsection.3.5}% 27
-\BOOKMARK [1][-]{section.4}{4 Ergebnisse}{}% 28
-\BOOKMARK [2][-]{subsection.4.1}{4.1 Auswertung}{section.4}% 29
-\BOOKMARK [2][-]{subsection.4.2}{4.2 Schwierigkeiten}{section.4}% 30
-\BOOKMARK [3][-]{subsubsection.4.2.1}{4.2.1 Problem: Kreise um zusammenh\344ngende Blumen}{subsection.4.2}% 31
-\BOOKMARK [3][-]{subsubsection.4.2.2}{4.2.2 Problem: Blume wird durch Schatten gest\374ckelt}{subsection.4.2}% 32
-\BOOKMARK [3][-]{subsubsection.4.2.3}{4.2.3 Problem: Verwechslungspotential Arnica montana}{subsection.4.2}% 33
-\BOOKMARK [1][-]{section.5}{5 Fazit}{}% 34
-\BOOKMARK [1][-]{section.5}{Literaturverzeichnis}{}% 35
-\BOOKMARK [1][-]{section*.31}{Anhang}{}% 36
-\BOOKMARK [1][-]{section*.32}{Eidesstattliche Erkl\344rung}{}% 37
+\BOOKMARK [3][-]{subsubsection.3.4.2}{3.4.2 Objektorientierte Programmierung}{subsection.3.4}% 25
+\BOOKMARK [2][-]{subsection.3.5}{3.5 Implementierung / Aufruf}{section.3}% 26
+\BOOKMARK [3][-]{subsubsection.3.5.1}{3.5.1 Hard- und Softwarevoraussetzungen}{subsection.3.5}% 27
+\BOOKMARK [3][-]{subsubsection.3.5.2}{3.5.2 \(Notwendige\) In- und Output-Dateien und deren Formate}{subsection.3.5}% 28
+\BOOKMARK [1][-]{section.4}{4 Ergebnisse}{}% 29
+\BOOKMARK [2][-]{subsection.4.1}{4.1 Auswertung}{section.4}% 30
+\BOOKMARK [2][-]{subsection.4.2}{4.2 Schwierigkeiten}{section.4}% 31
+\BOOKMARK [3][-]{subsubsection.4.2.1}{4.2.1 Problem: Kreise um zusammenh\344ngende Blumen}{subsection.4.2}% 32
+\BOOKMARK [3][-]{subsubsection.4.2.2}{4.2.2 Problem: Blume wird durch Schatten gest\374ckelt}{subsection.4.2}% 33
+\BOOKMARK [3][-]{subsubsection.4.2.3}{4.2.3 Problem: Verwechslungspotential Arnica montana}{subsection.4.2}% 34
+\BOOKMARK [1][-]{section.5}{5 Diskussion}{}% 35
+\BOOKMARK [1][-]{section.6}{6 Fazit}{}% 36
+\BOOKMARK [1][-]{section.6}{Literaturverzeichnis}{}% 37
+\BOOKMARK [1][-]{section*.29}{Anhang}{}% 38
+\BOOKMARK [1][-]{section*.30}{Eidesstattliche Erkl\344rung}{}% 39
