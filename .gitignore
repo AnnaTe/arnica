@@ -1,8 +1,3 @@
-.idea/
-.egg/
-__pychache__/
-filter/__pychache__/
-gui/__pychache__/
-gui/pyqt5backend/__pychache__/
-flower_segmentation_tool.egg-info/
+.idea
+flower_segmentation_tool.egg-info
 
