@@ -1,5 +1,0 @@
-PyQt5-sip
-PyQt5
-numpy
-opencv-python
-matplotlib
