@@ -4,21 +4,21 @@ with open("README.md", "r") as fh:
     long_description = fh.read()
 
 setuptools.setup(
-    name="flower-sementation-tool",
-    version="0.1.3",
+    name="flowersegmentationtool",
+    version="0.1.8",
     author="Anna Tenberg",
     author_email="Anna.Tenberg@saturn.uni-freiburg.de",
-    description="A tool to segment yellow flowers in rgb images",
+    description="A tool to segment yellow arnica flowers in rgb images",
     long_description=long_description,
     long_description_content_type="text/markdown",
     url="https://github.com/AnnaTe/arnica",
     packages=setuptools.find_packages(exclude=['tests*', 'scripts', 'src', '*.git']),
-    python_requires='>=3.6',
+    python_requires='>=3.5',
     install_requires=[
-        'opencv-python',
         'PyQt5-sip',
-        'pyqt5',
+        'PyQt5',
         'numpy',
+        'opencv-python',
         'matplotlib',
     ],
     classifiers=[

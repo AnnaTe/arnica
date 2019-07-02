@@ -12,4 +12,3 @@ gui/app.py
 gui/pyqt5backend/__init__.py
 gui/pyqt5backend/guidesign.py
 gui/pyqt5backend/mplwidget_nav.py
-segtool/__init__.py

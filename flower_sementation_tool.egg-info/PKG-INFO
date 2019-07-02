@@ -1,6 +1,6 @@
 Metadata-Version: 2.1
 Name: flower-sementation-tool
-Version: 0.1.3
+Version: 0.1.4
 Summary: A tool to segment yellow flowers in rgb images
 Home-page: https://github.com/AnnaTe/arnica
 Author: Anna Tenberg

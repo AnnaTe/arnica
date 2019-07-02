@@ -41,11 +41,12 @@ class DesignerMainWindow(QtWidgets.QMainWindow, Ui_MainWindow, Data):
         self.perc = 100
         self.mins = None
 
-        self.statusbar.showMessage('Ready', 10000)
+        self.statusbar.showMessage('Ready')
 
         # File Menu signals
         self.actionSingle.triggered.connect(self.select_file)
         self.actionDirectory.triggered.connect(self.select_dir)
+	## TODO: inser close signal
 
         # push button signals
         self.pbImageOpen.clicked.connect(self.select_file)
@@ -57,7 +58,7 @@ class DesignerMainWindow(QtWidgets.QMainWindow, Ui_MainWindow, Data):
 
     def select_file(self):
         """opens a file select dialog and plots file"""
-        self.statusbar.showMessage('Loading Image', 20000)
+        self.statusbar.showMessage('Loading Image')
 
         # open file select dialog
         if self.lineEditImage.text() == '' or self.sender().text() == 'Open Image':
@@ -124,19 +125,90 @@ class DesignerMainWindow(QtWidgets.QMainWindow, Ui_MainWindow, Data):
                 else:
                     pass
             self.mpl.canvas.ax.clear()
-            number, output, stats, centroids = cv2.connectedComponentsWithStats(self.i.blob[:, :, 0], connectivity=8)
-            center = list(zip(centroids[1:, 0].astype(int), centroids[1:, 1].astype(int)))
-            radius = stats[1:, 3]
+            number, output, stats, centroids = cv2.connectedComponentsWithStats(self.i.blob[:, :, 2], connectivity=8)
+            nb_components = number - 1
+            left = stats[1:, 0]
+            top = stats[1:, 1]
+            width = stats[1:, 2]
+            height = stats[1:, 3]
+            sizes = stats[1:, 4]
+
+            center = np.array((centroids[1:, 0].astype(int), centroids[1:, 1].astype(int))).transpose()
+
+            groupsize = np.mean(sizes) * 2
+            centers = []
+            radius = []
+            for i in range(0, nb_components):
+                if sizes[i] >= groupsize:
+                    if width[i] / height[i] >= 0.75 and width[i] / height[i] < 1.5:
+                        pass
+                    elif width[i] / height[i] < 0.75 and width[i] / height[i] >= 0.415:
+                        center[i] = np.array([(width[i] / 2) + left[i], (height[i] / 4) + top[i]])
+                        centers.append([(width[i] / 2) + left[i], (height[i] / 4) * 3 + top[i]])
+                        radius.append(np.min((width[i], height[i])))
+                    elif width[i] / height[i] < 2.5 and width[i] / height[i] >= 1.5:
+                        center[i] = np.array([(width[i] / 4) + left[i], (height[i] / 2) + top[i]])
+                        centers.append([(width[i] / 4) * 3 + left[i], (height[i] / 2) + top[i]])
+                        radius.append(np.min((width[i], height[i])))
+                    elif width[i] / height[i] >= 2.5 and width[i] / height[i] < 3.5:
+                        centers.append([(width[i] / 4) + left[i], (height[i] / 2) + top[i]])
+                        radius.append(np.min((width[i], height[i])))
+                        centers.append([(width[i] / 4) * 3 + left[i], (height[i] / 2) + top[i]])
+                        radius.append(np.min((width[i], height[i])))
+                    elif width[i] / height[i] < 0.415 and width[i] / height[i] >= 0.29:
+                        centers.append([(width[i] / 2) + left[i], (height[i] / 4) + top[i]])
+                        radius.append(np.min((width[i], height[i])))
+                        centers.append([(width[i] / 2) + left[i], (height[i] / 4) * 3 + top[i]])
+                        radius.append(np.min((width[i], height[i])))
+                    elif width[i] / height[i] < 0.29 and width[i] / height[i] >= 0.225:
+                        center[i] = np.array([(width[i] / 2) + left[i], (height[i] / 5) + top[i]])
+                        centers.append([(width[i] / 2) + left[i], (height[i] / 5) * 2 + top[i]])
+                        radius.append(np.min((width[i], height[i])))
+                        centers.append([(width[i] / 2) + left[i], (height[i] / 5) * 3 + top[i]])
+                        radius.append(np.min((width[i], height[i])))
+                        centers.append([(width[i] / 2) + left[i], (height[i] / 5) * 4 + top[i]])
+                        radius.append(np.min((width[i], height[i])))
+                    elif width[i] / height[i] >= 3.5 and width[i] / height[i] < 4.5:
+                        center[i] = np.array([(width[i] / 5) + left[i], (height[i] / 2) + top[i]])
+                        centers.append([(width[i] / 5) * 2 + left[i], (height[i] / 2) + top[i]])
+                        radius.append(np.min((width[i], height[i])))
+                        centers.append([(width[i] / 5) * 3 + left[i], (height[i] / 2) + top[i]])
+                        radius.append(np.min((width[i], height[i])))
+                        centers.append([(width[i] / 5) * 4 + left[i], (height[i] / 2) + top[i]])
+                        radius.append(np.min((width[i], height[i])))
+                    elif width[i] / height[i] < 0.225:
+                        centers.append([(width[i] / 2) + left[i], (height[i] / 6) + top[i]])
+                        radius.append(np.min((width[i], height[i])))
+                        centers.append([(width[i] / 2) + left[i], (height[i] / 6) * 2 + top[i]])
+                        radius.append(np.min((width[i], height[i])))
+                        centers.append([(width[i] / 2) + left[i], (height[i] / 6) * 4 + top[i]])
+                        radius.append(np.min((width[i], height[i])))
+                        centers.append([(width[i] / 2) + left[i], (height[i] / 6) * 5 + top[i]])
+                        radius.append(np.min((width[i], height[i])))
+                    elif width[i] / height[i] >= 4.5:
+                        centers.append([(width[i] / 6) + left[i], (height[i] / 2) + top[i]])
+                        radius.append(np.min((width[i], height[i])))
+                        centers.append([(width[i] / 6) * 2 + left[i], (height[i] / 2) + top[i]])
+                        radius.append(np.min((width[i], height[i])))
+                        centers.append([(width[i] / 6) * 5 + left[i], (height[i] / 2) + top[i]])
+                        radius.append(np.min((width[i], height[i])))
+                        centers.append([(width[i] / 6) * 4 + left[i], (height[i] / 2) + top[i]])
+                        radius.append(np.min((width[i], height[i])))
 
             self.mpl.canvas.ax.imshow(cv2.cvtColor(self.i.cropped, cv2.COLOR_BGR2RGB))
             self.mpl.canvas.ax.axis("off")
-            counter = 0
+            self.i.count = 0
+            
             for i in range(centroids[1:, 1].shape[0]):
-                circ = Circle(center[i], radius[i], color="r", linewidth=0.5, fill=False)
+                circ = Circle(tuple(center[i]), np.min(stats[i + 1, 2:4]), color="r", linewidth=0.5, fill=False)
                 self.mpl.canvas.ax.add_patch(circ)
-                counter += 1
+                self.i.count += 1
+            for a in range(len(centers)):
+                circ2 = Circle(tuple(centers[a]), int(radius[a]), color="r", linewidth=0.5, fill=False)
+                self.mpl.canvas.ax.add_patch(circ2)
+                self.i.count += 1
             self.mpl.canvas.draw()
-            self.statusbar.showMessage('{} Flowers counted.'.format(counter))
+            self.statusbar.showMessage('{} Flowers counted.'.format(self.i.count))
 
 
         elif self.cbYellow.isChecked() == True:
@@ -151,6 +223,7 @@ class DesignerMainWindow(QtWidgets.QMainWindow, Ui_MainWindow, Data):
                 else:
                     pass
             self.plot(self.i.blob)
+            self.statusbar.showMessage('{} Flowers counted.'.format(self.i.count))
 
         else:
             if percent == self.perc:
@@ -173,7 +246,7 @@ class DesignerMainWindow(QtWidgets.QMainWindow, Ui_MainWindow, Data):
                 try:
                     self.mpl.ntb.save_figure()
                 except:
-                    self.statusbar.showMessage('Figsave not working.')
+                    self.statusbar.showMessage('Saving of figure is not working.')
             else:
                 if percent != self.perc:
                     self.i.filter(percent, lowsize)
@@ -184,19 +257,19 @@ class DesignerMainWindow(QtWidgets.QMainWindow, Ui_MainWindow, Data):
                     self.mins = lowsize
 
                 #self.mpl.canvas.ax.clear()
-                number, output, stats, centroids = cv2.connectedComponentsWithStats(self.i.blob[:, :, 0], connectivity=8)
+                number, output, stats, centroids = cv2.connectedComponentsWithStats(self.i.blob[:, :, 2], connectivity=8)
                 center = list(zip(centroids[1:, 0].astype(int), centroids[1:, 1].astype(int)))
                 radius = stats[1:, 3]
                 image = np.copy(self.i.cropped)
 
-                counter = 0
+                self.i.count = 0
                 for i in range(centroids[1:, 1].shape[0]):
                     cv2.circle(image, center[i], radius[i], color = (0, 0, 255), thickness = 3)
-                    counter += 1
+                    self.i.count += 1
 
                 self.plot(image)
                 self.mpl.ntb.save_figure()
-                self.statusbar.showMessage('{} Flowers counted.'.format(counter))
+                self.statusbar.showMessage('{} Flowers counted.'.format(self.i.count))
 
         elif self.cbYellow.isChecked() == True:
             try:
@@ -269,7 +342,7 @@ class DesignerMainWindow(QtWidgets.QMainWindow, Ui_MainWindow, Data):
                 outpath = outputdir + self.i.name + 'seg' + str(lowsize) + '.png'
                 cv2.imwrite(outpath, self.i.blob)
                 self.completed += 1
-                self.statusbar.showMessage("Running: {} of {} image exported.".format(self.completed, self.total))
+                self.statusbar.showMessage("Running: {} of {} images exported.".format(self.completed, self.total))
 
             else:
                 try:
@@ -279,6 +352,6 @@ class DesignerMainWindow(QtWidgets.QMainWindow, Ui_MainWindow, Data):
                 outpath = outputdir + self.i.name + 'crop' + str(percent) + '.png'
                 cv2.imwrite(outpath, self.i.cropped)
                 self.completed += 1
-                self.statusbar.showMessage("Running: {} of {} image exported.".format(self.completed, self.total))
+                self.statusbar.showMessage("Running: {} of {} images exported.".format(self.completed, self.total))
         self.statusbar.showMessage("Process finished.", 500)
 

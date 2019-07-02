@@ -3,7 +3,7 @@ import numpy as np
 
 
 class Data:
-    """This is the Data class that stores the images and the altered copys for fast accessibility."""
+    """This is the Data class that stores the images and the altered copies for fast accessibility."""
 
     def __init__(self, path):
         self.img = self._open(path)
@@ -12,43 +12,67 @@ class Data:
         self.blob = np.copy(self.cropped)
         self.path = path
         self.name = self.path.split('/')[-1].split('.')[0]
+        self.count = 0
 
     @staticmethod
     def _open(path):
         img = cv2.imread(path)
         return img
 
-    def crop(self, percent=50):
+    def crop(self, percent=20):
         """crop of image from the center in percent"""
         if percent == 100:
             pass
-        # if percent == 0:
+        # borders from center
         lower = (50 - (percent / 2)) / 100
         upper = (50 + (percent / 2)) / 100
         self.cropped = self.img[int(self.img.shape[0] * lower):int(self.img.shape[0] * upper) + 1,
                        int(self.img.shape[1] * lower):int(self.img.shape[1] * upper) + 1, :]
 
-    def yellow(self, image, lowsize=100):
+    def yellow(self, image, lowsize=50):
         """segmentation of yellow area in the image with minimum size of segmented Components"""
         minBGR = np.array((0, 133, 200))
         maxBGR = np.array((122, 255, 255))
         maskBGR = cv2.inRange(image, minBGR, maxBGR)
-        self.seg = cv2.bitwise_and(image, image, mask=maskBGR)
+        holefill = cv2.morphologyEx(maskBGR, cv2.MORPH_CLOSE, cv2.getStructuringElement(cv2.MORPH_ELLIPSE,(5,5)))
+        self.seg = cv2.bitwise_and(image, image, mask=holefill)
 
-        if lowsize == 0:
-            self.blob = self.seg
-
-        else:
-            # blob dectection including sizes
-            nb_components, output, stats, centroids = cv2.connectedComponentsWithStats(maskBGR, connectivity=8)
-            sizes = stats[1:, -1]
-            nb_components = nb_components - 1
-            mask = np.zeros(maskBGR.shape, dtype='uint8')
-            for i in range(0, nb_components):
-                if sizes[i] >= lowsize:
-                    mask[output == i + 1] = 255
-            self.blob = cv2.bitwise_and(image, image, mask=mask)
-            return self.blob
+        # blob dectection including sizes
+        nb_components, output, stats, centroids = cv2.connectedComponentsWithStats(holefill, connectivity=8)
+        sizes = stats[1:, -1]
+        groupsize = np.mean(sizes) * 2
+        number = nb_components - 1
+        mask = np.zeros(maskBGR.shape, dtype='uint8')
+        height = stats[1:, 2]
+        width = stats[1:, 3]
+        self.count = nb_components - 1
+        korr = 0
+        for i in range(0, number):
+            if sizes[i] >= lowsize:
+                mask[output == i + 1] = 255
+                if sizes[i] >= groupsize:
+                    if width[i] / height[i] >= 0.75 and width[i] / height[i] < 1.5:
+                        pass
+                    elif width[i] / height[i] < 0.75 and width[i] / height[i] >= 0.415:
+                        korr += 1
+                    elif width[i] / height[i] < 2.5 and width[i] / height[i] >= 1.5:
+                        korr += 1
+                    elif width[i] / height[i] >= 2.5 and width[i] / height[i] < 3.5:
+                        korr += 2
+                    elif width[i] / height[i] < 0.415 and width[i] / height[i] >= 0.29:
+                        korr += 2
+                    elif width[i] / height[i] < 0.29 and width[i] / height[i] >= 0.225:
+                        korr += 3
+                    elif width[i] / height[i] >= 3.5 and width[i] / height[i] < 4.5:
+                        korr += 3
+                    elif width[i] / height[i] < 0.225:
+                        korr += 4
+                    elif width[i] / height[i] >= 4.5:
+                        korr += 4
+            else:
+                self.count -= 1
+        self.count += korr
+        self.blob = cv2.bitwise_and(image, image, mask=mask)
 
     def filter(self, percent=50, lowsize=100):
         """calls the crop and segmentation methods together"""
@@ -56,13 +80,13 @@ class Data:
         self.yellow(self.cropped, lowsize)
 
     def circleplot(self):
-        """plots red circles around the flowers. Is only called directly from Data class."""
+        """plots red circles around the flowers. This function not called from application."""
         from matplotlib.patches import Circle
         import matplotlib.pyplot as plt
 
         fig, ax = plt.subplots(1, figsize=(15, 10))
         ax.set_aspect('equal')
-        number, output, stats, centroids = cv2.connectedComponentsWithStats(self.blob[:, :, 0], connectivity=8)
+        number, output, stats, centroids = cv2.connectedComponentsWithStats(self.blob[:, :, 2], connectivity=8)
         center = list(zip(centroids[1:, 0].astype(int), centroids[1:, 1].astype(int)))
         radius = stats[1:, 3]
 
