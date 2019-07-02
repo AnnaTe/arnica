@@ -55,8 +55,8 @@ It is important, that sip is installed before pyqt5. Try unistalling both and th
 ```
 pip uninstall pyqt5
 pip uninstall pyqt5-sip
-pip install --user -I PyQt5-sip
-pip install --user -I PyQt5
+pip install -I PyQt5-sip
+pip install -I PyQt5
 ```
 
 For Error Message: zlib not found:

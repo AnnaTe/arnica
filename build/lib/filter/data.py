@@ -10,9 +10,11 @@ class Data:
         self.cropped = np.copy(self.img)
         self.seg = np.copy(self.cropped)
         self.blob = np.copy(self.cropped)
+        self.circle = np.copy(self.cropped)
         self.path = path
         self.name = self.path.split('/')[-1].split('.')[0]
         self.count = 0
+        self.groupsize = 0
 
     @staticmethod
     def _open(path):
@@ -34,70 +36,133 @@ class Data:
         minBGR = np.array((0, 133, 200))
         maxBGR = np.array((122, 255, 255))
         maskBGR = cv2.inRange(image, minBGR, maxBGR)
+        # morphological filtering
         holefill = cv2.morphologyEx(maskBGR, cv2.MORPH_CLOSE, cv2.getStructuringElement(cv2.MORPH_ELLIPSE,(5,5)))
         self.seg = cv2.bitwise_and(image, image, mask=holefill)
 
         # blob dectection including sizes
         nb_components, output, stats, centroids = cv2.connectedComponentsWithStats(holefill, connectivity=8)
         sizes = stats[1:, -1]
-        groupsize = np.mean(sizes) * 2
+        self.groupsize = np.mean(sizes) * 2
         number = nb_components - 1
         mask = np.zeros(maskBGR.shape, dtype='uint8')
-        height = stats[1:, 2]
-        width = stats[1:, 3]
+        height = stats[1:, 3]
+        width = stats[1:, 2]
         self.count = nb_components - 1
         korr = 0
         for i in range(0, number):
             if sizes[i] >= lowsize:
                 mask[output == i + 1] = 255
-                if sizes[i] >= groupsize:
-                    if width[i] / height[i] >= 0.75 and width[i] / height[i] < 1.5:
-                        pass
-                    elif width[i] / height[i] < 0.75 and width[i] / height[i] >= 0.415:
-                        korr += 1
-                    elif width[i] / height[i] < 2.5 and width[i] / height[i] >= 1.5:
-                        korr += 1
-                    elif width[i] / height[i] >= 2.5 and width[i] / height[i] < 3.5:
-                        korr += 2
-                    elif width[i] / height[i] < 0.415 and width[i] / height[i] >= 0.29:
-                        korr += 2
-                    elif width[i] / height[i] < 0.29 and width[i] / height[i] >= 0.225:
-                        korr += 3
-                    elif width[i] / height[i] >= 3.5 and width[i] / height[i] < 4.5:
-                        korr += 3
-                    elif width[i] / height[i] < 0.225:
-                        korr += 4
-                    elif width[i] / height[i] >= 4.5:
-                        korr += 4
             else:
                 self.count -= 1
+            if sizes[i] >= self.groupsize:
+                if width[i] / height[i] >= 0.75 and width[i] / height[i] < 1.5:
+                    pass
+                elif width[i] / height[i] < 0.75 and width[i] / height[i] >= 0.415:
+                    korr += 1
+                elif width[i] / height[i] < 2.5 and width[i] / height[i] >= 1.5:
+                    korr += 1
+                elif width[i] / height[i] >= 2.5 and width[i] / height[i] < 3.5:
+                    korr += 2
+                elif width[i] / height[i] < 0.415 and width[i] / height[i] >= 0.29:
+                    korr += 2
+                elif width[i] / height[i] < 0.29 and width[i] / height[i] >= 0.225:
+                    korr += 3
+                elif width[i] / height[i] >= 3.5 and width[i] / height[i] < 4.5:
+                    korr += 3
+                elif width[i] / height[i] < 0.225:
+                    korr += 4
+                elif width[i] / height[i] >= 4.5:
+                    korr += 4
         self.count += korr
         self.blob = cv2.bitwise_and(image, image, mask=mask)
 
-    def filter(self, percent=50, lowsize=100):
+    def filter(self, percent=20, lowsize=50):
         """calls the crop and segmentation methods together"""
         self.crop(percent)
         self.yellow(self.cropped, lowsize)
 
     def circleplot(self):
-        """plots red circles around the flowers. This function not called from application."""
-        from matplotlib.patches import Circle
-        import matplotlib.pyplot as plt
+        """adds red circles around the flowers."""
+        number, output, stats, centroids = cv2.connectedComponentsWithStats(
+            cv2.cvtColor(self.blob, cv2.COLOR_BGR2GRAY), connectivity=8)
+        # center = list(zip(centroids[1:, 0].astype(int), centroids[1:, 1].astype(int)))
+        center = np.array([centroids[1:, 0].astype(int), centroids[1:, 1].astype(int)]).transpose()
+        self.circle = np.copy(self.cropped)
+        left = stats[1:, 0]
+        top = stats[1:, 1]
+        width = stats[1:, 2]
+        height = stats[1:, 3]
+        sizes = stats[1:, 4]
+        centers = []
+        radius = []
+        for i in range(0, (number - 1)):
+            if sizes[i] >= self.groupsize:
+                if width[i] / height[i] >= 0.75 and width[i] / height[i] < 1.5:
+                    pass
+                elif width[i] / height[i] < 0.75 and width[i] / height[i] >= 0.415:
+                    center[i] = np.array([int((width[i] / 2) + left[i]), int((height[i] / 4) + top[i])])
+                    centers.append([int((width[i] / 2) + left[i]), int((height[i] / 4) * 3 + top[i])])
+                    radius.append(np.min((width[i], height[i])))
+                elif width[i] / height[i] < 2.5 and width[i] / height[i] >= 1.5:
+                    center[i] = np.array([int((width[i] / 4) + left[i]), int((height[i] / 2) + top[i])])
+                    centers.append([int((width[i] / 4) * 3 + left[i]), int((height[i] / 2) + top[i])])
+                    radius.append(np.min((width[i], height[i])))
+                elif width[i] / height[i] >= 2.5 and width[i] / height[i] < 3.5:
+                    centers.append([int((width[i] / 4) + left[i]), int((height[i] / 2) + top[i])])
+                    radius.append(np.min((width[i], height[i])))
+                    centers.append([int((width[i] / 4) * 3 + left[i]), int((height[i] / 2) + top[i])])
+                    radius.append(np.min((width[i], height[i])))
+                elif width[i] / height[i] < 0.415 and width[i] / height[i] >= 0.29:
+                    centers.append([int((width[i] / 2) + left[i]), int((height[i] / 4) + top[i])])
+                    radius.append(np.min((width[i], height[i])))
+                    centers.append([int((width[i] / 2) + left[i]), int((height[i] / 4) * 3 + top[i])])
+                    radius.append(np.min((width[i], height[i])))
+                elif width[i] / height[i] < 0.29 and width[i] / height[i] >= 0.225:
+                    center[i] = np.array([int((width[i] / 2) + left[i]), int((height[i] / 5) + top[i])])
+                    centers.append([int((width[i] / 2) + left[i]), int((height[i] / 5) * 2 + top[i])])
+                    radius.append(np.min((width[i], height[i])))
+                    centers.append([int((width[i] / 2) + left[i]), int((height[i] / 5) * 3 + top[i])])
+                    radius.append(np.min((width[i], height[i])))
+                    centers.append([int((width[i] / 2) + left[i]), int((height[i] / 5) * 4 + top[i])])
+                    radius.append(np.min((width[i], height[i])))
+                elif width[i] / height[i] >= 3.5 and width[i] / height[i] < 4.5:
+                    center[i] = np.array([int((width[i] / 5) + left[i]), int((height[i] / 2) + top[i])])
+                    centers.append([int((width[i] / 5) * 2 + left[i]), int((height[i] / 2) + top[i])])
+                    radius.append(np.min((width[i], height[i])))
+                    centers.append([int((width[i] / 5) * 3 + left[i]), int((height[i] / 2) + top[i])])
+                    radius.append(np.min((width[i], height[i])))
+                    centers.append([int((width[i] / 5) * 4 + left[i]), int((height[i] / 2) + top[i])])
+                    radius.append(np.min((width[i], height[i])))
+                elif width[i] / height[i] < 0.225:
+                    centers.append([int((width[i] / 2) + left[i]), int((height[i] / 6) + top[i])])
+                    radius.append(np.min((width[i], height[i])))
+                    centers.append([int((width[i] / 2) + left[i]), int((height[i] / 6) * 2 + top[i])])
+                    radius.append(np.min((width[i], height[i])))
+                    centers.append([int((width[i] / 2) + left[i]), int((height[i] / 6) * 4 + top[i])])
+                    radius.append(np.min((width[i], height[i])))
+                    centers.append([int((width[i] / 2) + left[i]), int((height[i] / 6) * 5 + top[i])])
+                    radius.append(np.min((width[i], height[i])))
+                elif width[i] / height[i] >= 4.5:
+                    centers.append([int((width[i] / 6) + left[i]), int((height[i] / 2) + top[i])])
+                    radius.append(np.min((width[i], height[i])))
+                    centers.append([int((width[i] / 6) * 2 + left[i]), int((height[i] / 2) + top[i])])
+                    radius.append(np.min((width[i], height[i])))
+                    centers.append([int((width[i] / 6) * 5 + left[i]), int((height[i] / 2) + top[i])])
+                    radius.append(np.min((width[i], height[i])))
+                    centers.append([int((width[i] / 6) * 4 + left[i]), int((height[i] / 2) + top[i])])
+                    radius.append(np.min((width[i], height[i])))
 
-        fig, ax = plt.subplots(1, figsize=(15, 10))
-        ax.set_aspect('equal')
-        number, output, stats, centroids = cv2.connectedComponentsWithStats(self.blob[:, :, 2], connectivity=8)
-        center = list(zip(centroids[1:, 0].astype(int), centroids[1:, 1].astype(int)))
-        radius = stats[1:, 3]
-
-        ax.imshow(cv2.cvtColor(self.cropped, cv2.COLOR_BGR2RGB))
-        ax.axis("off")
-
+        self.count = 0
         for i in range(centroids[1:, 1].shape[0]):
-            circ = Circle(center[i], radius[i], color="r", linewidth=0.5, fill=False)
-            ax.add_patch(circ)
+            cv2.circle(self.circle, tuple(center[i]), int(np.min(stats[i + 1, 2:4])), color=(0, 0, 255), thickness=2)
+            self.count += 1
+        for a in range(len(centers)):
+            cv2.circle(self.circle, tuple(centers[a]), int(radius[a]), color=(0, 0, 255), thickness=2)
+            self.count += 1
 
-        # Show the image
-        return plt.show()
+        return self.circle
+
+
 
 
