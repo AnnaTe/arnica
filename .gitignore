@@ -1,8 +1,8 @@
-scripts*
-src/abb*
-src/raus*
-src/anhang*
-src/latex_einstellungen*
-src/Hauptdatei.pdf
-tests*
-ARN*
+.idea/
+.egg/
+__pychache__/
+filter/__pychache__/
+gui/__pychache__/
+gui/pyqt5backend/__pychache__/
+flower_segmentation_tool.egg-info/
+

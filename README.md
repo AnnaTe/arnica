@@ -8,29 +8,27 @@ These instructions will get you a copy of the project up and running on your loc
 
 ### Download and Installation from the Python Packaging Index
 
-For installing the flower segmentation tool from the [Python Packaging Index](https://pypi.org/) try:
+For installing the flower segmentation tool first download package from github:
+https://github.com/AnnaTe/arnica or clone repository from github
 
 ```
-pip install URL package-name
+git clone git@github.com:AnnaTe/arnica.git
 ```
 
 ### Installing
 
 For installation first go inside of the package directory.
-
-Install with pip
+Try:
 
 ```
-pip install PACKAGENAME
+python setup.py install
 ```
 
-if there are any dependencies missing try
+install dependencies:
 
 ```
 pip install -r requirements.txt
 ```
-
-End with an example of getting some data out of the system or using it for a little demo
 
 ## Running the programm
 
@@ -41,11 +39,9 @@ Python3 segtool.py
 
 ### Testing
 
-Explain what these tests test and why TODO
+There are two tests, to check for missing dependencies.
 
-```
-Give an example TODO
-```
+tests/test.py and tests/testgui.py
 
 ## Troubleshooting
 
@@ -72,7 +68,6 @@ https://sourceforge.net/projects/libpng/files/zlib/1.2.9/
 and install zlib newest version according to your architecture.
 
 
-
 ## Built With
 
 * [PyCharm](https://www.jetbrains.com/pycharm/) - The Python IDE used
@@ -81,7 +76,7 @@ and install zlib newest version according to your architecture.
 
 ## Versioning
 
-We use [PyPI](http://pypi.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags). 
+We use [GitHub](https://github.com/AnnaTe/arnica) for versioning.
 
 ## Authors
 
@@ -89,7 +84,7 @@ We use [PyPI](http://pypi.org/) for versioning. For the versions available, see 
 
 ## License
 
-This project is licensed under the GPLv3 LICENSE - see the [LICENSE](LICENSE) file for details
+This project is licensed under the GPLv3 LICENSE - see the [LICENSE](LICENSE) file for details.
 
 ## Acknowledgments
 
